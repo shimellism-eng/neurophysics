@@ -5,6 +5,34 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice AQA Insulation authored
+- Fixed AQA `Insulation`: 19/19 authored and passed.
+- Hidden spec metadata:
+  - AQA Physics `specRef`: `4.1.2.1`.
+  - AQA Combined Science `combinedSpecRef`: `6.1.2.1`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Runtime quality checks:
+  - Insulation runtime count: 19.
+  - Authored IDs: 19.
+  - Bad scaffold/answer phrase count: 0.
+  - Covers lubrication, thermal insulation, thermal conductivity, wall thickness, trapped air, vacuum flasks, infrared radiation, convection, conduction, cooling graphs, and fair-test controls.
+- Current Energy good-to-go count after this fix:
+  - AQA: 56/94 good to go.
+  - Edexcel: 0/94 good to go.
+  - Combined Energy: 56/188 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `npx cap sync ios` passes.
+  - Exact AQA Insulation route was shown live in Simulator at `/practice/energy_pathways`.
+- Temporary simulator bypass was used only to jump straight to the fixed screen, then removed from source and the app was rebuilt/synced cleanly.
+
+### Next step
+- Continue AQA Energy:
+  - AQA `Kinetic Energy`: 19 authored exam-style questions.
+
 ### Adaptive Practice AQA Efficiency authored
 - Fixed AQA `Efficiency`: 18/18 authored and passed.
 - Hidden spec metadata:

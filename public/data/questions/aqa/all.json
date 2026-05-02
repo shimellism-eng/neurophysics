@@ -1,7 +1,7 @@
 {
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
-  "generatedAt": "2026-05-02T09:09:39.012Z",
+  "generatedAt": "2026-05-02T09:19:14.725Z",
   "questions": [
     {
       "id": "aqa_atomic_isotopes_positive_ion_001",
@@ -15276,7 +15276,7 @@
       "senNote": "Checks: Interpret total output energy on a Sankey diagram."
     },
     {
-      "id": "aqa_4_1_2_1_insulation_conduction_direct_recall_001",
+      "id": "aqa_energy_insulation_unwanted_transfer_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -15288,6 +15288,7 @@
       "subtopicSlug": "insulation",
       "topicId": "energy_pathways",
       "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
       "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -15298,56 +15299,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_conduction",
-        "statement": "Explain conduction in solids. (Insulation)",
+        "id": "aqa_energy_insulation_unwanted_transfer_001_lo",
+        "statement": "Explain how lubrication reduces unwanted energy transfer.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.1.2.1:conduction:direct_recall",
-      "conceptFamily": "conduction",
-      "contextType": "a safety decision",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_insulation_unwanted_transfer_001",
+      "conceptFamily": "explain_how_lubrication_reduces_unwanted_energy_transfer",
+      "contextType": "exam_style",
       "skill": "Insulation practice",
-      "stem": "Which statement is correct for insulation? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
-      "question": "Which statement is correct for insulation? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
+      "stem": "A machine becomes hot while it is running. Which change would reduce the unwanted energy transfer by heating?",
+      "question": "A machine becomes hot while it is running. Which change would reduce the unwanted energy transfer by heating?",
       "options": [
-        "For insulation, this would mean that conduction transfers energy through particle vibrations and free electrons in metals.",
-        "For insulation, the option says that conduction happens only by light waves.",
-        "For insulation, the option says that conduction needs a vacuum.",
-        "For insulation, the option says that conduction requires particles to leave the material."
+        "Lubricating the moving parts.",
+        "Increasing friction between the moving parts.",
+        "Removing all useful output from the machine.",
+        "Using rougher surfaces in contact."
       ],
-      "correctAnswer": "For insulation, this would mean that conduction transfers energy through particle vibrations and free electrons in metals.",
+      "correctAnswer": "Lubricating the moving parts.",
       "correctIndex": 0,
-      "explanation": "4.1.2.1 targets: Explain conduction in solids. Focus area: Insulation. For this question, Conduction transfers energy through particle vibrations and free electrons in metals. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:conduction",
+      "explanation": "Lubrication reduces friction, so less energy is transferred by unwanted heating to the machine and surroundings.",
+      "misconceptionTag": "lubrication-reduces-friction",
       "distractorRationales": [
         {
-          "text": "For insulation, the option says that conduction needs a vacuum.",
-          "misconception": "Conduction needs a vacuum."
+          "text": "Increasing friction between the moving parts.",
+          "misconception": "friction increases unwanted heating"
         },
         {
-          "text": "For insulation, the option says that conduction happens only by light waves.",
-          "misconception": "Conduction happens only by light waves."
+          "text": "Removing all useful output from the machine.",
+          "misconception": ""
         },
         {
-          "text": "For insulation, the option says that conduction requires particles to leave the material.",
-          "misconception": "Conduction requires particles to leave the material."
+          "text": "Using rougher surfaces in contact.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain conduction in solids."
+      "senNote": "Checks: Explain how lubrication reduces unwanted energy transfer."
     },
     {
-      "id": "aqa_4_1_2_1_insulation_convection_concept_discrimination_002",
+      "id": "aqa_energy_insulation_loft_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -15359,6 +15361,7 @@
       "subtopicSlug": "insulation",
       "topicId": "energy_pathways",
       "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
       "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -15369,56 +15372,130 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_convection",
-        "statement": "Explain convection in fluids. (Insulation)",
+        "id": "aqa_energy_insulation_loft_002_lo",
+        "statement": "Describe the effect of thermal insulation on energy transfer rate.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_insulation_loft_002",
+      "conceptFamily": "describe_the_effect_of_thermal_insulation_on_energy_transfer_rate",
+      "contextType": "exam_style",
+      "skill": "Insulation practice",
+      "stem": "Loft insulation is added to a house. What is its main effect?",
+      "question": "Loft insulation is added to a house. What is its main effect?",
+      "options": [
+        "It reduces the rate of energy transfer from the house to the surroundings.",
+        "It makes the house produce extra energy.",
+        "It stops energy being transferred inside the house.",
+        "It increases the thermal conductivity of the roof."
+      ],
+      "correctAnswer": "It reduces the rate of energy transfer from the house to the surroundings.",
+      "correctIndex": 0,
+      "explanation": "Insulation reduces the rate at which energy is transferred from the warmer house to the cooler surroundings.",
+      "misconceptionTag": "insulation-energy-created",
+      "distractorRationales": [
+        {
+          "text": "It makes the house produce extra energy.",
+          "misconception": ""
+        },
+        {
+          "text": "It stops energy being transferred inside the house.",
+          "misconception": ""
+        },
+        {
+          "text": "It increases the thermal conductivity of the roof.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe the effect of thermal insulation on energy transfer rate."
+    },
+    {
+      "id": "aqa_energy_insulation_thermal_conductivity_003",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Insulation",
+      "topicSlug": "energy",
+      "subtopicSlug": "insulation",
+      "topicId": "energy_pathways",
+      "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
+      "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_insulation_thermal_conductivity_003_lo",
+        "statement": "Relate thermal conductivity to rate of energy transfer by conduction.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.1.2.1:convection:concept_discrimination",
-      "conceptFamily": "convection",
-      "contextType": "a graph-reading task",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_insulation_thermal_conductivity_003",
+      "conceptFamily": "relate_thermal_conductivity_to_rate_of_energy_transfer_by_conduction",
+      "contextType": "exam_style",
       "skill": "Insulation practice",
-      "stem": "A student is comparing similar ideas in insulation. Which statement is correct? Demand focus: explain convection in fluids.",
-      "question": "A student is comparing similar ideas in insulation. Which statement is correct? Demand focus: explain convection in fluids.",
+      "stem": "Two wall materials have the same thickness. Which material transfers energy by conduction at the greater rate?",
+      "question": "Two wall materials have the same thickness. Which material transfers energy by conduction at the greater rate?",
       "options": [
-        "The claim for insulation is that convection happens only in solids.",
-        "In this item, it means that convection is the same as electrical current.",
-        "For insulation, it means that convection requires no density difference.",
-        "The claim for insulation is that convection occurs when warmer, less dense fluid rises and cooler fluid sinks."
+        "The material with the higher thermal conductivity.",
+        "The material with the lower thermal conductivity.",
+        "The material with the darker colour only.",
+        "The material with the smaller surface area only."
       ],
-      "correctAnswer": "The claim for insulation is that convection occurs when warmer, less dense fluid rises and cooler fluid sinks.",
-      "correctIndex": 3,
-      "explanation": "4.1.2.1 targets: Explain convection in fluids. Focus area: Insulation. For this question, Convection occurs when warmer, less dense fluid rises and cooler fluid sinks. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:convection",
+      "correctAnswer": "The material with the higher thermal conductivity.",
+      "correctIndex": 0,
+      "explanation": "A material with higher thermal conductivity transfers energy by conduction at a greater rate.",
+      "misconceptionTag": "thermal-conductivity-reversed",
       "distractorRationales": [
         {
-          "text": "For insulation, it means that convection requires no density difference.",
-          "misconception": "Convection happens only in solids."
+          "text": "The material with the lower thermal conductivity.",
+          "misconception": ""
         },
         {
-          "text": "In this item, it means that convection is the same as electrical current.",
-          "misconception": "Convection requires no density difference."
+          "text": "The material with the darker colour only.",
+          "misconception": ""
         },
         {
-          "text": "The claim for insulation is that convection happens only in solids.",
-          "misconception": "Convection is the same as electrical current."
+          "text": "The material with the smaller surface area only.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain convection in fluids."
+      "senNote": "Checks: Relate thermal conductivity to rate of energy transfer by conduction."
     },
     {
-      "id": "aqa_4_1_2_1_insulation_radiation_misconception_correction_003",
+      "id": "aqa_energy_insulation_wall_thickness_004",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -15430,6 +15507,7 @@
       "subtopicSlug": "insulation",
       "topicId": "energy_pathways",
       "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
       "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -15440,56 +15518,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_radiation",
-        "statement": "Describe thermal radiation. (Insulation)",
+        "id": "aqa_energy_insulation_wall_thickness_004_lo",
+        "statement": "Describe how wall thickness affects cooling rate.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.1.2.1:radiation:misconception_correction",
-      "conceptFamily": "radiation",
-      "contextType": "a comparison question",
+      "commandWord": "describe",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_insulation_wall_thickness_004",
+      "conceptFamily": "describe_how_wall_thickness_affects_cooling_rate",
+      "contextType": "exam_style",
       "skill": "Insulation practice",
-      "stem": "A revision note about insulation contains an error. Which replacement is correct? Demand focus: describe thermal radiation.",
-      "question": "A revision note about insulation contains an error. Which replacement is correct? Demand focus: describe thermal radiation.",
+      "stem": "A house has thicker walls made from the same material. How does this affect the rate of cooling?",
+      "question": "A house has thicker walls made from the same material. How does this affect the rate of cooling?",
       "options": [
-        "For insulation, the option says that thermal radiation is only sound.",
-        "For insulation: Infrared radiation needs air particles.",
-        "For insulation: Radiation cannot travel through a vacuum.",
-        "The claim for insulation is that infrared radiation transfers energy without needing particles."
+        "The house cools more slowly.",
+        "The house cools more quickly.",
+        "The house cannot lose energy at all.",
+        "The thermal conductivity of the wall material increases."
       ],
-      "correctAnswer": "The claim for insulation is that infrared radiation transfers energy without needing particles.",
-      "correctIndex": 3,
-      "explanation": "4.1.2.1 targets: Describe thermal radiation. Focus area: Insulation. For this question, Infrared radiation transfers energy without needing particles. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:radiation",
+      "correctAnswer": "The house cools more slowly.",
+      "correctIndex": 0,
+      "explanation": "Increasing wall thickness increases the distance energy must transfer through, so the rate of cooling decreases.",
+      "misconceptionTag": "wall-thickness-cooling",
       "distractorRationales": [
         {
-          "text": "For insulation: Radiation cannot travel through a vacuum.",
-          "misconception": "Infrared radiation needs air particles."
+          "text": "The house cools more quickly.",
+          "misconception": ""
         },
         {
-          "text": "For insulation: Infrared radiation needs air particles.",
-          "misconception": "Thermal radiation is only sound."
+          "text": "The house cannot lose energy at all.",
+          "misconception": ""
         },
         {
-          "text": "For insulation, the option says that thermal radiation is only sound.",
-          "misconception": "Radiation cannot travel through a vacuum."
+          "text": "The thermal conductivity of the wall material increases.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe thermal radiation."
+      "senNote": "Checks: Describe how wall thickness affects cooling rate."
     },
     {
-      "id": "aqa_4_1_2_1_insulation_insulation_data_interpretation_004",
+      "id": "aqa_energy_insulation_cavity_wall_005",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -15501,6 +15580,7 @@
       "subtopicSlug": "insulation",
       "topicId": "energy_pathways",
       "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
       "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -15511,56 +15591,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_insulation",
-        "statement": "Explain how insulation reduces transfer. (Insulation)",
+        "id": "aqa_energy_insulation_cavity_wall_005_lo",
+        "statement": "Explain why trapped air is useful in insulation.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.1.2.1:insulation:data_interpretation",
-      "conceptFamily": "insulation",
-      "contextType": "a method-choice question",
+      "commandWord": "explain",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_insulation_cavity_wall_005",
+      "conceptFamily": "explain_why_trapped_air_is_useful_in_insulation",
+      "contextType": "exam_style",
       "skill": "Insulation practice",
-      "stem": "A small data set about insulation is being interpreted. Which conclusion is valid? Use the wording carefully: this is about explain how insulation reduces transfer.",
-      "question": "A small data set about insulation is being interpreted. Which conclusion is valid? Use the wording carefully: this is about explain how insulation reduces transfer.",
+      "stem": "Cavity wall insulation traps air between two walls. Why does this reduce energy transfer?",
+      "question": "Cavity wall insulation traps air between two walls. Why does this reduce energy transfer?",
       "options": [
-        "The answer for insulation says that insulation makes heat transfer faster.",
-        "The answer for insulation says that insulation only works by increasing current.",
-        "In this insulation item, insulation reduces the rate of energy transfer by conduction, convection or radiation.",
-        "The answer for insulation says that insulation creates energy."
+        "Air is a poor conductor, so conduction through the wall is reduced.",
+        "Air has a very high thermal conductivity.",
+        "The trapped air creates energy inside the wall.",
+        "The trapped air removes the temperature difference."
       ],
-      "correctAnswer": "In this insulation item, insulation reduces the rate of energy transfer by conduction, convection or radiation.",
-      "correctIndex": 2,
-      "explanation": "4.1.2.1 targets: Explain how insulation reduces transfer. Focus area: Insulation. For this question, Insulation reduces the rate of energy transfer by conduction, convection or radiation. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:insulation",
+      "correctAnswer": "Air is a poor conductor, so conduction through the wall is reduced.",
+      "correctIndex": 0,
+      "explanation": "Trapped air is a poor conductor. It reduces the rate of energy transfer by conduction through the wall.",
+      "misconceptionTag": "air-conductor",
       "distractorRationales": [
         {
-          "text": "The answer for insulation says that insulation creates energy.",
-          "misconception": "Insulation creates energy."
+          "text": "Air has a very high thermal conductivity.",
+          "misconception": ""
         },
         {
-          "text": "The answer for insulation says that insulation makes heat transfer faster.",
-          "misconception": "Insulation makes heat transfer faster."
+          "text": "The trapped air creates energy inside the wall.",
+          "misconception": ""
         },
         {
-          "text": "The answer for insulation says that insulation only works by increasing current.",
-          "misconception": "Insulation only works by increasing current."
+          "text": "The trapped air removes the temperature difference.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain how insulation reduces transfer."
+      "senNote": "Checks: Explain why trapped air is useful in insulation."
     },
     {
-      "id": "aqa_4_1_2_1_insulation_surface_colour_representation_interpretation_005",
+      "id": "aqa_energy_insulation_vacuum_flask_006",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -15572,6 +15653,7 @@
       "subtopicSlug": "insulation",
       "topicId": "energy_pathways",
       "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
       "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -15582,56 +15664,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_surface_colour",
-        "statement": "Compare emission and absorption. (Insulation)",
+        "id": "aqa_energy_insulation_vacuum_flask_006_lo",
+        "statement": "Explain why a vacuum reduces conduction and convection.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.1.2.1:surface_colour:representation_interpretation",
-      "conceptFamily": "surface_colour",
-      "contextType": "a results discussion",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_insulation_vacuum_flask_006",
+      "conceptFamily": "explain_why_a_vacuum_reduces_conduction_and_convection",
+      "contextType": "exam_style",
       "skill": "Insulation practice",
-      "stem": "Which option correctly reads the insulation model or diagram idea? Use the wording carefully: this is about compare emission and absorption.",
-      "question": "Which option correctly reads the insulation model or diagram idea? Use the wording carefully: this is about compare emission and absorption.",
+      "stem": "A vacuum flask has a vacuum between its walls. Which transfer is mainly reduced by the vacuum?",
+      "question": "A vacuum flask has a vacuum between its walls. Which transfer is mainly reduced by the vacuum?",
       "options": [
-        "For insulation, the statement is that shiny silver surfaces are always best absorbers.",
-        "For insulation, the statement is that colour has no effect on radiation.",
-        "For insulation, the statement is that dull black surfaces are good absorbers and emitters of infrared radiation.",
-        "For insulation, the answer claims that only transparent objects emit infrared."
+        "Conduction and convection through the space between the walls.",
+        "Radiation through the space only.",
+        "Electrical transfer through the drink.",
+        "Chemical transfer from the flask to the drink."
       ],
-      "correctAnswer": "For insulation, the statement is that dull black surfaces are good absorbers and emitters of infrared radiation.",
-      "correctIndex": 2,
-      "explanation": "4.1.2.1 targets: Compare emission and absorption. Focus area: Insulation. For this question, Dull black surfaces are good absorbers and emitters of infrared radiation. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:surface_colour",
+      "correctAnswer": "Conduction and convection through the space between the walls.",
+      "correctIndex": 0,
+      "explanation": "Conduction and convection need particles. A vacuum has no particles, so both transfers through the space are greatly reduced.",
+      "misconceptionTag": "vacuum-radiation-only",
       "distractorRationales": [
         {
-          "text": "For insulation, the statement is that colour has no effect on radiation.",
-          "misconception": "Shiny silver surfaces are always best absorbers."
+          "text": "Radiation through the space only.",
+          "misconception": ""
         },
         {
-          "text": "For insulation, the answer claims that only transparent objects emit infrared.",
-          "misconception": "Colour has no effect on radiation."
+          "text": "Electrical transfer through the drink.",
+          "misconception": ""
         },
         {
-          "text": "For insulation, the statement is that shiny silver surfaces are always best absorbers.",
-          "misconception": "Only transparent objects emit infrared."
+          "text": "Chemical transfer from the flask to the drink.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Compare emission and absorption."
+      "senNote": "Checks: Explain why a vacuum reduces conduction and convection."
     },
     {
-      "id": "aqa_4_1_2_1_insulation_conduction_direct_recall_006",
+      "id": "aqa_energy_insulation_shiny_surface_007",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -15643,6 +15726,7 @@
       "subtopicSlug": "insulation",
       "topicId": "energy_pathways",
       "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
       "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -15653,56 +15737,130 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_conduction",
-        "statement": "Explain conduction in solids. (Insulation)",
+        "id": "aqa_energy_insulation_shiny_surface_007_lo",
+        "statement": "Describe how shiny surfaces reduce transfer by radiation.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_insulation_shiny_surface_007",
+      "conceptFamily": "describe_how_shiny_surfaces_reduce_transfer_by_radiation",
+      "contextType": "exam_style",
+      "skill": "Insulation practice",
+      "stem": "The inner surface of a vacuum flask is shiny. Why does this help keep a hot drink warm?",
+      "question": "The inner surface of a vacuum flask is shiny. Why does this help keep a hot drink warm?",
+      "options": [
+        "It reflects infrared radiation back towards the drink.",
+        "It increases convection currents in the vacuum.",
+        "It makes the glass a better conductor.",
+        "It converts thermal energy into chemical energy."
+      ],
+      "correctAnswer": "It reflects infrared radiation back towards the drink.",
+      "correctIndex": 0,
+      "explanation": "A shiny surface is a poor absorber and emitter of infrared radiation, so it reflects more radiation back towards the hot drink.",
+      "misconceptionTag": "shiny-surface-conduction",
+      "distractorRationales": [
+        {
+          "text": "It increases convection currents in the vacuum.",
+          "misconception": ""
+        },
+        {
+          "text": "It makes the glass a better conductor.",
+          "misconception": ""
+        },
+        {
+          "text": "It converts thermal energy into chemical energy.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe how shiny surfaces reduce transfer by radiation."
+    },
+    {
+      "id": "aqa_energy_insulation_black_surface_008",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Insulation",
+      "topicSlug": "energy",
+      "subtopicSlug": "insulation",
+      "topicId": "energy_pathways",
+      "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
+      "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_insulation_black_surface_008_lo",
+        "statement": "Compare infrared emission from dull black and shiny surfaces.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.1.2.1:conduction:direct_recall",
-      "conceptFamily": "conduction",
-      "contextType": "a classroom demonstration",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_insulation_black_surface_008",
+      "conceptFamily": "compare_infrared_emission_from_dull_black_and_shiny_surfaces",
+      "contextType": "exam_style",
       "skill": "Insulation practice",
-      "stem": "Which answer matches this insulation objective: Explain conduction in solids? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
-      "question": "Which answer matches this insulation objective: Explain conduction in solids? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
+      "stem": "A dull black metal plate and a shiny silver metal plate are heated to the same temperature. Which plate emits infrared radiation at the greater rate?",
+      "question": "A dull black metal plate and a shiny silver metal plate are heated to the same temperature. Which plate emits infrared radiation at the greater rate?",
       "options": [
-        "In this insulation item, conduction happens only by light waves.",
-        "In this insulation item, conduction requires particles to leave the material.",
-        "In this insulation item, conduction needs a vacuum.",
-        "For insulation, the statement is that conduction transfers energy through particle vibrations and free electrons in metals."
+        "The dull black plate.",
+        "The shiny silver plate.",
+        "Both plates emit no infrared radiation.",
+        "Both must emit at exactly the same rate because their temperature is the same."
       ],
-      "correctAnswer": "For insulation, the statement is that conduction transfers energy through particle vibrations and free electrons in metals.",
-      "correctIndex": 3,
-      "explanation": "4.1.2.1 targets: Explain conduction in solids. Focus area: Insulation. For this question, Conduction transfers energy through particle vibrations and free electrons in metals. Context used: a classroom demonstration; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:conduction",
+      "correctAnswer": "The dull black plate.",
+      "correctIndex": 0,
+      "explanation": "Dull black surfaces are better emitters of infrared radiation than shiny silver surfaces.",
+      "misconceptionTag": "surface-colour-emission",
       "distractorRationales": [
         {
-          "text": "In this insulation item, conduction requires particles to leave the material.",
-          "misconception": "Conduction needs a vacuum."
+          "text": "The shiny silver plate.",
+          "misconception": ""
         },
         {
-          "text": "In this insulation item, conduction needs a vacuum.",
-          "misconception": "Conduction happens only by light waves."
+          "text": "Both plates emit no infrared radiation.",
+          "misconception": ""
         },
         {
-          "text": "In this insulation item, conduction happens only by light waves.",
-          "misconception": "Conduction requires particles to leave the material."
+          "text": "Both must emit at exactly the same rate because their temperature is the same.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain conduction in solids."
+      "senNote": "Checks: Compare infrared emission from dull black and shiny surfaces."
     },
     {
-      "id": "aqa_4_1_2_1_insulation_convection_applied_context_007",
+      "id": "aqa_energy_insulation_convection_009",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -15714,6 +15872,7 @@
       "subtopicSlug": "insulation",
       "topicId": "energy_pathways",
       "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
       "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -15724,56 +15883,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_convection",
-        "statement": "Explain convection in fluids. (Insulation)",
+        "id": "aqa_energy_insulation_convection_009_lo",
+        "statement": "Explain convection in a fluid using density changes.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.1.2.1:convection:applied_context",
-      "conceptFamily": "convection",
-      "contextType": "a revision checkpoint",
+      "commandWord": "explain",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_insulation_convection_009",
+      "conceptFamily": "explain_convection_in_a_fluid_using_density_changes",
+      "contextType": "exam_style",
       "skill": "Insulation practice",
-      "stem": "In a revision checkpoint, which conclusion is correct for insulation? Demand focus: explain convection in fluids.",
-      "question": "In a revision checkpoint, which conclusion is correct for insulation? Demand focus: explain convection in fluids.",
+      "stem": "Warm air near a radiator rises. Which statement explains why?",
+      "question": "Warm air near a radiator rises. Which statement explains why?",
       "options": [
-        "For insulation, it means that convection happens only in solids.",
-        "For insulation, it means that convection is the same as electrical current.",
-        "For insulation: Convection occurs when warmer, less dense fluid rises and cooler fluid sinks.",
-        "For insulation, it means that convection requires no density difference."
+        "The warm air expands, becomes less dense and rises.",
+        "The warm air becomes more dense and sinks.",
+        "The warm air rises because radiation needs particles.",
+        "The warm air rises because its mass becomes zero."
       ],
-      "correctAnswer": "For insulation: Convection occurs when warmer, less dense fluid rises and cooler fluid sinks.",
-      "correctIndex": 2,
-      "explanation": "4.1.2.1 targets: Explain convection in fluids. Focus area: Insulation. For this question, Convection occurs when warmer, less dense fluid rises and cooler fluid sinks. Context used: a revision checkpoint; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:convection",
+      "correctAnswer": "The warm air expands, becomes less dense and rises.",
+      "correctIndex": 0,
+      "explanation": "When air is heated it expands and becomes less dense than the cooler air around it, so it rises and sets up convection.",
+      "misconceptionTag": "convection-density-reversed",
       "distractorRationales": [
         {
-          "text": "For insulation, it means that convection happens only in solids.",
-          "misconception": "Convection happens only in solids."
+          "text": "The warm air becomes more dense and sinks.",
+          "misconception": ""
         },
         {
-          "text": "For insulation, it means that convection requires no density difference.",
-          "misconception": "Convection requires no density difference."
+          "text": "The warm air rises because radiation needs particles.",
+          "misconception": ""
         },
         {
-          "text": "For insulation, it means that convection is the same as electrical current.",
-          "misconception": "Convection is the same as electrical current."
+          "text": "The warm air rises because its mass becomes zero.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain convection in fluids."
+      "senNote": "Checks: Explain convection in a fluid using density changes."
     },
     {
-      "id": "aqa_4_1_2_1_insulation_radiation_misconception_correction_008",
+      "id": "aqa_energy_insulation_conduction_solid_010",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -15785,6 +15945,7 @@
       "subtopicSlug": "insulation",
       "topicId": "energy_pathways",
       "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
       "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -15795,56 +15956,276 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_radiation",
-        "statement": "Describe thermal radiation. (Insulation)",
+        "id": "aqa_energy_insulation_conduction_solid_010_lo",
+        "statement": "Identify conduction as energy transfer through a solid metal.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_insulation_conduction_solid_010",
+      "conceptFamily": "identify_conduction_as_energy_transfer_through_a_solid_metal",
+      "contextType": "exam_style",
+      "skill": "Insulation practice",
+      "stem": "Energy is transferred along a metal spoon in hot soup. Which process is mainly responsible?",
+      "question": "Energy is transferred along a metal spoon in hot soup. Which process is mainly responsible?",
+      "options": [
+        "Conduction through the metal.",
+        "Convection through the solid spoon.",
+        "Evaporation from the metal.",
+        "Nuclear radiation from the spoon."
+      ],
+      "correctAnswer": "Conduction through the metal.",
+      "correctIndex": 0,
+      "explanation": "In a solid metal, energy is transferred by conduction through particle vibrations and free electrons.",
+      "misconceptionTag": "convection-in-solid",
+      "distractorRationales": [
+        {
+          "text": "Convection through the solid spoon.",
+          "misconception": ""
+        },
+        {
+          "text": "Evaporation from the metal.",
+          "misconception": ""
+        },
+        {
+          "text": "Nuclear radiation from the spoon.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify conduction as energy transfer through a solid metal."
+    },
+    {
+      "id": "aqa_energy_insulation_required_practical_011",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Insulation",
+      "topicSlug": "energy",
+      "subtopicSlug": "insulation",
+      "topicId": "energy_pathways",
+      "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
+      "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_insulation_required_practical_011_lo",
+        "statement": "Identify control variables in an insulation investigation.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "practical_method",
+      "patternId": "authored:aqa_energy_insulation_required_practical_011",
+      "conceptFamily": "identify_control_variables_in_an_insulation_investigation",
+      "contextType": "exam_style",
+      "skill": "Insulation practice",
+      "stem": "In an investigation, beakers of hot water are wrapped in different materials. What should be kept the same to make the comparison fair?",
+      "question": "In an investigation, beakers of hot water are wrapped in different materials. What should be kept the same to make the comparison fair?",
+      "options": [
+        "The starting temperature and volume of water in each beaker.",
+        "The type of insulation wrapped round each beaker.",
+        "The final temperature only.",
+        "The rate of cooling in every beaker."
+      ],
+      "correctAnswer": "The starting temperature and volume of water in each beaker.",
+      "correctIndex": 0,
+      "explanation": "Starting temperature and water volume are control variables. The insulation material is the independent variable being tested.",
+      "misconceptionTag": "control-variable-independent-variable",
+      "distractorRationales": [
+        {
+          "text": "The type of insulation wrapped round each beaker.",
+          "misconception": ""
+        },
+        {
+          "text": "The final temperature only.",
+          "misconception": ""
+        },
+        {
+          "text": "The rate of cooling in every beaker.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify control variables in an insulation investigation."
+    },
+    {
+      "id": "aqa_energy_insulation_cooling_graph_012",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Insulation",
+      "topicSlug": "energy",
+      "subtopicSlug": "insulation",
+      "topicId": "energy_pathways",
+      "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
+      "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_insulation_cooling_graph_012_lo",
+        "statement": "Interpret cooling rate from a temperature-time graph.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "interpret",
+      "responseMode": "graph_interpretation",
+      "patternId": "authored:aqa_energy_insulation_cooling_graph_012",
+      "conceptFamily": "interpret_cooling_rate_from_a_temperature_time_graph",
+      "contextType": "exam_style",
+      "skill": "Insulation practice",
+      "stem": "A cooling graph for an insulated cup is less steep than the graph for an uninsulated cup. What does this show?",
+      "question": "A cooling graph for an insulated cup is less steep than the graph for an uninsulated cup. What does this show?",
+      "options": [
+        "The insulated cup loses energy more slowly.",
+        "The insulated cup loses energy more quickly.",
+        "The insulated cup has no thermal energy.",
+        "The uninsulated cup gains energy from the room throughout."
+      ],
+      "correctAnswer": "The insulated cup loses energy more slowly.",
+      "correctIndex": 0,
+      "explanation": "A less steep cooling graph means the temperature falls more slowly, so energy is transferred to the surroundings at a lower rate.",
+      "misconceptionTag": "cooling-graph-gradient",
+      "distractorRationales": [
+        {
+          "text": "The insulated cup loses energy more quickly.",
+          "misconception": ""
+        },
+        {
+          "text": "The insulated cup has no thermal energy.",
+          "misconception": ""
+        },
+        {
+          "text": "The uninsulated cup gains energy from the room throughout.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Interpret cooling rate from a temperature-time graph."
+    },
+    {
+      "id": "aqa_energy_insulation_temperature_difference_013",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Insulation",
+      "topicSlug": "energy",
+      "subtopicSlug": "insulation",
+      "topicId": "energy_pathways",
+      "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
+      "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_insulation_temperature_difference_013_lo",
+        "statement": "Relate temperature difference to cooling rate.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.1.2.1:radiation:misconception_correction",
-      "conceptFamily": "radiation",
-      "contextType": "an exam-style data table",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_insulation_temperature_difference_013",
+      "conceptFamily": "relate_temperature_difference_to_cooling_rate",
+      "contextType": "exam_style",
       "skill": "Insulation practice",
-      "stem": "Which answer corrects a misconception about insulation? Demand focus: describe thermal radiation.",
-      "question": "Which answer corrects a misconception about insulation? Demand focus: describe thermal radiation.",
+      "stem": "Why does a cup of hot water usually cool fastest just after it is poured?",
+      "question": "Why does a cup of hot water usually cool fastest just after it is poured?",
       "options": [
-        "For insulation, the statement is that infrared radiation transfers energy without needing particles.",
-        "For insulation, the answer claims that radiation cannot travel through a vacuum.",
-        "For insulation, the answer claims that thermal radiation is only sound.",
-        "In this insulation item, infrared radiation needs air particles."
+        "The temperature difference between the water and the room is greatest.",
+        "The water has no energy store after it is poured.",
+        "The room temperature is higher than the water temperature.",
+        "The water stops transferring energy after a few minutes."
       ],
-      "correctAnswer": "For insulation, the statement is that infrared radiation transfers energy without needing particles.",
+      "correctAnswer": "The temperature difference between the water and the room is greatest.",
       "correctIndex": 0,
-      "explanation": "4.1.2.1 targets: Describe thermal radiation. Focus area: Insulation. For this question, Infrared radiation transfers energy without needing particles. Context used: an exam-style data table; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:radiation",
+      "explanation": "A larger temperature difference gives a greater rate of energy transfer, so the water cools fastest at the start.",
+      "misconceptionTag": "temperature-difference-cooling",
       "distractorRationales": [
         {
-          "text": "For insulation, the answer claims that thermal radiation is only sound.",
-          "misconception": "Infrared radiation needs air particles."
+          "text": "The water has no energy store after it is poured.",
+          "misconception": ""
         },
         {
-          "text": "For insulation, the answer claims that radiation cannot travel through a vacuum.",
-          "misconception": "Thermal radiation is only sound."
+          "text": "The room temperature is higher than the water temperature.",
+          "misconception": ""
         },
         {
-          "text": "In this insulation item, infrared radiation needs air particles.",
-          "misconception": "Radiation cannot travel through a vacuum."
+          "text": "The water stops transferring energy after a few minutes.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe thermal radiation."
+      "senNote": "Checks: Relate temperature difference to cooling rate."
     },
     {
-      "id": "aqa_4_1_2_1_insulation_insulation_exam_decision_009",
+      "id": "aqa_energy_insulation_double_glazing_014",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -15856,6 +16237,7 @@
       "subtopicSlug": "insulation",
       "topicId": "energy_pathways",
       "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
       "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -15866,56 +16248,130 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_insulation",
-        "statement": "Explain how insulation reduces transfer. (Insulation)",
+        "id": "aqa_energy_insulation_double_glazing_014_lo",
+        "statement": "Explain how double glazing reduces unwanted energy transfer.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_insulation_double_glazing_014",
+      "conceptFamily": "explain_how_double_glazing_reduces_unwanted_energy_transfer",
+      "contextType": "exam_style",
+      "skill": "Insulation practice",
+      "stem": "Double glazing reduces energy transfer through a window. Which feature is most important?",
+      "question": "Double glazing reduces energy transfer through a window. Which feature is most important?",
+      "options": [
+        "A layer of trapped air or gas between the panes.",
+        "A larger hole between the room and outside.",
+        "A single thin pane with high thermal conductivity.",
+        "A metal strip connecting the two panes across the gap."
+      ],
+      "correctAnswer": "A layer of trapped air or gas between the panes.",
+      "correctIndex": 0,
+      "explanation": "The trapped air or gas is a poor conductor and reduces convection between the panes, so less energy is transferred.",
+      "misconceptionTag": "double-glazing-metal-bridge",
+      "distractorRationales": [
+        {
+          "text": "A larger hole between the room and outside.",
+          "misconception": ""
+        },
+        {
+          "text": "A single thin pane with high thermal conductivity.",
+          "misconception": ""
+        },
+        {
+          "text": "A metal strip connecting the two panes across the gap.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain how double glazing reduces unwanted energy transfer."
+    },
+    {
+      "id": "aqa_energy_insulation_low_conductivity_choice_015",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Insulation",
+      "topicSlug": "energy",
+      "subtopicSlug": "insulation",
+      "topicId": "energy_pathways",
+      "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
+      "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_insulation_low_conductivity_choice_015_lo",
+        "statement": "Choose an insulating material using thermal conductivity.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
       "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.1.2.1:insulation:exam_decision",
-      "conceptFamily": "insulation",
-      "contextType": "a required-practical notebook",
+      "responseMode": "method-choice",
+      "patternId": "authored:aqa_energy_insulation_low_conductivity_choice_015",
+      "conceptFamily": "choose_an_insulating_material_using_thermal_conductivity",
+      "contextType": "exam_style",
       "skill": "Insulation practice",
-      "stem": "The mark scheme is testing explain how insulation reduces transfer. Which answer matches that point? Use the wording carefully: this is about explain how insulation reduces transfer.",
-      "question": "The mark scheme is testing explain how insulation reduces transfer. Which answer matches that point? Use the wording carefully: this is about explain how insulation reduces transfer.",
+      "stem": "A student is choosing a material to reduce conduction through a wall. Which property should the material have?",
+      "question": "A student is choosing a material to reduce conduction through a wall. Which property should the material have?",
       "options": [
-        "For insulation, the statement is that insulation reduces the rate of energy transfer by conduction, convection or radiation.",
-        "For insulation, the statement is that insulation only works by increasing current.",
-        "For insulation, the answer claims that insulation creates energy.",
-        "For insulation, the statement is that insulation makes heat transfer faster."
+        "Low thermal conductivity.",
+        "High electrical conductivity.",
+        "High thermal conductivity.",
+        "High density only."
       ],
-      "correctAnswer": "For insulation, the statement is that insulation reduces the rate of energy transfer by conduction, convection or radiation.",
+      "correctAnswer": "Low thermal conductivity.",
       "correctIndex": 0,
-      "explanation": "4.1.2.1 targets: Explain how insulation reduces transfer. Focus area: Insulation. For this question, Insulation reduces the rate of energy transfer by conduction, convection or radiation. Context used: a required-practical notebook; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:insulation",
+      "explanation": "A low thermal conductivity means energy is transferred by conduction at a lower rate.",
+      "misconceptionTag": "conductivity-property-choice",
       "distractorRationales": [
         {
-          "text": "For insulation, the statement is that insulation only works by increasing current.",
-          "misconception": "Insulation creates energy."
+          "text": "High electrical conductivity.",
+          "misconception": ""
         },
         {
-          "text": "For insulation, the answer claims that insulation creates energy.",
-          "misconception": "Insulation makes heat transfer faster."
+          "text": "High thermal conductivity.",
+          "misconception": ""
         },
         {
-          "text": "For insulation, the statement is that insulation makes heat transfer faster.",
-          "misconception": "Insulation only works by increasing current."
+          "text": "High density only.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain how insulation reduces transfer."
+      "senNote": "Checks: Choose an insulating material using thermal conductivity."
     },
     {
-      "id": "aqa_4_1_2_1_insulation_surface_colour_representation_interpretation_010",
+      "id": "aqa_energy_insulation_radiation_particles_016",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -15927,6 +16383,7 @@
       "subtopicSlug": "insulation",
       "topicId": "energy_pathways",
       "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
       "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -15937,127 +16394,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_surface_colour",
-        "statement": "Compare emission and absorption. (Insulation)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.1.2.1:surface_colour:representation_interpretation",
-      "conceptFamily": "surface_colour",
-      "contextType": "a technician report",
-      "skill": "Insulation practice",
-      "stem": "A representation of insulation is described in words. Which interpretation is correct? Use the wording carefully: this is about compare emission and absorption.",
-      "question": "A representation of insulation is described in words. Which interpretation is correct? Use the wording carefully: this is about compare emission and absorption.",
-      "options": [
-        "In this item, it means that only transparent objects emit infrared.",
-        "In this item, it means that shiny silver surfaces are always best absorbers.",
-        "In this item, it means that dull black surfaces are good absorbers and emitters of infrared radiation.",
-        "The claim for insulation is that colour has no effect on radiation."
-      ],
-      "correctAnswer": "In this item, it means that dull black surfaces are good absorbers and emitters of infrared radiation.",
-      "correctIndex": 2,
-      "explanation": "4.1.2.1 targets: Compare emission and absorption. Focus area: Insulation. For this question, Dull black surfaces are good absorbers and emitters of infrared radiation. Context used: a technician report; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:surface_colour",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that shiny silver surfaces are always best absorbers.",
-          "misconception": "Shiny silver surfaces are always best absorbers."
-        },
-        {
-          "text": "The claim for insulation is that colour has no effect on radiation.",
-          "misconception": "Colour has no effect on radiation."
-        },
-        {
-          "text": "In this item, it means that only transparent objects emit infrared.",
-          "misconception": "Only transparent objects emit infrared."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Compare emission and absorption."
-    },
-    {
-      "id": "aqa_4_1_2_1_insulation_conduction_concept_discrimination_011",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Insulation",
-      "topicSlug": "energy",
-      "subtopicSlug": "insulation",
-      "topicId": "energy_pathways",
-      "specRef": "4.1.2.1",
-      "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_conduction",
-        "statement": "Explain conduction in solids. (Insulation)",
+        "id": "aqa_energy_insulation_radiation_particles_016_lo",
+        "statement": "Recognise that radiation can transfer energy without particles.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.1.2.1:conduction:concept_discrimination",
-      "conceptFamily": "conduction",
-      "contextType": "a labelled diagram",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_insulation_radiation_particles_016",
+      "conceptFamily": "recognise_that_radiation_can_transfer_energy_without_particles",
+      "contextType": "exam_style",
       "skill": "Insulation practice",
-      "stem": "A student is comparing similar ideas in insulation. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
-      "question": "A student is comparing similar ideas in insulation. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
+      "stem": "Which energy transfer can happen through a vacuum?",
+      "question": "Which energy transfer can happen through a vacuum?",
       "options": [
-        "For insulation, it means that conduction happens only by light waves.",
-        "For insulation, it means that conduction transfers energy through particle vibrations and free electrons in metals.",
-        "For insulation, the statement is that conduction requires particles to leave the material.",
-        "For insulation, it means that conduction needs a vacuum."
+        "Infrared radiation.",
+        "Conduction only.",
+        "Convection only.",
+        "Conduction and convection only."
       ],
-      "correctAnswer": "For insulation, it means that conduction transfers energy through particle vibrations and free electrons in metals.",
-      "correctIndex": 1,
-      "explanation": "4.1.2.1 targets: Explain conduction in solids. Focus area: Insulation. For this question, Conduction transfers energy through particle vibrations and free electrons in metals. Context used: a labelled diagram; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:conduction",
+      "correctAnswer": "Infrared radiation.",
+      "correctIndex": 0,
+      "explanation": "Infrared radiation does not need particles, so it can transfer energy through a vacuum.",
+      "misconceptionTag": "radiation-needs-particles",
       "distractorRationales": [
         {
-          "text": "For insulation, it means that conduction happens only by light waves.",
-          "misconception": "Conduction needs a vacuum."
+          "text": "Conduction only.",
+          "misconception": ""
         },
         {
-          "text": "For insulation, the statement is that conduction requires particles to leave the material.",
-          "misconception": "Conduction happens only by light waves."
+          "text": "Convection only.",
+          "misconception": ""
         },
         {
-          "text": "For insulation, it means that conduction needs a vacuum.",
-          "misconception": "Conduction requires particles to leave the material."
+          "text": "Conduction and convection only.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain conduction in solids."
+      "senNote": "Checks: Recognise that radiation can transfer energy without particles."
     },
     {
-      "id": "aqa_4_1_2_1_insulation_convection_applied_context_012",
+      "id": "aqa_energy_insulation_pipe_lagging_017",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -16069,6 +16456,7 @@
       "subtopicSlug": "insulation",
       "topicId": "energy_pathways",
       "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
       "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -16079,56 +16467,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_convection",
-        "statement": "Explain convection in fluids. (Insulation)",
+        "id": "aqa_energy_insulation_pipe_lagging_017_lo",
+        "statement": "Apply insulation ideas to hot-water pipes.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.1.2.1:convection:applied_context",
-      "conceptFamily": "convection",
-      "contextType": "a short calculation",
+      "commandWord": "explain",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_insulation_pipe_lagging_017",
+      "conceptFamily": "apply_insulation_ideas_to_hot_water_pipes",
+      "contextType": "exam_style",
       "skill": "Insulation practice",
-      "stem": "A question set in a short calculation tests insulation. Which answer applies the idea correctly? Demand focus: explain convection in fluids.",
-      "question": "A question set in a short calculation tests insulation. Which answer applies the idea correctly? Demand focus: explain convection in fluids.",
+      "stem": "Foam lagging is put around hot-water pipes. Why does this save energy?",
+      "question": "Foam lagging is put around hot-water pipes. Why does this save energy?",
       "options": [
-        "The answer for insulation says that convection happens only in solids.",
-        "The answer for insulation says that convection requires no density difference.",
-        "For insulation, the answer claims that convection occurs when warmer, less dense fluid rises and cooler fluid sinks.",
-        "The answer for insulation says that convection is the same as electrical current."
+        "Less energy is transferred from the hot water to the surroundings before the water reaches the tap.",
+        "The water gains chemical energy from the foam.",
+        "The pipe becomes a better conductor.",
+        "The water temperature becomes independent of the surroundings."
       ],
-      "correctAnswer": "For insulation, the answer claims that convection occurs when warmer, less dense fluid rises and cooler fluid sinks.",
-      "correctIndex": 2,
-      "explanation": "4.1.2.1 targets: Explain convection in fluids. Focus area: Insulation. For this question, Convection occurs when warmer, less dense fluid rises and cooler fluid sinks. Context used: a short calculation; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:convection",
+      "correctAnswer": "Less energy is transferred from the hot water to the surroundings before the water reaches the tap.",
+      "correctIndex": 0,
+      "explanation": "Foam lagging is an insulator, so it reduces unwanted energy transfer from the hot pipe to the cooler surroundings.",
+      "misconceptionTag": "pipe-lagging-energy-created",
       "distractorRationales": [
         {
-          "text": "The answer for insulation says that convection is the same as electrical current.",
-          "misconception": "Convection happens only in solids."
+          "text": "The water gains chemical energy from the foam.",
+          "misconception": ""
         },
         {
-          "text": "The answer for insulation says that convection happens only in solids.",
-          "misconception": "Convection requires no density difference."
+          "text": "The pipe becomes a better conductor.",
+          "misconception": ""
         },
         {
-          "text": "The answer for insulation says that convection requires no density difference.",
-          "misconception": "Convection is the same as electrical current."
+          "text": "The water temperature becomes independent of the surroundings.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain convection in fluids."
+      "senNote": "Checks: Apply insulation ideas to hot-water pipes."
     },
     {
-      "id": "aqa_4_1_2_1_insulation_radiation_data_interpretation_013",
+      "id": "aqa_energy_insulation_best_material_table_018",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -16140,6 +16529,7 @@
       "subtopicSlug": "insulation",
       "topicId": "energy_pathways",
       "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
       "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -16150,479 +16540,127 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_radiation",
-        "statement": "Describe thermal radiation. (Insulation)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.1.2.1:radiation:data_interpretation",
-      "conceptFamily": "radiation",
-      "contextType": "a safety decision",
-      "skill": "Insulation practice",
-      "stem": "A small data set about insulation is being interpreted. Which conclusion is valid? Demand focus: describe thermal radiation.",
-      "question": "A small data set about insulation is being interpreted. Which conclusion is valid? Demand focus: describe thermal radiation.",
-      "options": [
-        "For insulation, it means that radiation cannot travel through a vacuum.",
-        "The answer for insulation says that thermal radiation is only sound.",
-        "For insulation, the answer claims that infrared radiation transfers energy without needing particles.",
-        "In this insulation item, infrared radiation needs air particles."
-      ],
-      "correctAnswer": "For insulation, the answer claims that infrared radiation transfers energy without needing particles.",
-      "correctIndex": 2,
-      "explanation": "4.1.2.1 targets: Describe thermal radiation. Focus area: Insulation. For this question, Infrared radiation transfers energy without needing particles. Context used: a safety decision; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:radiation",
-      "distractorRationales": [
-        {
-          "text": "In this insulation item, infrared radiation needs air particles.",
-          "misconception": "Infrared radiation needs air particles."
-        },
-        {
-          "text": "The answer for insulation says that thermal radiation is only sound.",
-          "misconception": "Thermal radiation is only sound."
-        },
-        {
-          "text": "For insulation, it means that radiation cannot travel through a vacuum.",
-          "misconception": "Radiation cannot travel through a vacuum."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe thermal radiation."
-    },
-    {
-      "id": "aqa_4_1_2_1_insulation_insulation_exam_decision_014",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Insulation",
-      "topicSlug": "energy",
-      "subtopicSlug": "insulation",
-      "topicId": "energy_pathways",
-      "specRef": "4.1.2.1",
-      "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_insulation",
-        "statement": "Explain how insulation reduces transfer. (Insulation)",
+        "id": "aqa_energy_insulation_best_material_table_018_lo",
+        "statement": "Use temperature results to identify the best insulator.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "conclude",
+      "responseMode": "data_interpretation",
+      "patternId": "authored:aqa_energy_insulation_best_material_table_018",
+      "conceptFamily": "use_temperature_results_to_identify_the_best_insulator",
+      "contextType": "exam_style",
+      "skill": "Insulation practice",
+      "stem": "Four identical cups of hot water are wrapped in different materials. After 10 minutes, cup A has the highest temperature. What is the best conclusion?",
+      "question": "Four identical cups of hot water are wrapped in different materials. After 10 minutes, cup A has the highest temperature. What is the best conclusion?",
+      "options": [
+        "The material around cup A is the best insulator.",
+        "The material around cup A has the highest thermal conductivity.",
+        "Cup A transferred energy to the surroundings fastest.",
+        "Cup A had no energy transfer to the surroundings."
+      ],
+      "correctAnswer": "The material around cup A is the best insulator.",
+      "correctIndex": 0,
+      "explanation": "If cup A stays hottest, it has transferred energy to the surroundings at the lowest rate, so its material is the best insulator.",
+      "misconceptionTag": "highest-final-temperature",
+      "distractorRationales": [
+        {
+          "text": "The material around cup A has the highest thermal conductivity.",
+          "misconception": ""
+        },
+        {
+          "text": "Cup A transferred energy to the surroundings fastest.",
+          "misconception": ""
+        },
+        {
+          "text": "Cup A had no energy transfer to the surroundings.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Use temperature results to identify the best insulator."
+    },
+    {
+      "id": "aqa_energy_insulation_room_cooling_019",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Insulation",
+      "topicSlug": "energy",
+      "subtopicSlug": "insulation",
+      "topicId": "energy_pathways",
+      "specRef": "4.1.2.1",
+      "combinedSpecRef": "6.1.2.1",
+      "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_insulation_room_cooling_019_lo",
+        "statement": "Choose a building change that reduces cooling rate.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
       "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.1.2.1:insulation:exam_decision",
-      "conceptFamily": "insulation",
-      "contextType": "a graph-reading task",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_insulation_room_cooling_019",
+      "conceptFamily": "choose_a_building_change_that_reduces_cooling_rate",
+      "contextType": "exam_style",
       "skill": "Insulation practice",
-      "stem": "Which answer is the strongest GCSE Physics response for insulation? Use the wording carefully: this is about explain how insulation reduces transfer.",
-      "question": "Which answer is the strongest GCSE Physics response for insulation? Use the wording carefully: this is about explain how insulation reduces transfer.",
+      "stem": "A room is at 21 °C and the outside air is at 3 °C. Which change would most reduce the rate of cooling of the room?",
+      "question": "A room is at 21 °C and the outside air is at 3 °C. Which change would most reduce the rate of cooling of the room?",
       "options": [
-        "The claim for insulation is that insulation only works by increasing current.",
-        "In this item, it means that insulation reduces the rate of energy transfer by conduction, convection or radiation.",
-        "In this item, it means that insulation makes heat transfer faster.",
-        "In this item, it means that insulation creates energy."
+        "Adding wall insulation with low thermal conductivity.",
+        "Replacing insulation with a thin metal sheet.",
+        "Opening the windows wider.",
+        "Using wall material with higher thermal conductivity."
       ],
-      "correctAnswer": "In this item, it means that insulation reduces the rate of energy transfer by conduction, convection or radiation.",
-      "correctIndex": 1,
-      "explanation": "4.1.2.1 targets: Explain how insulation reduces transfer. Focus area: Insulation. For this question, Insulation reduces the rate of energy transfer by conduction, convection or radiation. Context used: a graph-reading task; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:insulation",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that insulation makes heat transfer faster.",
-          "misconception": "Insulation creates energy."
-        },
-        {
-          "text": "The claim for insulation is that insulation only works by increasing current.",
-          "misconception": "Insulation makes heat transfer faster."
-        },
-        {
-          "text": "In this item, it means that insulation creates energy.",
-          "misconception": "Insulation only works by increasing current."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain how insulation reduces transfer."
-    },
-    {
-      "id": "aqa_4_1_2_1_insulation_surface_colour_direct_recall_015",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Insulation",
-      "topicSlug": "energy",
-      "subtopicSlug": "insulation",
-      "topicId": "energy_pathways",
-      "specRef": "4.1.2.1",
-      "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_surface_colour",
-        "statement": "Compare emission and absorption. (Insulation)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.1.2.1:surface_colour:direct_recall",
-      "conceptFamily": "surface_colour",
-      "contextType": "a comparison question",
-      "skill": "Insulation practice",
-      "stem": "Which answer matches this insulation objective: Compare emission and absorption? Use the wording carefully: this is about compare emission and absorption.",
-      "question": "Which answer matches this insulation objective: Compare emission and absorption? Use the wording carefully: this is about compare emission and absorption.",
-      "options": [
-        "For insulation: Shiny silver surfaces are always best absorbers.",
-        "The claim for insulation is that dull black surfaces are good absorbers and emitters of infrared radiation.",
-        "For insulation, the option says that colour has no effect on radiation.",
-        "For insulation: Only transparent objects emit infrared."
-      ],
-      "correctAnswer": "The claim for insulation is that dull black surfaces are good absorbers and emitters of infrared radiation.",
-      "correctIndex": 1,
-      "explanation": "4.1.2.1 targets: Compare emission and absorption. Focus area: Insulation. For this question, Dull black surfaces are good absorbers and emitters of infrared radiation. Context used: a comparison question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:surface_colour",
-      "distractorRationales": [
-        {
-          "text": "For insulation: Only transparent objects emit infrared.",
-          "misconception": "Shiny silver surfaces are always best absorbers."
-        },
-        {
-          "text": "For insulation: Shiny silver surfaces are always best absorbers.",
-          "misconception": "Colour has no effect on radiation."
-        },
-        {
-          "text": "For insulation, the option says that colour has no effect on radiation.",
-          "misconception": "Only transparent objects emit infrared."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Compare emission and absorption."
-    },
-    {
-      "id": "aqa_4_1_2_1_insulation_conduction_concept_discrimination_016",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Insulation",
-      "topicSlug": "energy",
-      "subtopicSlug": "insulation",
-      "topicId": "energy_pathways",
-      "specRef": "4.1.2.1",
-      "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_conduction",
-        "statement": "Explain conduction in solids. (Insulation)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.1.2.1:conduction:concept_discrimination",
-      "conceptFamily": "conduction",
-      "contextType": "a method-choice question",
-      "skill": "Insulation practice",
-      "stem": "Which option best separates the correct insulation idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
-      "question": "Which option best separates the correct insulation idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
-      "options": [
-        "In this item, it means that conduction happens only by light waves.",
-        "For insulation, it means that conduction needs a vacuum.",
-        "For insulation, it means that conduction transfers energy through particle vibrations and free electrons in metals.",
-        "For insulation, it means that conduction requires particles to leave the material."
-      ],
-      "correctAnswer": "For insulation, it means that conduction transfers energy through particle vibrations and free electrons in metals.",
-      "correctIndex": 2,
-      "explanation": "4.1.2.1 targets: Explain conduction in solids. Focus area: Insulation. For this question, Conduction transfers energy through particle vibrations and free electrons in metals. Context used: a method-choice question; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:conduction",
-      "distractorRationales": [
-        {
-          "text": "For insulation, it means that conduction needs a vacuum.",
-          "misconception": "Conduction needs a vacuum."
-        },
-        {
-          "text": "In this item, it means that conduction happens only by light waves.",
-          "misconception": "Conduction happens only by light waves."
-        },
-        {
-          "text": "For insulation, it means that conduction requires particles to leave the material.",
-          "misconception": "Conduction requires particles to leave the material."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain conduction in solids."
-    },
-    {
-      "id": "aqa_4_1_2_1_insulation_convection_misconception_correction_017",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Insulation",
-      "topicSlug": "energy",
-      "subtopicSlug": "insulation",
-      "topicId": "energy_pathways",
-      "specRef": "4.1.2.1",
-      "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_convection",
-        "statement": "Explain convection in fluids. (Insulation)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.1.2.1:convection:misconception_correction",
-      "conceptFamily": "convection",
-      "contextType": "a results discussion",
-      "skill": "Insulation practice",
-      "stem": "Which answer corrects a misconception about insulation? Demand focus: explain convection in fluids.",
-      "question": "Which answer corrects a misconception about insulation? Demand focus: explain convection in fluids.",
-      "options": [
-        "For insulation, the statement is that convection requires no density difference.",
-        "In this insulation item, convection is the same as electrical current.",
-        "For insulation, the statement is that convection happens only in solids.",
-        "The answer for insulation says that convection occurs when warmer, less dense fluid rises and cooler fluid sinks."
-      ],
-      "correctAnswer": "The answer for insulation says that convection occurs when warmer, less dense fluid rises and cooler fluid sinks.",
-      "correctIndex": 3,
-      "explanation": "4.1.2.1 targets: Explain convection in fluids. Focus area: Insulation. For this question, Convection occurs when warmer, less dense fluid rises and cooler fluid sinks. Context used: a results discussion; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:convection",
-      "distractorRationales": [
-        {
-          "text": "For insulation, the statement is that convection requires no density difference.",
-          "misconception": "Convection happens only in solids."
-        },
-        {
-          "text": "In this insulation item, convection is the same as electrical current.",
-          "misconception": "Convection requires no density difference."
-        },
-        {
-          "text": "For insulation, the statement is that convection happens only in solids.",
-          "misconception": "Convection is the same as electrical current."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain convection in fluids."
-    },
-    {
-      "id": "aqa_4_1_2_1_insulation_radiation_data_interpretation_018",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Insulation",
-      "topicSlug": "energy",
-      "subtopicSlug": "insulation",
-      "topicId": "energy_pathways",
-      "specRef": "4.1.2.1",
-      "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_radiation",
-        "statement": "Describe thermal radiation. (Insulation)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.1.2.1:radiation:data_interpretation",
-      "conceptFamily": "radiation",
-      "contextType": "a classroom demonstration",
-      "skill": "Insulation practice",
-      "stem": "Which conclusion about insulation is supported by the evidence? Demand focus: describe thermal radiation.",
-      "question": "Which conclusion about insulation is supported by the evidence? Demand focus: describe thermal radiation.",
-      "options": [
-        "The claim for insulation is that infrared radiation transfers energy without needing particles.",
-        "For insulation, this would mean that radiation cannot travel through a vacuum.",
-        "For insulation, it means that thermal radiation is only sound.",
-        "For insulation, the option says that infrared radiation needs air particles."
-      ],
-      "correctAnswer": "The claim for insulation is that infrared radiation transfers energy without needing particles.",
+      "correctAnswer": "Adding wall insulation with low thermal conductivity.",
       "correctIndex": 0,
-      "explanation": "4.1.2.1 targets: Describe thermal radiation. Focus area: Insulation. For this question, Infrared radiation transfers energy without needing particles. Context used: a classroom demonstration; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:radiation",
+      "explanation": "Wall insulation with low thermal conductivity reduces the rate of energy transfer by conduction from the room to outside.",
+      "misconceptionTag": "building-insulation-choice",
       "distractorRationales": [
         {
-          "text": "For insulation, this would mean that radiation cannot travel through a vacuum.",
-          "misconception": "Infrared radiation needs air particles."
+          "text": "Replacing insulation with a thin metal sheet.",
+          "misconception": ""
         },
         {
-          "text": "For insulation, the option says that infrared radiation needs air particles.",
-          "misconception": "Thermal radiation is only sound."
+          "text": "Opening the windows wider.",
+          "misconception": ""
         },
         {
-          "text": "For insulation, it means that thermal radiation is only sound.",
-          "misconception": "Radiation cannot travel through a vacuum."
+          "text": "Using wall material with higher thermal conductivity.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe thermal radiation."
-    },
-    {
-      "id": "aqa_4_1_2_1_insulation_insulation_representation_interpretation_019",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Insulation",
-      "topicSlug": "energy",
-      "subtopicSlug": "insulation",
-      "topicId": "energy_pathways",
-      "specRef": "4.1.2.1",
-      "specStatement": "Energy transfers in a system and ways of reducing unwanted transfers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_1_insulation_insulation",
-        "statement": "Explain how insulation reduces transfer. (Insulation)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.1.2.1:insulation:representation_interpretation",
-      "conceptFamily": "insulation",
-      "contextType": "a revision checkpoint",
-      "skill": "Insulation practice",
-      "stem": "A representation of insulation is described in words. Which interpretation is correct? Use the wording carefully: this is about explain how insulation reduces transfer.",
-      "question": "A representation of insulation is described in words. Which interpretation is correct? Use the wording carefully: this is about explain how insulation reduces transfer.",
-      "options": [
-        "For insulation, the statement is that insulation only works by increasing current.",
-        "For insulation, the statement is that insulation reduces the rate of energy transfer by conduction, convection or radiation.",
-        "The answer for insulation says that insulation creates energy.",
-        "For insulation, it means that insulation makes heat transfer faster."
-      ],
-      "correctAnswer": "For insulation, the statement is that insulation reduces the rate of energy transfer by conduction, convection or radiation.",
-      "correctIndex": 1,
-      "explanation": "4.1.2.1 targets: Explain how insulation reduces transfer. Focus area: Insulation. For this question, Insulation reduces the rate of energy transfer by conduction, convection or radiation. Context used: a revision checkpoint; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:insulation",
-      "distractorRationales": [
-        {
-          "text": "The answer for insulation says that insulation creates energy.",
-          "misconception": "Insulation creates energy."
-        },
-        {
-          "text": "For insulation, it means that insulation makes heat transfer faster.",
-          "misconception": "Insulation makes heat transfer faster."
-        },
-        {
-          "text": "For insulation, the statement is that insulation only works by increasing current.",
-          "misconception": "Insulation only works by increasing current."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain how insulation reduces transfer."
+      "senNote": "Checks: Choose a building change that reduces cooling rate."
     },
     {
       "id": "aqa_4_1_1_2_kinetic_energy_kinetic_energy_direct_recall_001",

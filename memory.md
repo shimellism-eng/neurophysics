@@ -64,6 +64,32 @@
 - Build the authored Electricity source while preserving the 1,500+ total bank requirement.
 - Replace Electricity only when AQA + Edexcel authored Electricity coverage is dense enough to pass the count guard and quality gates.
 
+### Adaptive Practice Electricity authored slice
+- Added the first Electricity authored-source checkpoint:
+  - AQA Charge: 24 authored exam-style questions.
+  - Edexcel Electrical Power: 19 authored exam-style questions.
+- Wired `AUTHORED_ELECTRICITY_ITEMS` into the same authored regeneration path as Atomic Structure.
+- Kept runtime totals unchanged:
+  - AQA: 832
+  - Edexcel: 681
+  - Total: 1,513
+- Kept non-authored Electricity subtopics on the existing fallback bank for now, so the app does not drop below the release count floor while the rebuild continues.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `git diff --check` passes.
+  - `npx cap sync ios` passes.
+  - iOS simulator build passes with `CODE_SIGNING_ALLOWED=NO`.
+  - iOS simulator install/launch passes after booting the iPhone 17 Pro Max simulator.
+
+### Next step
+- Continue Electricity subtopic-by-subtopic:
+  - AQA: Current, Potential Difference, Resistance, Series/Parallel circuits, Power, Energy Transfer, National Grid.
+  - Edexcel: Current-Voltage Characteristics, Domestic Electricity, Electrical Energy, Parallel Circuits.
+- Next immediate fix: AQA Resistance + Edexcel Current-Voltage Characteristics because they are high-impact, diagram/graph-heavy exam areas.
+
 ### Adaptive Practice full regeneration from spec manifests
 - Rebuilt the Adaptive Practice bank for the locked AQA + Edexcel release scope.
 - Added source-of-truth inputs:

@@ -4,6 +4,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { AUTHORED_ATOMIC_STRUCTURE_ITEMS } from '../src/data/adaptiveQuestionSource/authoredAtomicStructure.js'
+import { AUTHORED_ELECTRICITY_ITEMS } from '../src/data/adaptiveQuestionSource/authoredElectricity.js'
 import { ADAPTIVE_SPEC_MANIFESTS } from '../src/data/adaptiveQuestionSource/specManifests.js'
 import {
   CONTEXTS,
@@ -258,7 +259,10 @@ function authoredKey(board, topic, subtopic) {
 
 function buildAuthoredLookup() {
   const lookup = new Map()
-  for (const item of AUTHORED_ATOMIC_STRUCTURE_ITEMS) {
+  for (const item of [
+    ...AUTHORED_ATOMIC_STRUCTURE_ITEMS,
+    ...AUTHORED_ELECTRICITY_ITEMS,
+  ]) {
     const key = authoredKey(item.board, item.topic, item.subtopic)
     if (!lookup.has(key)) lookup.set(key, [])
     lookup.get(key).push(item)

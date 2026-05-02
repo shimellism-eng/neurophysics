@@ -1,7 +1,7 @@
 {
   "examBoard": "Edexcel",
   "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-  "generatedAt": "2026-05-02T05:55:11.806Z",
+  "generatedAt": "2026-05-02T06:22:28.408Z",
   "questions": [
     {
       "id": "edexcel_atomic_structure_nucleus_001",
@@ -5775,7 +5775,7 @@
       "senNote": "This checks one idea only: Use power, potential difference and current."
     },
     {
-      "id": "edexcel_10_31_electrical_power_power_vi_direct_recall_001",
+      "id": "edexcel_electricity_power_definition_001",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -5797,127 +5797,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_power_vi",
-        "statement": "Use power, potential difference and current. (Electrical Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "10.31:power_vi:direct_recall",
-      "conceptFamily": "power_vi",
-      "contextType": "a labelled diagram",
-      "skill": "Use power, potential difference and current.",
-      "stem": "Which statement is correct for electrical power? Demand focus: use power, potential difference and current.",
-      "question": "Which statement is correct for electrical power? Demand focus: use power, potential difference and current.",
-      "options": [
-        "For electrical power, the answer claims that power is measured in coulombs.",
-        "For electrical power, the statement is that power = charge × resistance only.",
-        "For electrical power, it means that power = current ÷ potential difference.",
-        "For electrical power, the answer claims that electrical power can be calculated using power = potential difference × current."
-      ],
-      "correctAnswer": "For electrical power, the answer claims that electrical power can be calculated using power = potential difference × current.",
-      "correctIndex": 3,
-      "explanation": "10.31 targets: Use power, potential difference and current. Focus area: Electrical Power. For this question, Electrical power can be calculated using power = potential difference × current. Context used: a labelled diagram; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_vi",
-      "distractorRationales": [
-        {
-          "text": "For electrical power, it means that power = current ÷ potential difference.",
-          "misconception": "Power = current ÷ potential difference."
-        },
-        {
-          "text": "For electrical power, the statement is that power = charge × resistance only.",
-          "misconception": "Power = charge × resistance only."
-        },
-        {
-          "text": "For electrical power, the answer claims that power is measured in coulombs.",
-          "misconception": "Power is measured in coulombs."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use power, potential difference and current."
-    },
-    {
-      "id": "edexcel_10_31_electrical_power_power_i2r_concept_discrimination_002",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Electrical Power",
-      "topicSlug": "electricity",
-      "subtopicSlug": "electrical_power",
-      "topicId": "electrical_power",
-      "specRef": "10.31",
-      "specStatement": "Use power equations in electrical circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_power_i2r",
-        "statement": "Use power, current and resistance. (Electrical Power)",
+        "id": "edexcel_electricity_power_definition_001_lo",
+        "statement": "State power as the rate of energy transfer.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "10.31:power_i2r:concept_discrimination",
-      "conceptFamily": "power_i2r",
-      "contextType": "a short calculation",
-      "skill": "Use power, current and resistance.",
-      "stem": "A student is comparing similar ideas in electrical power. Which statement is correct? Use the wording carefully: this is about use power, current and resistance.",
-      "question": "A student is comparing similar ideas in electrical power. Which statement is correct? Use the wording carefully: this is about use power, current and resistance.",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_power_definition_001",
+      "conceptFamily": "state_power_as_the_rate_of_energy_transfer",
+      "contextType": "exam_style",
+      "skill": "State power as the rate of energy transfer.",
+      "stem": "What does the power rating of an electrical appliance tell you?",
+      "question": "What does the power rating of an electrical appliance tell you?",
       "options": [
-        "For electrical power, the statement is that power can also be calculated using power = current² × resistance.",
-        "For electrical power, it means that power is independent of current.",
-        "For electrical power, it means that power = resistance ÷ current².",
-        "For electrical power, it means that power = current × resistance²."
+        "The rate at which it transfers energy.",
+        "The total charge stored inside it.",
+        "The mass of the appliance.",
+        "The number of electrons in each wire."
       ],
-      "correctAnswer": "For electrical power, the statement is that power can also be calculated using power = current² × resistance.",
+      "correctAnswer": "The rate at which it transfers energy.",
       "correctIndex": 0,
-      "explanation": "10.31 targets: Use power, current and resistance. Focus area: Electrical Power. For this question, Power can also be calculated using power = current² × resistance. Context used: a short calculation; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_i2r",
+      "explanation": "Power is the rate of energy transfer. A higher power rating means energy is transferred more quickly.",
+      "misconceptionTag": "power-rate-energy-transfer",
       "distractorRationales": [
         {
-          "text": "For electrical power, it means that power = resistance ÷ current².",
-          "misconception": "Power = current × resistance²."
+          "text": "The total charge stored inside it.",
+          "misconception": ""
         },
         {
-          "text": "For electrical power, it means that power is independent of current.",
-          "misconception": "Power = resistance ÷ current²."
+          "text": "The mass of the appliance.",
+          "misconception": ""
         },
         {
-          "text": "For electrical power, it means that power = current × resistance².",
-          "misconception": "Power is independent of current."
+          "text": "The number of electrons in each wire.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use power, current and resistance."
+      "senNote": "Checks: State power as the rate of energy transfer."
     },
     {
-      "id": "edexcel_10_31_electrical_power_energy_power_time_misconception_correction_003",
+      "id": "edexcel_electricity_power_unit_002",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -5939,269 +5869,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_energy_power_time",
-        "statement": "Use energy transferred by a device. (Electrical Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "10.31:energy_power_time:misconception_correction",
-      "conceptFamily": "energy_power_time",
-      "contextType": "a safety decision",
-      "skill": "Use energy transferred by a device.",
-      "stem": "A revision note about electrical power contains an error. Which replacement is correct? Check the clue before choosing: Use energy transferred by a device.",
-      "question": "A revision note about electrical power contains an error. Which replacement is correct? Check the clue before choosing: Use energy transferred by a device.",
-      "options": [
-        "For electrical power, the statement is that energy transferred = power × time.",
-        "For electrical power, the statement is that energy transferred is measured in amperes.",
-        "For electrical power, it means that energy transferred = power ÷ time.",
-        "The answer for electrical power says that energy transfer does not depend on time."
-      ],
-      "correctAnswer": "For electrical power, the statement is that energy transferred = power × time.",
-      "correctIndex": 0,
-      "explanation": "10.31 targets: Use energy transferred by a device. Focus area: Electrical Power. For this question, Energy transferred = power × time. Context used: a safety decision; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:energy_power_time",
-      "distractorRationales": [
-        {
-          "text": "The answer for electrical power says that energy transfer does not depend on time.",
-          "misconception": "Energy transferred = power ÷ time."
-        },
-        {
-          "text": "For electrical power, it means that energy transferred = power ÷ time.",
-          "misconception": "Energy transferred is measured in amperes."
-        },
-        {
-          "text": "For electrical power, the statement is that energy transferred is measured in amperes.",
-          "misconception": "Energy transfer does not depend on time."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use energy transferred by a device."
-    },
-    {
-      "id": "edexcel_10_31_electrical_power_cost_electricity_data_interpretation_004",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Electrical Power",
-      "topicSlug": "electricity",
-      "subtopicSlug": "electrical_power",
-      "topicId": "electrical_power",
-      "specRef": "10.31",
-      "specStatement": "Use power equations in electrical circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_cost_electricity",
-        "statement": "Calculate cost of electricity. (Electrical Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "10.31:cost_electricity:data_interpretation",
-      "conceptFamily": "cost_electricity",
-      "contextType": "a graph-reading task",
-      "skill": "Calculate cost of electricity.",
-      "stem": "A small data set about electrical power is being interpreted. Which conclusion is valid? Check the clue before choosing: Calculate cost of electricity.",
-      "question": "A small data set about electrical power is being interpreted. Which conclusion is valid? Check the clue before choosing: Calculate cost of electricity.",
-      "options": [
-        "For electrical power: Cost is found from current alone.",
-        "For electrical power, the option says that cost does not depend on how long the device is used.",
-        "For electrical power, this would mean that cost is measured in watts.",
-        "For electrical power: Cost is found from energy used in kWh multiplied by cost per kWh."
-      ],
-      "correctAnswer": "For electrical power: Cost is found from energy used in kWh multiplied by cost per kWh.",
-      "correctIndex": 3,
-      "explanation": "10.31 targets: Calculate cost of electricity. Focus area: Electrical Power. For this question, Cost is found from energy used in kWh multiplied by cost per kWh. Context used: a graph-reading task; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:cost_electricity",
-      "distractorRationales": [
-        {
-          "text": "For electrical power: Cost is found from current alone.",
-          "misconception": "Cost is found from current alone."
-        },
-        {
-          "text": "For electrical power, this would mean that cost is measured in watts.",
-          "misconception": "Cost is measured in watts."
-        },
-        {
-          "text": "For electrical power, the option says that cost does not depend on how long the device is used.",
-          "misconception": "Cost does not depend on how long the device is used."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Calculate cost of electricity."
-    },
-    {
-      "id": "edexcel_10_31_electrical_power_heating_effect_representation_interpretation_005",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Electrical Power",
-      "topicSlug": "electricity",
-      "subtopicSlug": "electrical_power",
-      "topicId": "electrical_power",
-      "specRef": "10.31",
-      "specStatement": "Use power equations in electrical circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_heating_effect",
-        "statement": "Link resistance to heating. (Electrical Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "10.31:heating_effect:representation_interpretation",
-      "conceptFamily": "heating_effect",
-      "contextType": "a comparison question",
-      "skill": "Link resistance to heating.",
-      "stem": "Which option correctly reads the electrical power model or diagram idea? Demand focus: link resistance to heating.",
-      "question": "Which option correctly reads the electrical power model or diagram idea? Demand focus: link resistance to heating.",
-      "options": [
-        "For electrical power, the answer claims that resistance makes energy disappear rather than transfer.",
-        "For electrical power, the statement is that a current through resistance transfers energy by heating the component and surroundings.",
-        "For electrical power, the statement is that heating proves no current is flowing.",
-        "For electrical power, the statement is that resistance removes all energy transfer."
-      ],
-      "correctAnswer": "For electrical power, the statement is that a current through resistance transfers energy by heating the component and surroundings.",
-      "correctIndex": 1,
-      "explanation": "10.31 targets: Link resistance to heating. Focus area: Electrical Power. For this question, A current through resistance transfers energy by heating the component and surroundings. Context used: a comparison question; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:heating_effect",
-      "distractorRationales": [
-        {
-          "text": "For electrical power, the statement is that heating proves no current is flowing.",
-          "misconception": "Resistance removes all energy transfer."
-        },
-        {
-          "text": "For electrical power, the answer claims that resistance makes energy disappear rather than transfer.",
-          "misconception": "Heating proves no current is flowing."
-        },
-        {
-          "text": "For electrical power, the statement is that resistance removes all energy transfer.",
-          "misconception": "Resistance makes energy disappear rather than transfer."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Link resistance to heating."
-    },
-    {
-      "id": "edexcel_10_31_electrical_power_power_vi_direct_recall_006",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Electrical Power",
-      "topicSlug": "electricity",
-      "subtopicSlug": "electrical_power",
-      "topicId": "electrical_power",
-      "specRef": "10.31",
-      "specStatement": "Use power equations in electrical circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_power_vi",
-        "statement": "Use power, potential difference and current. (Electrical Power)",
+        "id": "edexcel_electricity_power_unit_002_lo",
+        "statement": "Recall the unit of electrical power.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "low",
       "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "10.31:power_vi:direct_recall",
-      "conceptFamily": "power_vi",
-      "contextType": "a method-choice question",
-      "skill": "Use power, potential difference and current.",
-      "stem": "Which answer matches this electrical power objective: Use power, potential difference and current? Demand focus: use power, potential difference and current.",
-      "question": "Which answer matches this electrical power objective: Use power, potential difference and current? Demand focus: use power, potential difference and current.",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_power_unit_002",
+      "conceptFamily": "recall_the_unit_of_electrical_power",
+      "contextType": "exam_style",
+      "skill": "Recall the unit of electrical power.",
+      "stem": "Which unit is used for electrical power?",
+      "question": "Which unit is used for electrical power?",
       "options": [
-        "For electrical power, it means that power is measured in coulombs.",
-        "The claim for electrical power is that electrical power can be calculated using power = potential difference × current.",
-        "In this item, it means that power = current ÷ potential difference.",
-        "The claim for electrical power is that power = charge × resistance only."
+        "joule",
+        "coulomb",
+        "watt",
+        "ohm"
       ],
-      "correctAnswer": "The claim for electrical power is that electrical power can be calculated using power = potential difference × current.",
-      "correctIndex": 1,
-      "explanation": "10.31 targets: Use power, potential difference and current. Focus area: Electrical Power. For this question, Electrical power can be calculated using power = potential difference × current. Context used: a method-choice question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_vi",
+      "correctAnswer": "watt",
+      "correctIndex": 2,
+      "explanation": "Power is measured in watts. One watt is one joule per second.",
+      "misconceptionTag": "power-unit-watt",
       "distractorRationales": [
         {
-          "text": "For electrical power, it means that power is measured in coulombs.",
-          "misconception": "Power = current ÷ potential difference."
+          "text": "joule",
+          "misconception": ""
         },
         {
-          "text": "In this item, it means that power = current ÷ potential difference.",
-          "misconception": "Power = charge × resistance only."
+          "text": "coulomb",
+          "misconception": ""
         },
         {
-          "text": "The claim for electrical power is that power = charge × resistance only.",
-          "misconception": "Power is measured in coulombs."
+          "text": "ohm",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use power, potential difference and current."
+      "senNote": "Checks: Recall the unit of electrical power."
     },
     {
-      "id": "edexcel_10_31_electrical_power_power_i2r_applied_context_007",
+      "id": "edexcel_electricity_power_vi_003",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -6223,56 +5941,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_power_i2r",
-        "statement": "Use power, current and resistance. (Electrical Power)",
+        "id": "edexcel_electricity_power_vi_003_lo",
+        "statement": "Calculate power using potential difference and current.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "10.31:power_i2r:applied_context",
-      "conceptFamily": "power_i2r",
-      "contextType": "a results discussion",
-      "skill": "Use power, current and resistance.",
-      "stem": "In a results discussion, which conclusion is correct for electrical power? Use the wording carefully: this is about use power, current and resistance.",
-      "question": "In a results discussion, which conclusion is correct for electrical power? Use the wording carefully: this is about use power, current and resistance.",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_power_vi_003",
+      "conceptFamily": "calculate_power_using_potential_difference_and_current",
+      "contextType": "exam_style",
+      "skill": "Calculate power using potential difference and current.",
+      "stem": "A motor has a potential difference of 12 V across it and a current of 3 A through it. What is its power?",
+      "question": "A motor has a potential difference of 12 V across it and a current of 3 A through it. What is its power?",
       "options": [
-        "For electrical power, the answer claims that power = current × resistance².",
-        "For electrical power, the statement is that power = resistance ÷ current².",
-        "In this electrical power item, power can also be calculated using power = current² × resistance.",
-        "For electrical power, the answer claims that power is independent of current."
+        "4 W",
+        "9 W",
+        "15 W",
+        "36 W"
       ],
-      "correctAnswer": "In this electrical power item, power can also be calculated using power = current² × resistance.",
-      "correctIndex": 2,
-      "explanation": "10.31 targets: Use power, current and resistance. Focus area: Electrical Power. For this question, Power can also be calculated using power = current² × resistance. Context used: a results discussion; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_i2r",
+      "correctAnswer": "36 W",
+      "correctIndex": 3,
+      "explanation": "Power = potential difference x current, so P = 12 x 3 = 36 W.",
+      "misconceptionTag": "power-pd-current",
       "distractorRationales": [
         {
-          "text": "For electrical power, the answer claims that power = current × resistance².",
-          "misconception": "Power = current × resistance²."
+          "text": "4 W",
+          "misconception": ""
         },
         {
-          "text": "For electrical power, the statement is that power = resistance ÷ current².",
-          "misconception": "Power = resistance ÷ current²."
+          "text": "9 W",
+          "misconception": ""
         },
         {
-          "text": "For electrical power, the answer claims that power is independent of current.",
-          "misconception": "Power is independent of current."
+          "text": "15 W",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use power, current and resistance."
+      "senNote": "Checks: Calculate power using potential difference and current."
     },
     {
-      "id": "edexcel_10_31_electrical_power_energy_power_time_misconception_correction_008",
+      "id": "edexcel_electricity_power_current_004",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -6294,56 +6013,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_energy_power_time",
-        "statement": "Use energy transferred by a device. (Electrical Power)",
+        "id": "edexcel_electricity_power_current_004_lo",
+        "statement": "Calculate current from power and potential difference.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "10.31:energy_power_time:misconception_correction",
-      "conceptFamily": "energy_power_time",
-      "contextType": "a classroom demonstration",
-      "skill": "Use energy transferred by a device.",
-      "stem": "Which answer corrects a misconception about electrical power? Check the clue before choosing: Use energy transferred by a device.",
-      "question": "Which answer corrects a misconception about electrical power? Check the clue before choosing: Use energy transferred by a device.",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_power_current_004",
+      "conceptFamily": "calculate_current_from_power_and_potential_difference",
+      "contextType": "exam_style",
+      "skill": "Calculate current from power and potential difference.",
+      "stem": "A 60 W lamp is connected to a 12 V supply. What current flows through the lamp?",
+      "question": "A 60 W lamp is connected to a 12 V supply. What current flows through the lamp?",
       "options": [
-        "For electrical power, it means that energy transfer does not depend on time.",
-        "For electrical power, the option says that energy transferred is measured in amperes.",
-        "In this item, it means that energy transferred = power ÷ time.",
-        "For electrical power: Energy transferred = power × time."
+        "0.2 A",
+        "5 A",
+        "48 A",
+        "720 A"
       ],
-      "correctAnswer": "For electrical power: Energy transferred = power × time.",
-      "correctIndex": 3,
-      "explanation": "10.31 targets: Use energy transferred by a device. Focus area: Electrical Power. For this question, Energy transferred = power × time. Context used: a classroom demonstration; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:energy_power_time",
+      "correctAnswer": "5 A",
+      "correctIndex": 1,
+      "explanation": "Current = power / potential difference, so I = 60 / 12 = 5 A.",
+      "misconceptionTag": "current-from-power-pd",
       "distractorRationales": [
         {
-          "text": "For electrical power, the option says that energy transferred is measured in amperes.",
-          "misconception": "Energy transferred = power ÷ time."
+          "text": "0.2 A",
+          "misconception": ""
         },
         {
-          "text": "For electrical power, it means that energy transfer does not depend on time.",
-          "misconception": "Energy transferred is measured in amperes."
+          "text": "48 A",
+          "misconception": ""
         },
         {
-          "text": "In this item, it means that energy transferred = power ÷ time.",
-          "misconception": "Energy transfer does not depend on time."
+          "text": "720 A",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use energy transferred by a device."
+      "senNote": "Checks: Calculate current from power and potential difference."
     },
     {
-      "id": "edexcel_10_31_electrical_power_cost_electricity_exam_decision_009",
+      "id": "edexcel_electricity_power_pd_005",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -6365,56 +6085,489 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_cost_electricity",
-        "statement": "Calculate cost of electricity. (Electrical Power)",
+        "id": "edexcel_electricity_power_pd_005_lo",
+        "statement": "Calculate potential difference from power and current.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_power_pd_005",
+      "conceptFamily": "calculate_potential_difference_from_power_and_current",
+      "contextType": "exam_style",
+      "skill": "Calculate potential difference from power and current.",
+      "stem": "A heater transfers energy at 920 W when the current is 4 A. What is the potential difference across the heater?",
+      "question": "A heater transfers energy at 920 W when the current is 4 A. What is the potential difference across the heater?",
+      "options": [
+        "230 V",
+        "916 V",
+        "924 V",
+        "3680 V"
+      ],
+      "correctAnswer": "230 V",
+      "correctIndex": 0,
+      "explanation": "Potential difference = power / current, so V = 920 / 4 = 230 V.",
+      "misconceptionTag": "pd-from-power-current",
+      "distractorRationales": [
+        {
+          "text": "916 V",
+          "misconception": ""
+        },
+        {
+          "text": "924 V",
+          "misconception": ""
+        },
+        {
+          "text": "3680 V",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate potential difference from power and current."
+    },
+    {
+      "id": "edexcel_electricity_power_i2r_006",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Electrical Power",
+      "topicSlug": "electricity",
+      "subtopicSlug": "electrical_power",
+      "topicId": "electrical_power",
+      "specRef": "10.31",
+      "specStatement": "Use power equations in electrical circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_power_i2r_006_lo",
+        "statement": "Calculate power using current and resistance.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_power_i2r_006",
+      "conceptFamily": "calculate_power_using_current_and_resistance",
+      "contextType": "exam_style",
+      "skill": "Calculate power using current and resistance.",
+      "stem": "A resistor has a resistance of 5 ohms and a current of 2 A. What is the power transferred by the resistor?",
+      "question": "A resistor has a resistance of 5 ohms and a current of 2 A. What is the power transferred by the resistor?",
+      "options": [
+        "10 W",
+        "20 W",
+        "25 W",
+        "50 W"
+      ],
+      "correctAnswer": "20 W",
+      "correctIndex": 1,
+      "explanation": "Power = current squared x resistance, so P = 2^2 x 5 = 20 W.",
+      "misconceptionTag": "power-i-squared-r",
+      "distractorRationales": [
+        {
+          "text": "10 W",
+          "misconception": ""
+        },
+        {
+          "text": "25 W",
+          "misconception": ""
+        },
+        {
+          "text": "50 W",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate power using current and resistance."
+    },
+    {
+      "id": "edexcel_electricity_power_resistance_007",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Electrical Power",
+      "topicSlug": "electricity",
+      "subtopicSlug": "electrical_power",
+      "topicId": "electrical_power",
+      "specRef": "10.31",
+      "specStatement": "Use power equations in electrical circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_power_resistance_007_lo",
+        "statement": "Rearrange the power equation involving resistance.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "high",
+      "difficulty": "hard",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_power_resistance_007",
+      "conceptFamily": "rearrange_the_power_equation_involving_resistance",
+      "contextType": "exam_style",
+      "skill": "Rearrange the power equation involving resistance.",
+      "stem": "A component transfers 45 W of power when the current is 3 A. What is its resistance?",
+      "question": "A component transfers 45 W of power when the current is 3 A. What is its resistance?",
+      "options": [
+        "5 ohms",
+        "15 ohms",
+        "42 ohms",
+        "135 ohms"
+      ],
+      "correctAnswer": "5 ohms",
+      "correctIndex": 0,
+      "explanation": "Using P = I^2 R, resistance = P / I^2 = 45 / 9 = 5 ohms.",
+      "misconceptionTag": "resistance-from-power-current",
+      "distractorRationales": [
+        {
+          "text": "15 ohms",
+          "misconception": ""
+        },
+        {
+          "text": "42 ohms",
+          "misconception": ""
+        },
+        {
+          "text": "135 ohms",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Rearrange the power equation involving resistance."
+    },
+    {
+      "id": "edexcel_electricity_power_energy_time_008",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Electrical Power",
+      "topicSlug": "electricity",
+      "subtopicSlug": "electrical_power",
+      "topicId": "electrical_power",
+      "specRef": "10.31",
+      "specStatement": "Use power equations in electrical circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_power_energy_time_008_lo",
+        "statement": "Calculate power from energy transferred and time.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_power_energy_time_008",
+      "conceptFamily": "calculate_power_from_energy_transferred_and_time",
+      "contextType": "exam_style",
+      "skill": "Calculate power from energy transferred and time.",
+      "stem": "A device transfers 1800 J of energy in 30 s. What is its power?",
+      "question": "A device transfers 1800 J of energy in 30 s. What is its power?",
+      "options": [
+        "30 W",
+        "60 W",
+        "1770 W",
+        "54000 W"
+      ],
+      "correctAnswer": "60 W",
+      "correctIndex": 1,
+      "explanation": "Power = energy transferred / time, so P = 1800 / 30 = 60 W.",
+      "misconceptionTag": "power-energy-time",
+      "distractorRationales": [
+        {
+          "text": "30 W",
+          "misconception": ""
+        },
+        {
+          "text": "1770 W",
+          "misconception": ""
+        },
+        {
+          "text": "54000 W",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate power from energy transferred and time."
+    },
+    {
+      "id": "edexcel_electricity_power_kilowatt_009",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Electrical Power",
+      "topicSlug": "electricity",
+      "subtopicSlug": "electrical_power",
+      "topicId": "electrical_power",
+      "specRef": "10.31",
+      "specStatement": "Use power equations in electrical circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_power_kilowatt_009_lo",
+        "statement": "Convert kilowatts to watts.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "convert",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_power_kilowatt_009",
+      "conceptFamily": "convert_kilowatts_to_watts",
+      "contextType": "exam_style",
+      "skill": "Convert kilowatts to watts.",
+      "stem": "An electric kettle has a power rating of 2.4 kW. What is this power in watts?",
+      "question": "An electric kettle has a power rating of 2.4 kW. What is this power in watts?",
+      "options": [
+        "2.4 W",
+        "24 W",
+        "240 W",
+        "2400 W"
+      ],
+      "correctAnswer": "2400 W",
+      "correctIndex": 3,
+      "explanation": "1 kW = 1000 W, so 2.4 kW = 2400 W.",
+      "misconceptionTag": "kilowatt-to-watt",
+      "distractorRationales": [
+        {
+          "text": "2.4 W",
+          "misconception": ""
+        },
+        {
+          "text": "24 W",
+          "misconception": ""
+        },
+        {
+          "text": "240 W",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Convert kilowatts to watts."
+    },
+    {
+      "id": "edexcel_electricity_power_higher_rating_010",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Electrical Power",
+      "topicSlug": "electricity",
+      "subtopicSlug": "electrical_power",
+      "topicId": "electrical_power",
+      "specRef": "10.31",
+      "specStatement": "Use power equations in electrical circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_power_higher_rating_010_lo",
+        "statement": "Compare appliances using power ratings.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_power_higher_rating_010",
+      "conceptFamily": "compare_appliances_using_power_ratings",
+      "contextType": "exam_style",
+      "skill": "Compare appliances using power ratings.",
+      "stem": "Two lamps are connected to the same potential difference. Lamp A is rated at 20 W and lamp B is rated at 60 W. Which lamp transfers energy faster?",
+      "question": "Two lamps are connected to the same potential difference. Lamp A is rated at 20 W and lamp B is rated at 60 W. Which lamp transfers energy faster?",
+      "options": [
+        "Lamp A, because it has the smaller rating.",
+        "Lamp B, because it has the larger power rating.",
+        "Both lamps transfer energy at the same rate.",
+        "Neither lamp transfers energy unless the current is zero."
+      ],
+      "correctAnswer": "Lamp B, because it has the larger power rating.",
+      "correctIndex": 1,
+      "explanation": "The lamp with the larger power rating transfers energy at a greater rate.",
+      "misconceptionTag": "compare-power-ratings",
+      "distractorRationales": [
+        {
+          "text": "Lamp A, because it has the smaller rating.",
+          "misconception": ""
+        },
+        {
+          "text": "Both lamps transfer energy at the same rate.",
+          "misconception": ""
+        },
+        {
+          "text": "Neither lamp transfers energy unless the current is zero.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Compare appliances using power ratings."
+    },
+    {
+      "id": "edexcel_electricity_power_fuse_choice_011",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Electrical Power",
+      "topicSlug": "electricity",
+      "subtopicSlug": "electrical_power",
+      "topicId": "electrical_power",
+      "specRef": "10.31",
+      "specStatement": "Use power equations in electrical circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_power_fuse_choice_011_lo",
+        "statement": "Choose a fuse rating using power and potential difference.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
       "demand": "high",
       "difficulty": "hard",
       "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "10.31:cost_electricity:exam_decision",
-      "conceptFamily": "cost_electricity",
-      "contextType": "a revision checkpoint",
-      "skill": "Calculate cost of electricity.",
-      "stem": "The mark scheme is testing calculate cost of electricity. Which answer matches that point? Check the clue before choosing: Calculate cost of electricity.",
-      "question": "The mark scheme is testing calculate cost of electricity. Which answer matches that point? Check the clue before choosing: Calculate cost of electricity.",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_power_fuse_choice_011",
+      "conceptFamily": "choose_a_fuse_rating_using_power_and_potential_difference",
+      "contextType": "exam_style",
+      "skill": "Choose a fuse rating using power and potential difference.",
+      "stem": "A 690 W appliance is used on a 230 V supply. Which fuse rating is most suitable?",
+      "question": "A 690 W appliance is used on a 230 V supply. Which fuse rating is most suitable?",
       "options": [
-        "For electrical power, it means that cost is measured in watts.",
-        "In this item, it means that cost is found from energy used in kWh multiplied by cost per kWh.",
-        "For electrical power, this would mean that cost does not depend on how long the device is used.",
-        "For electrical power, this would mean that cost is found from current alone."
+        "1 A",
+        "3 A",
+        "10 A",
+        "30 A"
       ],
-      "correctAnswer": "In this item, it means that cost is found from energy used in kWh multiplied by cost per kWh.",
+      "correctAnswer": "3 A",
       "correctIndex": 1,
-      "explanation": "10.31 targets: Calculate cost of electricity. Focus area: Electrical Power. For this question, Cost is found from energy used in kWh multiplied by cost per kWh. Context used: a revision checkpoint; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:cost_electricity",
+      "explanation": "The current is I = P / V = 690 / 230 = 3 A. A 3 A fuse is suitable.",
+      "misconceptionTag": "fuse-current-power",
       "distractorRationales": [
         {
-          "text": "For electrical power, this would mean that cost does not depend on how long the device is used.",
-          "misconception": "Cost is found from current alone."
+          "text": "1 A",
+          "misconception": ""
         },
         {
-          "text": "For electrical power, this would mean that cost is found from current alone.",
-          "misconception": "Cost is measured in watts."
+          "text": "10 A",
+          "misconception": ""
         },
         {
-          "text": "For electrical power, it means that cost is measured in watts.",
-          "misconception": "Cost does not depend on how long the device is used."
+          "text": "30 A",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate cost of electricity."
+      "senNote": "Checks: Choose a fuse rating using power and potential difference."
     },
     {
-      "id": "edexcel_10_31_electrical_power_heating_effect_representation_interpretation_010",
+      "id": "edexcel_electricity_power_energy_cost_012",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -6436,340 +6589,349 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_heating_effect",
-        "statement": "Link resistance to heating. (Electrical Power)",
+        "id": "edexcel_electricity_power_energy_cost_012_lo",
+        "statement": "Calculate energy transferred in kilowatt-hours.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_power_energy_cost_012",
+      "conceptFamily": "calculate_energy_transferred_in_kilowatt_hours",
+      "contextType": "exam_style",
+      "skill": "Calculate energy transferred in kilowatt-hours.",
+      "stem": "A 1.5 kW heater is used for 2 hours. How much energy is transferred in kilowatt-hours?",
+      "question": "A 1.5 kW heater is used for 2 hours. How much energy is transferred in kilowatt-hours?",
+      "options": [
+        "0.75 kWh",
+        "3.0 kWh",
+        "4.5 kWh",
+        "3000 kWh"
+      ],
+      "correctAnswer": "3.0 kWh",
+      "correctIndex": 1,
+      "explanation": "Energy in kWh = power in kW x time in hours, so 1.5 x 2 = 3.0 kWh.",
+      "misconceptionTag": "energy-kwh",
+      "distractorRationales": [
+        {
+          "text": "0.75 kWh",
+          "misconception": ""
+        },
+        {
+          "text": "4.5 kWh",
+          "misconception": ""
+        },
+        {
+          "text": "3000 kWh",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate energy transferred in kilowatt-hours."
+    },
+    {
+      "id": "edexcel_electricity_power_cost_013",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Electrical Power",
+      "topicSlug": "electricity",
+      "subtopicSlug": "electrical_power",
+      "topicId": "electrical_power",
+      "specRef": "10.31",
+      "specStatement": "Use power equations in electrical circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_power_cost_013_lo",
+        "statement": "Calculate the cost of electrical energy.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_power_cost_013",
+      "conceptFamily": "calculate_the_cost_of_electrical_energy",
+      "contextType": "exam_style",
+      "skill": "Calculate the cost of electrical energy.",
+      "stem": "Electricity costs 28 p per kWh. A heater uses 3 kWh. What is the cost?",
+      "question": "Electricity costs 28 p per kWh. A heater uses 3 kWh. What is the cost?",
+      "options": [
+        "31 p",
+        "84 p",
+        "93 p",
+        "840 p"
+      ],
+      "correctAnswer": "84 p",
+      "correctIndex": 1,
+      "explanation": "Cost = energy used x cost per kWh, so 3 x 28 p = 84 p.",
+      "misconceptionTag": "electricity-cost",
+      "distractorRationales": [
+        {
+          "text": "31 p",
+          "misconception": ""
+        },
+        {
+          "text": "93 p",
+          "misconception": ""
+        },
+        {
+          "text": "840 p",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate the cost of electrical energy."
+    },
+    {
+      "id": "edexcel_electricity_power_low_energy_014",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Electrical Power",
+      "topicSlug": "electricity",
+      "subtopicSlug": "electrical_power",
+      "topicId": "electrical_power",
+      "specRef": "10.31",
+      "specStatement": "Use power equations in electrical circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_power_low_energy_014_lo",
+        "statement": "Explain why lower-power appliances use less energy for the same time.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_power_low_energy_014",
+      "conceptFamily": "explain_why_lower_power_appliances_use_less_energy_for_the_same_time",
+      "contextType": "exam_style",
+      "skill": "Explain why lower-power appliances use less energy for the same time.",
+      "stem": "Why does replacing a 60 W filament lamp with a 9 W LED reduce energy use for the same time switched on?",
+      "question": "Why does replacing a 60 W filament lamp with a 9 W LED reduce energy use for the same time switched on?",
+      "options": [
+        "The LED transfers energy at a lower rate.",
+        "The LED has no current through it.",
+        "The filament lamp has zero resistance.",
+        "The LED makes electricity instead of using it."
+      ],
+      "correctAnswer": "The LED transfers energy at a lower rate.",
+      "correctIndex": 0,
+      "explanation": "A lower power rating means less energy is transferred each second, so less energy is used over the same time.",
+      "misconceptionTag": "lower-power-less-energy",
+      "distractorRationales": [
+        {
+          "text": "The LED has no current through it.",
+          "misconception": ""
+        },
+        {
+          "text": "The filament lamp has zero resistance.",
+          "misconception": ""
+        },
+        {
+          "text": "The LED makes electricity instead of using it.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain why lower-power appliances use less energy for the same time."
+    },
+    {
+      "id": "edexcel_electricity_power_current_limit_015",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Electrical Power",
+      "topicSlug": "electricity",
+      "subtopicSlug": "electrical_power",
+      "topicId": "electrical_power",
+      "specRef": "10.31",
+      "specStatement": "Use power equations in electrical circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_power_current_limit_015_lo",
+        "statement": "Calculate maximum power from supply limits.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_power_current_limit_015",
+      "conceptFamily": "calculate_maximum_power_from_supply_limits",
+      "contextType": "exam_style",
+      "skill": "Calculate maximum power from supply limits.",
+      "stem": "A power supply can safely provide a maximum current of 2 A at 12 V. What is the maximum power it can provide?",
+      "question": "A power supply can safely provide a maximum current of 2 A at 12 V. What is the maximum power it can provide?",
+      "options": [
+        "6 W",
+        "10 W",
+        "14 W",
+        "24 W"
+      ],
+      "correctAnswer": "24 W",
+      "correctIndex": 3,
+      "explanation": "Power = potential difference x current, so P = 12 x 2 = 24 W.",
+      "misconceptionTag": "maximum-power",
+      "distractorRationales": [
+        {
+          "text": "6 W",
+          "misconception": ""
+        },
+        {
+          "text": "10 W",
+          "misconception": ""
+        },
+        {
+          "text": "14 W",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate maximum power from supply limits."
+    },
+    {
+      "id": "edexcel_electricity_power_graph_area_016",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Electrical Power",
+      "topicSlug": "electricity",
+      "subtopicSlug": "electrical_power",
+      "topicId": "electrical_power",
+      "specRef": "10.31",
+      "specStatement": "Use power equations in electrical circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_power_graph_area_016_lo",
+        "statement": "Use a power-time graph to calculate energy transferred.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
       "demand": "high",
       "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "10.31:heating_effect:representation_interpretation",
-      "conceptFamily": "heating_effect",
-      "contextType": "an exam-style data table",
-      "skill": "Link resistance to heating.",
-      "stem": "A representation of electrical power is described in words. Which interpretation is correct? Demand focus: link resistance to heating.",
-      "question": "A representation of electrical power is described in words. Which interpretation is correct? Demand focus: link resistance to heating.",
-      "options": [
-        "The claim for electrical power is that heating proves no current is flowing.",
-        "In this item, it means that resistance makes energy disappear rather than transfer.",
-        "In this item, it means that resistance removes all energy transfer.",
-        "For electrical power: A current through resistance transfers energy by heating the component and surroundings."
-      ],
-      "correctAnswer": "For electrical power: A current through resistance transfers energy by heating the component and surroundings.",
-      "correctIndex": 3,
-      "explanation": "10.31 targets: Link resistance to heating. Focus area: Electrical Power. For this question, A current through resistance transfers energy by heating the component and surroundings. Context used: an exam-style data table; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:heating_effect",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that resistance removes all energy transfer.",
-          "misconception": "Resistance removes all energy transfer."
-        },
-        {
-          "text": "The claim for electrical power is that heating proves no current is flowing.",
-          "misconception": "Heating proves no current is flowing."
-        },
-        {
-          "text": "In this item, it means that resistance makes energy disappear rather than transfer.",
-          "misconception": "Resistance makes energy disappear rather than transfer."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Link resistance to heating."
-    },
-    {
-      "id": "edexcel_10_31_electrical_power_power_vi_concept_discrimination_011",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Electrical Power",
-      "topicSlug": "electricity",
-      "subtopicSlug": "electrical_power",
-      "topicId": "electrical_power",
-      "specRef": "10.31",
-      "specStatement": "Use power equations in electrical circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_power_vi",
-        "statement": "Use power, potential difference and current. (Electrical Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "10.31:power_vi:concept_discrimination",
-      "conceptFamily": "power_vi",
-      "contextType": "a required-practical notebook",
-      "skill": "Use power, potential difference and current.",
-      "stem": "A student is comparing similar ideas in electrical power. Which statement is correct? Demand focus: use power, potential difference and current.",
-      "question": "A student is comparing similar ideas in electrical power. Which statement is correct? Demand focus: use power, potential difference and current.",
-      "options": [
-        "The claim for electrical power is that power is measured in coulombs.",
-        "The claim for electrical power is that power = charge × resistance only.",
-        "The claim for electrical power is that power = current ÷ potential difference.",
-        "In this item, it means that electrical power can be calculated using power = potential difference × current."
-      ],
-      "correctAnswer": "In this item, it means that electrical power can be calculated using power = potential difference × current.",
-      "correctIndex": 3,
-      "explanation": "10.31 targets: Use power, potential difference and current. Focus area: Electrical Power. For this question, Electrical power can be calculated using power = potential difference × current. Context used: a required-practical notebook; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_vi",
-      "distractorRationales": [
-        {
-          "text": "The claim for electrical power is that power = charge × resistance only.",
-          "misconception": "Power = current ÷ potential difference."
-        },
-        {
-          "text": "The claim for electrical power is that power is measured in coulombs.",
-          "misconception": "Power = charge × resistance only."
-        },
-        {
-          "text": "The claim for electrical power is that power = current ÷ potential difference.",
-          "misconception": "Power is measured in coulombs."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use power, potential difference and current."
-    },
-    {
-      "id": "edexcel_10_31_electrical_power_power_i2r_applied_context_012",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Electrical Power",
-      "topicSlug": "electricity",
-      "subtopicSlug": "electrical_power",
-      "topicId": "electrical_power",
-      "specRef": "10.31",
-      "specStatement": "Use power equations in electrical circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_power_i2r",
-        "statement": "Use power, current and resistance. (Electrical Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "10.31:power_i2r:applied_context",
-      "conceptFamily": "power_i2r",
-      "contextType": "a technician report",
-      "skill": "Use power, current and resistance.",
-      "stem": "A question set in a technician report tests electrical power. Which answer applies the idea correctly? Use the wording carefully: this is about use power, current and resistance.",
-      "question": "A question set in a technician report tests electrical power. Which answer applies the idea correctly? Use the wording carefully: this is about use power, current and resistance.",
-      "options": [
-        "The claim for electrical power is that power = resistance ÷ current².",
-        "For electrical power, this would mean that power can also be calculated using power = current² × resistance.",
-        "For electrical power: Power = current × resistance².",
-        "The claim for electrical power is that power is independent of current."
-      ],
-      "correctAnswer": "For electrical power, this would mean that power can also be calculated using power = current² × resistance.",
-      "correctIndex": 1,
-      "explanation": "10.31 targets: Use power, current and resistance. Focus area: Electrical Power. For this question, Power can also be calculated using power = current² × resistance. Context used: a technician report; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_i2r",
-      "distractorRationales": [
-        {
-          "text": "The claim for electrical power is that power is independent of current.",
-          "misconception": "Power = current × resistance²."
-        },
-        {
-          "text": "For electrical power: Power = current × resistance².",
-          "misconception": "Power = resistance ÷ current²."
-        },
-        {
-          "text": "The claim for electrical power is that power = resistance ÷ current².",
-          "misconception": "Power is independent of current."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use power, current and resistance."
-    },
-    {
-      "id": "edexcel_10_31_electrical_power_energy_power_time_data_interpretation_013",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Electrical Power",
-      "topicSlug": "electricity",
-      "subtopicSlug": "electrical_power",
-      "topicId": "electrical_power",
-      "specRef": "10.31",
-      "specStatement": "Use power equations in electrical circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_energy_power_time",
-        "statement": "Use energy transferred by a device. (Electrical Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
+      "commandWord": "calculate",
       "responseMode": "data_interpretation",
-      "patternId": "10.31:energy_power_time:data_interpretation",
-      "conceptFamily": "energy_power_time",
-      "contextType": "a labelled diagram",
-      "skill": "Use energy transferred by a device.",
-      "stem": "A small data set about electrical power is being interpreted. Which conclusion is valid? Check the clue before choosing: Use energy transferred by a device.",
-      "question": "A small data set about electrical power is being interpreted. Which conclusion is valid? Check the clue before choosing: Use energy transferred by a device.",
+      "patternId": "authored:edexcel_electricity_power_graph_area_016",
+      "conceptFamily": "use_a_power_time_graph_to_calculate_energy_transferred",
+      "contextType": "exam_style",
+      "skill": "Use a power-time graph to calculate energy transferred.",
+      "stem": "A power-time graph is horizontal at 40 W for 5 s. How much energy is transferred?",
+      "question": "A power-time graph is horizontal at 40 W for 5 s. How much energy is transferred?",
       "options": [
-        "For electrical power, this would mean that energy transferred = power × time.",
-        "For electrical power, the option says that energy transferred = power ÷ time.",
-        "For electrical power, the option says that energy transfer does not depend on time.",
-        "For electrical power, the option says that energy transferred is measured in amperes."
+        "8 J",
+        "35 J",
+        "45 J",
+        "200 J"
       ],
-      "correctAnswer": "For electrical power, this would mean that energy transferred = power × time.",
-      "correctIndex": 0,
-      "explanation": "10.31 targets: Use energy transferred by a device. Focus area: Electrical Power. For this question, Energy transferred = power × time. Context used: a labelled diagram; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:energy_power_time",
-      "distractorRationales": [
-        {
-          "text": "For electrical power, the option says that energy transferred = power ÷ time.",
-          "misconception": "Energy transferred = power ÷ time."
-        },
-        {
-          "text": "For electrical power, the option says that energy transferred is measured in amperes.",
-          "misconception": "Energy transferred is measured in amperes."
-        },
-        {
-          "text": "For electrical power, the option says that energy transfer does not depend on time.",
-          "misconception": "Energy transfer does not depend on time."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use energy transferred by a device."
-    },
-    {
-      "id": "edexcel_10_31_electrical_power_cost_electricity_exam_decision_014",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Electrical Power",
-      "topicSlug": "electricity",
-      "subtopicSlug": "electrical_power",
-      "topicId": "electrical_power",
-      "specRef": "10.31",
-      "specStatement": "Use power equations in electrical circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_cost_electricity",
-        "statement": "Calculate cost of electricity. (Electrical Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "10.31:cost_electricity:exam_decision",
-      "conceptFamily": "cost_electricity",
-      "contextType": "a short calculation",
-      "skill": "Calculate cost of electricity.",
-      "stem": "Which answer is the strongest GCSE Physics response for electrical power? Check the clue before choosing: Calculate cost of electricity.",
-      "question": "Which answer is the strongest GCSE Physics response for electrical power? Check the clue before choosing: Calculate cost of electricity.",
-      "options": [
-        "For electrical power, the statement is that cost does not depend on how long the device is used.",
-        "The answer for electrical power says that cost is found from current alone.",
-        "For electrical power, the statement is that cost is measured in watts.",
-        "For electrical power, it means that cost is found from energy used in kWh multiplied by cost per kWh."
-      ],
-      "correctAnswer": "For electrical power, it means that cost is found from energy used in kWh multiplied by cost per kWh.",
+      "correctAnswer": "200 J",
       "correctIndex": 3,
-      "explanation": "10.31 targets: Calculate cost of electricity. Focus area: Electrical Power. For this question, Cost is found from energy used in kWh multiplied by cost per kWh. Context used: a short calculation; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:cost_electricity",
+      "explanation": "Energy transferred is the area under a power-time graph. E = 40 x 5 = 200 J.",
+      "misconceptionTag": "power-time-area",
       "distractorRationales": [
         {
-          "text": "For electrical power, the statement is that cost is measured in watts.",
-          "misconception": "Cost is found from current alone."
+          "text": "8 J",
+          "misconception": ""
         },
         {
-          "text": "For electrical power, the statement is that cost does not depend on how long the device is used.",
-          "misconception": "Cost is measured in watts."
+          "text": "35 J",
+          "misconception": ""
         },
         {
-          "text": "The answer for electrical power says that cost is found from current alone.",
-          "misconception": "Cost does not depend on how long the device is used."
+          "text": "45 J",
+          "misconception": ""
         }
       ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
+      "diagramJson": {
+        "type": "powerTimeGraph",
+        "powerW": 40,
+        "timeS": 5
+      },
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate cost of electricity."
+      "senNote": "Checks: Use a power-time graph to calculate energy transferred."
     },
     {
-      "id": "edexcel_10_31_electrical_power_heating_effect_direct_recall_015",
+      "id": "edexcel_electricity_power_resistor_heating_017",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -6791,198 +6953,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_heating_effect",
-        "statement": "Link resistance to heating. (Electrical Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "10.31:heating_effect:direct_recall",
-      "conceptFamily": "heating_effect",
-      "contextType": "a safety decision",
-      "skill": "Link resistance to heating.",
-      "stem": "Which answer matches this electrical power objective: Link resistance to heating? Demand focus: link resistance to heating.",
-      "question": "Which answer matches this electrical power objective: Link resistance to heating? Demand focus: link resistance to heating.",
-      "options": [
-        "For electrical power, the option says that resistance removes all energy transfer.",
-        "In this item, it means that heating proves no current is flowing.",
-        "For electrical power, the option says that resistance makes energy disappear rather than transfer.",
-        "The claim for electrical power is that a current through resistance transfers energy by heating the component and surroundings."
-      ],
-      "correctAnswer": "The claim for electrical power is that a current through resistance transfers energy by heating the component and surroundings.",
-      "correctIndex": 3,
-      "explanation": "10.31 targets: Link resistance to heating. Focus area: Electrical Power. For this question, A current through resistance transfers energy by heating the component and surroundings. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:heating_effect",
-      "distractorRationales": [
-        {
-          "text": "For electrical power, the option says that resistance makes energy disappear rather than transfer.",
-          "misconception": "Resistance removes all energy transfer."
-        },
-        {
-          "text": "For electrical power, the option says that resistance removes all energy transfer.",
-          "misconception": "Heating proves no current is flowing."
-        },
-        {
-          "text": "In this item, it means that heating proves no current is flowing.",
-          "misconception": "Resistance makes energy disappear rather than transfer."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Link resistance to heating."
-    },
-    {
-      "id": "edexcel_10_31_electrical_power_power_vi_concept_discrimination_016",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Electrical Power",
-      "topicSlug": "electricity",
-      "subtopicSlug": "electrical_power",
-      "topicId": "electrical_power",
-      "specRef": "10.31",
-      "specStatement": "Use power equations in electrical circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_power_vi",
-        "statement": "Use power, potential difference and current. (Electrical Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "10.31:power_vi:concept_discrimination",
-      "conceptFamily": "power_vi",
-      "contextType": "a graph-reading task",
-      "skill": "Use power, potential difference and current.",
-      "stem": "Which option best separates the correct electrical power idea from a common mix-up? Demand focus: use power, potential difference and current.",
-      "question": "Which option best separates the correct electrical power idea from a common mix-up? Demand focus: use power, potential difference and current.",
-      "options": [
-        "For electrical power, the statement is that power is measured in coulombs.",
-        "For electrical power, the statement is that power = current ÷ potential difference.",
-        "For electrical power, it means that electrical power can be calculated using power = potential difference × current.",
-        "For electrical power, the statement is that power = charge × resistance only."
-      ],
-      "correctAnswer": "For electrical power, it means that electrical power can be calculated using power = potential difference × current.",
-      "correctIndex": 2,
-      "explanation": "10.31 targets: Use power, potential difference and current. Focus area: Electrical Power. For this question, Electrical power can be calculated using power = potential difference × current. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_vi",
-      "distractorRationales": [
-        {
-          "text": "For electrical power, the statement is that power = current ÷ potential difference.",
-          "misconception": "Power = current ÷ potential difference."
-        },
-        {
-          "text": "For electrical power, the statement is that power = charge × resistance only.",
-          "misconception": "Power = charge × resistance only."
-        },
-        {
-          "text": "For electrical power, the statement is that power is measured in coulombs.",
-          "misconception": "Power is measured in coulombs."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use power, potential difference and current."
-    },
-    {
-      "id": "edexcel_10_31_electrical_power_power_i2r_misconception_correction_017",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Electrical Power",
-      "topicSlug": "electricity",
-      "subtopicSlug": "electrical_power",
-      "topicId": "electrical_power",
-      "specRef": "10.31",
-      "specStatement": "Use power equations in electrical circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_power_i2r",
-        "statement": "Use power, current and resistance. (Electrical Power)",
+        "id": "edexcel_electricity_power_resistor_heating_017_lo",
+        "statement": "Describe the heating effect of a current in a resistor.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "10.31:power_i2r:misconception_correction",
-      "conceptFamily": "power_i2r",
-      "contextType": "a comparison question",
-      "skill": "Use power, current and resistance.",
-      "stem": "Which answer corrects a misconception about electrical power? Use the wording carefully: this is about use power, current and resistance.",
-      "question": "Which answer corrects a misconception about electrical power? Use the wording carefully: this is about use power, current and resistance.",
+      "commandWord": "describe",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_power_resistor_heating_017",
+      "conceptFamily": "describe_the_heating_effect_of_a_current_in_a_resistor",
+      "contextType": "exam_style",
+      "skill": "Describe the heating effect of a current in a resistor.",
+      "stem": "A resistor gets warmer when a current passes through it. What energy transfer is taking place?",
+      "question": "A resistor gets warmer when a current passes through it. What energy transfer is taking place?",
       "options": [
-        "For electrical power, the option says that power can also be calculated using power = current² × resistance.",
-        "The claim for electrical power is that power = resistance ÷ current².",
-        "For electrical power, this would mean that power = current × resistance².",
-        "The claim for electrical power is that power is independent of current."
+        "Electrical energy is transferred to the thermal store of the resistor.",
+        "Thermal energy is transferred to the electrical store of the battery.",
+        "Nuclear energy is transferred to the chemical store of the resistor.",
+        "Kinetic energy is transferred to gravitational potential energy only."
       ],
-      "correctAnswer": "For electrical power, the option says that power can also be calculated using power = current² × resistance.",
+      "correctAnswer": "Electrical energy is transferred to the thermal store of the resistor.",
       "correctIndex": 0,
-      "explanation": "10.31 targets: Use power, current and resistance. Focus area: Electrical Power. For this question, Power can also be calculated using power = current² × resistance. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_i2r",
+      "explanation": "Current through a resistor transfers electrical energy to the thermal store of the resistor and its surroundings.",
+      "misconceptionTag": "resistor-heating-transfer",
       "distractorRationales": [
         {
-          "text": "The claim for electrical power is that power = resistance ÷ current².",
-          "misconception": "Power = current × resistance²."
+          "text": "Thermal energy is transferred to the electrical store of the battery.",
+          "misconception": ""
         },
         {
-          "text": "The claim for electrical power is that power is independent of current.",
-          "misconception": "Power = resistance ÷ current²."
+          "text": "Nuclear energy is transferred to the chemical store of the resistor.",
+          "misconception": ""
         },
         {
-          "text": "For electrical power, this would mean that power = current × resistance².",
-          "misconception": "Power is independent of current."
+          "text": "Kinetic energy is transferred to gravitational potential energy only.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use power, current and resistance."
+      "senNote": "Checks: Describe the heating effect of a current in a resistor."
     },
     {
-      "id": "edexcel_10_31_electrical_power_energy_power_time_data_interpretation_018",
+      "id": "edexcel_electricity_power_compare_time_018",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -7004,56 +7025,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_energy_power_time",
-        "statement": "Use energy transferred by a device. (Electrical Power)",
+        "id": "edexcel_electricity_power_compare_time_018_lo",
+        "statement": "Compare energy transfer using power and time.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "10.31:energy_power_time:data_interpretation",
-      "conceptFamily": "energy_power_time",
-      "contextType": "a method-choice question",
-      "skill": "Use energy transferred by a device.",
-      "stem": "Which conclusion about electrical power is supported by the evidence? Check the clue before choosing: Use energy transferred by a device.",
-      "question": "Which conclusion about electrical power is supported by the evidence? Check the clue before choosing: Use energy transferred by a device.",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_power_compare_time_018",
+      "conceptFamily": "compare_energy_transfer_using_power_and_time",
+      "contextType": "exam_style",
+      "skill": "Compare energy transfer using power and time.",
+      "stem": "A 100 W device and a 200 W device are each used for 10 s. Which device transfers more energy?",
+      "question": "A 100 W device and a 200 W device are each used for 10 s. Which device transfers more energy?",
       "options": [
-        "For electrical power, the statement is that energy transferred = power × time.",
-        "In this electrical power item, energy transferred = power ÷ time.",
-        "In this electrical power item, energy transfer does not depend on time.",
-        "In this electrical power item, energy transferred is measured in amperes."
+        "The 100 W device, because it has the lower power.",
+        "The 200 W device, because it transfers energy twice as fast.",
+        "Both transfer the same energy because they are used for the same time.",
+        "Neither transfers energy unless the time is measured in hours."
       ],
-      "correctAnswer": "For electrical power, the statement is that energy transferred = power × time.",
-      "correctIndex": 0,
-      "explanation": "10.31 targets: Use energy transferred by a device. Focus area: Electrical Power. For this question, Energy transferred = power × time. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:energy_power_time",
+      "correctAnswer": "The 200 W device, because it transfers energy twice as fast.",
+      "correctIndex": 1,
+      "explanation": "For the same time, the device with twice the power transfers twice as much energy.",
+      "misconceptionTag": "power-time-comparison",
       "distractorRationales": [
         {
-          "text": "In this electrical power item, energy transfer does not depend on time.",
-          "misconception": "Energy transferred = power ÷ time."
+          "text": "The 100 W device, because it has the lower power.",
+          "misconception": ""
         },
         {
-          "text": "In this electrical power item, energy transferred = power ÷ time.",
-          "misconception": "Energy transferred is measured in amperes."
+          "text": "Both transfer the same energy because they are used for the same time.",
+          "misconception": ""
         },
         {
-          "text": "In this electrical power item, energy transferred is measured in amperes.",
-          "misconception": "Energy transfer does not depend on time."
+          "text": "Neither transfers energy unless the time is measured in hours.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use energy transferred by a device."
+      "senNote": "Checks: Compare energy transfer using power and time."
     },
     {
-      "id": "edexcel_10_31_electrical_power_cost_electricity_representation_interpretation_019",
+      "id": "edexcel_electricity_power_overload_019",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -7075,53 +7097,54 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_31_electrical_power_cost_electricity",
-        "statement": "Calculate cost of electricity. (Electrical Power)",
+        "id": "edexcel_electricity_power_overload_019_lo",
+        "statement": "Explain an overload risk using current and power.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "10.31:cost_electricity:representation_interpretation",
-      "conceptFamily": "cost_electricity",
-      "contextType": "a results discussion",
-      "skill": "Calculate cost of electricity.",
-      "stem": "A representation of electrical power is described in words. Which interpretation is correct? Check the clue before choosing: Calculate cost of electricity.",
-      "question": "A representation of electrical power is described in words. Which interpretation is correct? Check the clue before choosing: Calculate cost of electricity.",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_power_overload_019",
+      "conceptFamily": "explain_an_overload_risk_using_current_and_power",
+      "contextType": "exam_style",
+      "skill": "Explain an overload risk using current and power.",
+      "stem": "Why can using too many high-power appliances on one extension lead be dangerous?",
+      "question": "Why can using too many high-power appliances on one extension lead be dangerous?",
       "options": [
-        "The claim for electrical power is that cost is found from current alone.",
-        "In this item, it means that cost is found from energy used in kWh multiplied by cost per kWh.",
-        "The claim for electrical power is that cost is measured in watts.",
-        "The claim for electrical power is that cost does not depend on how long the device is used."
+        "The total current can become too large and overheat the lead.",
+        "The appliances stop using energy.",
+        "The mains potential difference falls to zero instantly.",
+        "The lead becomes a perfect insulator."
       ],
-      "correctAnswer": "In this item, it means that cost is found from energy used in kWh multiplied by cost per kWh.",
-      "correctIndex": 1,
-      "explanation": "10.31 targets: Calculate cost of electricity. Focus area: Electrical Power. For this question, Cost is found from energy used in kWh multiplied by cost per kWh. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:cost_electricity",
+      "correctAnswer": "The total current can become too large and overheat the lead.",
+      "correctIndex": 0,
+      "explanation": "High-power appliances can draw large currents. If the total current is too large, wires can overheat.",
+      "misconceptionTag": "overload-current-risk",
       "distractorRationales": [
         {
-          "text": "The claim for electrical power is that cost is found from current alone.",
-          "misconception": "Cost is found from current alone."
+          "text": "The appliances stop using energy.",
+          "misconception": ""
         },
         {
-          "text": "The claim for electrical power is that cost is measured in watts.",
-          "misconception": "Cost is measured in watts."
+          "text": "The mains potential difference falls to zero instantly.",
+          "misconception": ""
         },
         {
-          "text": "The claim for electrical power is that cost does not depend on how long the device is used.",
-          "misconception": "Cost does not depend on how long the device is used."
+          "text": "The lead becomes a perfect insulator.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.31; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.31.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate cost of electricity."
+      "senNote": "Checks: Explain an overload risk using current and power."
     },
     {
       "id": "edexcel_10_20_parallel_circuits_parallel_pd_direct_recall_001",

@@ -5,6 +5,31 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice Edexcel Energy completed
+- Fixed Edexcel `Internal Energy`: 19/19 authored and passed.
+- Hidden spec metadata:
+  - Pearson Edexcel GCSE Physics `specRef`: `3.1`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Runtime quality checks:
+  - Internal Energy runtime count: 19.
+  - Authored IDs: 19.
+  - Bad scaffold/answer phrase count: 0.
+  - Covers internal energy definition, heating and cooling, particle kinetic energy, changes of state, specific heat capacity, heating graphs, evaporation, practical controls, and unit conversion.
+- Topic completion:
+  - AQA Energy: 94/94 good to go.
+  - Edexcel Energy: 94/94 good to go.
+  - Combined Energy: 188/188 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm run build` passes.
+- Conserved checks:
+  - No simulator rebuild for this final slice; content-only slice passed the strict question audit and build.
+
+### Next step
+- Continue Adaptive Practice premium rebuild:
+  - Start AQA Forces, first subtopic `Work Done` (24 authored exam-style questions).
+
 ### Adaptive Practice Edexcel Gravitational Potential Energy authored
 - Fixed Edexcel `Gravitational Potential Energy`: 19/19 authored and passed.
 - Hidden spec metadata:

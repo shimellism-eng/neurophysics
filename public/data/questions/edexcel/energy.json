@@ -2,7 +2,7 @@
   "examBoard": "Edexcel",
   "qualification": "Pearson Edexcel GCSE Physics 1PH0",
   "topicSlug": "energy",
-  "generatedAt": "2026-05-02T09:58:18.290Z",
+  "generatedAt": "2026-05-02T10:02:57.818Z",
   "questions": [
     {
       "id": "edexcel_energy_efficiency_equation_001",
@@ -5405,7 +5405,7 @@
       "senNote": "Checks: Use correct units for energy calculations."
     },
     {
-      "id": "edexcel_3_1_internal_energy_internal_energy_direct_recall_001",
+      "id": "edexcel_energy_internal_energy_definition_001",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -5427,56 +5427,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_internal_energy",
-        "statement": "Describe internal energy. (Internal Energy)",
+        "id": "edexcel_energy_internal_energy_definition_001_lo",
+        "statement": "Define internal energy in terms of particle energies.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "3.1:internal_energy:direct_recall",
-      "conceptFamily": "internal_energy",
-      "contextType": "a required-practical notebook",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "define",
+      "responseMode": "recall",
+      "patternId": "authored:edexcel_energy_internal_energy_definition_001",
+      "conceptFamily": "define_internal_energy_in_terms_of_particle_energies",
+      "contextType": "exam_style",
       "skill": "Internal Energy practice",
-      "stem": "Which statement is correct for internal energy? Demand focus: describe internal energy.",
-      "question": "Which statement is correct for internal energy? Demand focus: describe internal energy.",
+      "stem": "What is the internal energy of a substance?",
+      "question": "What is the internal energy of a substance?",
       "options": [
-        "For internal energy, the statement is that internal energy is always zero in solids.",
-        "For internal energy, the statement is that internal energy is the movement of the whole object only.",
-        "For internal energy, the answer claims that internal energy is just gravitational potential energy.",
-        "The answer for internal energy says that internal energy is the total kinetic and potential energy of particles in a system."
+        "The total kinetic and potential energy of its particles.",
+        "The movement energy of the whole object only.",
+        "The gravitational potential energy of the object only.",
+        "The energy stored only in chemical bonds between atoms."
       ],
-      "correctAnswer": "The answer for internal energy says that internal energy is the total kinetic and potential energy of particles in a system.",
-      "correctIndex": 3,
-      "explanation": "3.1 targets: Describe internal energy. Focus area: Internal Energy. For this question, Internal energy is the total kinetic and potential energy of particles in a system. Context used: a required-practical notebook; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:internal_energy",
+      "correctAnswer": "The total kinetic and potential energy of its particles.",
+      "correctIndex": 0,
+      "explanation": "Internal energy is the total kinetic and potential energy of the particles in a substance.",
+      "misconceptionTag": "internal-energy-whole-object",
       "distractorRationales": [
         {
-          "text": "For internal energy, the statement is that internal energy is the movement of the whole object only.",
-          "misconception": "Internal energy is the movement of the whole object only."
+          "text": "The movement energy of the whole object only.",
+          "misconception": ""
         },
         {
-          "text": "For internal energy, the answer claims that internal energy is just gravitational potential energy.",
-          "misconception": "Internal energy is just gravitational potential energy."
+          "text": "The gravitational potential energy of the object only.",
+          "misconception": ""
         },
         {
-          "text": "For internal energy, the statement is that internal energy is always zero in solids.",
-          "misconception": "Internal energy is always zero in solids."
+          "text": "The energy stored only in chemical bonds between atoms.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe internal energy."
+      "senNote": "Checks: Define internal energy in terms of particle energies."
     },
     {
-      "id": "edexcel_3_1_internal_energy_heating_temperature_concept_discrimination_002",
+      "id": "edexcel_energy_internal_heating_temperature_002",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -5498,56 +5499,417 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_heating_temperature",
-        "statement": "Explain temperature increase. (Internal Energy)",
+        "id": "edexcel_energy_internal_heating_temperature_002_lo",
+        "statement": "Link temperature rise to particle kinetic energy.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "concept",
+      "patternId": "authored:edexcel_energy_internal_heating_temperature_002",
+      "conceptFamily": "link_temperature_rise_to_particle_kinetic_energy",
+      "contextType": "exam_style",
+      "skill": "Internal Energy practice",
+      "stem": "A metal block is heated and its temperature rises. What happens to the particles on average?",
+      "question": "A metal block is heated and its temperature rises. What happens to the particles on average?",
+      "options": [
+        "Their kinetic energy increases.",
+        "Their mass increases.",
+        "Their charge becomes zero.",
+        "Their nuclei disappear."
+      ],
+      "correctAnswer": "Their kinetic energy increases.",
+      "correctIndex": 0,
+      "explanation": "A temperature rise means the particles have a greater average kinetic energy.",
+      "misconceptionTag": "temperature-mass",
+      "distractorRationales": [
+        {
+          "text": "Their mass increases.",
+          "misconception": ""
+        },
+        {
+          "text": "Their charge becomes zero.",
+          "misconception": ""
+        },
+        {
+          "text": "Their nuclei disappear.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Link temperature rise to particle kinetic energy."
+    },
+    {
+      "id": "edexcel_energy_internal_cooling_003",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Internal Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "internal_energy",
+      "topicId": "energy_stores",
+      "specRef": "3.1",
+      "specStatement": "Describe internal energy and energy stores.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_internal_cooling_003_lo",
+        "statement": "Describe energy transfer during cooling.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "concept",
+      "patternId": "authored:edexcel_energy_internal_cooling_003",
+      "conceptFamily": "describe_energy_transfer_during_cooling",
+      "contextType": "exam_style",
+      "skill": "Internal Energy practice",
+      "stem": "A hot drink cools down in a room. Which statement describes the energy transfer?",
+      "question": "A hot drink cools down in a room. Which statement describes the energy transfer?",
+      "options": [
+        "Energy is transferred from the drink to the surroundings.",
+        "Energy is created inside the drink as it cools.",
+        "Energy is transferred from the colder room to the hotter drink.",
+        "The internal energy of the drink must stay constant."
+      ],
+      "correctAnswer": "Energy is transferred from the drink to the surroundings.",
+      "correctIndex": 0,
+      "explanation": "A hot object cools because energy is transferred from it to the cooler surroundings.",
+      "misconceptionTag": "cooling-energy-direction",
+      "distractorRationales": [
+        {
+          "text": "Energy is created inside the drink as it cools.",
+          "misconception": ""
+        },
+        {
+          "text": "Energy is transferred from the colder room to the hotter drink.",
+          "misconception": ""
+        },
+        {
+          "text": "The internal energy of the drink must stay constant.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe energy transfer during cooling."
+    },
+    {
+      "id": "edexcel_energy_internal_state_change_temperature_004",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Internal Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "internal_energy",
+      "topicId": "energy_stores",
+      "specRef": "3.1",
+      "specStatement": "Describe internal energy and energy stores.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_internal_state_change_temperature_004_lo",
+        "statement": "Explain energy transfer during a change of state.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "concept",
+      "patternId": "authored:edexcel_energy_internal_state_change_temperature_004",
+      "conceptFamily": "explain_energy_transfer_during_a_change_of_state",
+      "contextType": "exam_style",
+      "skill": "Internal Energy practice",
+      "stem": "Ice is melting at its melting point. Energy is transferred to the ice, but its temperature does not rise. What is the energy mainly doing?",
+      "question": "Ice is melting at its melting point. Energy is transferred to the ice, but its temperature does not rise. What is the energy mainly doing?",
+      "options": [
+        "Increasing the potential energy of the particles as bonds are overcome.",
+        "Increasing only the average kinetic energy of the particles.",
+        "Destroying particles in the ice.",
+        "Reducing the mass of each water molecule to zero."
+      ],
+      "correctAnswer": "Increasing the potential energy of the particles as bonds are overcome.",
+      "correctIndex": 0,
+      "explanation": "During melting, transferred energy changes the arrangement of particles and increases particle potential energy rather than temperature.",
+      "misconceptionTag": "state-change-temperature-rise",
+      "distractorRationales": [
+        {
+          "text": "Increasing only the average kinetic energy of the particles.",
+          "misconception": ""
+        },
+        {
+          "text": "Destroying particles in the ice.",
+          "misconception": ""
+        },
+        {
+          "text": "Reducing the mass of each water molecule to zero.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain energy transfer during a change of state."
+    },
+    {
+      "id": "edexcel_energy_internal_boiling_temperature_005",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Internal Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "internal_energy",
+      "topicId": "energy_stores",
+      "specRef": "3.1",
+      "specStatement": "Describe internal energy and energy stores.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_internal_boiling_temperature_005_lo",
+        "statement": "Interpret temperature during boiling.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "interpret",
+      "responseMode": "concept",
+      "patternId": "authored:edexcel_energy_internal_boiling_temperature_005",
+      "conceptFamily": "interpret_temperature_during_boiling",
+      "contextType": "exam_style",
+      "skill": "Internal Energy practice",
+      "stem": "Water is boiling steadily at 100 °C. More energy is supplied. What happens to the temperature of the water while it boils?",
+      "question": "Water is boiling steadily at 100 °C. More energy is supplied. What happens to the temperature of the water while it boils?",
+      "options": [
+        "It stays at about 100 °C until the water has changed state.",
+        "It rises steadily above 100 °C while liquid water remains.",
+        "It falls because boiling uses no energy.",
+        "It becomes 0 °C because particles stop moving."
+      ],
+      "correctAnswer": "It stays at about 100 °C until the water has changed state.",
+      "correctIndex": 0,
+      "explanation": "During boiling at constant pressure, energy is used for the change of state, so the temperature stays about constant until boiling is complete.",
+      "misconceptionTag": "boiling-temperature-keeps-rising",
+      "distractorRationales": [
+        {
+          "text": "It rises steadily above 100 °C while liquid water remains.",
+          "misconception": ""
+        },
+        {
+          "text": "It falls because boiling uses no energy.",
+          "misconception": ""
+        },
+        {
+          "text": "It becomes 0 °C because particles stop moving.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Interpret temperature during boiling."
+    },
+    {
+      "id": "edexcel_energy_internal_specific_heat_definition_006",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Internal Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "internal_energy",
+      "topicId": "energy_stores",
+      "specRef": "3.1",
+      "specStatement": "Describe internal energy and energy stores.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_internal_specific_heat_definition_006_lo",
+        "statement": "State the meaning of specific heat capacity.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "state",
+      "responseMode": "recall",
+      "patternId": "authored:edexcel_energy_internal_specific_heat_definition_006",
+      "conceptFamily": "state_the_meaning_of_specific_heat_capacity",
+      "contextType": "exam_style",
+      "skill": "Internal Energy practice",
+      "stem": "What does specific heat capacity tell you about a material?",
+      "question": "What does specific heat capacity tell you about a material?",
+      "options": [
+        "The energy needed to raise 1 kg of the material by 1 °C.",
+        "The force needed to stretch 1 m of the material.",
+        "The mass needed to make 1 N of weight.",
+        "The power needed to melt any sample instantly."
+      ],
+      "correctAnswer": "The energy needed to raise 1 kg of the material by 1 °C.",
+      "correctIndex": 0,
+      "explanation": "Specific heat capacity is the energy required to raise the temperature of 1 kg by 1 °C.",
+      "misconceptionTag": "specific-heat-meaning",
+      "distractorRationales": [
+        {
+          "text": "The force needed to stretch 1 m of the material.",
+          "misconception": ""
+        },
+        {
+          "text": "The mass needed to make 1 N of weight.",
+          "misconception": ""
+        },
+        {
+          "text": "The power needed to melt any sample instantly.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: State the meaning of specific heat capacity."
+    },
+    {
+      "id": "edexcel_energy_internal_specific_heat_unit_007",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Internal Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "internal_energy",
+      "topicId": "energy_stores",
+      "specRef": "3.1",
+      "specStatement": "Describe internal energy and energy stores.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_internal_specific_heat_unit_007_lo",
+        "statement": "Identify the unit of specific heat capacity.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "3.1:heating_temperature:concept_discrimination",
-      "conceptFamily": "heating_temperature",
-      "contextType": "a technician report",
+      "responseMode": "recall",
+      "patternId": "authored:edexcel_energy_internal_specific_heat_unit_007",
+      "conceptFamily": "identify_the_unit_of_specific_heat_capacity",
+      "contextType": "exam_style",
       "skill": "Internal Energy practice",
-      "stem": "A student is comparing similar ideas in internal energy. Which statement is correct? Demand focus: explain temperature increase.",
-      "question": "A student is comparing similar ideas in internal energy. Which statement is correct? Demand focus: explain temperature increase.",
+      "stem": "Which unit is used for specific heat capacity?",
+      "question": "Which unit is used for specific heat capacity?",
       "options": [
-        "For internal energy, the option says that temperature rise means particles become heavier.",
-        "In this item, it means that heating can increase particles’ average kinetic energy, raising temperature.",
-        "For internal energy, the option says that heating always lowers kinetic energy.",
-        "For internal energy, it means that heating changes mass but not energy."
+        "J/kg °C",
+        "J",
+        "W",
+        "N/m"
       ],
-      "correctAnswer": "In this item, it means that heating can increase particles’ average kinetic energy, raising temperature.",
-      "correctIndex": 1,
-      "explanation": "3.1 targets: Explain temperature increase. Focus area: Internal Energy. For this question, Heating can increase particles’ average kinetic energy, raising temperature. Context used: a technician report; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:heating_temperature",
+      "correctAnswer": "J/kg °C",
+      "correctIndex": 0,
+      "explanation": "Specific heat capacity is measured in joules per kilogram per degree Celsius, J/kg °C.",
+      "misconceptionTag": "specific-heat-unit",
       "distractorRationales": [
         {
-          "text": "For internal energy, the option says that temperature rise means particles become heavier.",
-          "misconception": "Heating always lowers kinetic energy."
+          "text": "J",
+          "misconception": ""
         },
         {
-          "text": "For internal energy, it means that heating changes mass but not energy.",
-          "misconception": "Temperature rise means particles become heavier."
+          "text": "W",
+          "misconception": ""
         },
         {
-          "text": "For internal energy, the option says that heating always lowers kinetic energy.",
-          "misconception": "Heating changes mass but not energy."
+          "text": "N/m",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain temperature increase."
+      "senNote": "Checks: Identify the unit of specific heat capacity."
     },
     {
-      "id": "edexcel_3_1_internal_energy_change_state_energy_misconception_correction_003",
+      "id": "edexcel_energy_internal_specific_heat_compare_008",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -5569,56 +5931,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_change_state_energy",
-        "statement": "Explain energy during change of state. (Internal Energy)",
+        "id": "edexcel_energy_internal_specific_heat_compare_008_lo",
+        "statement": "Compare temperature changes using specific heat capacity.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "3.1:change_state_energy:misconception_correction",
-      "conceptFamily": "change_state_energy",
-      "contextType": "a labelled diagram",
+      "commandWord": "compare",
+      "responseMode": "concept",
+      "patternId": "authored:edexcel_energy_internal_specific_heat_compare_008",
+      "conceptFamily": "compare_temperature_changes_using_specific_heat_capacity",
+      "contextType": "exam_style",
       "skill": "Internal Energy practice",
-      "stem": "A revision note about internal energy contains an error. Which replacement is correct? Check the clue before choosing: Explain energy during change of state.",
-      "question": "A revision note about internal energy contains an error. Which replacement is correct? Check the clue before choosing: Explain energy during change of state.",
+      "stem": "Two equal masses receive the same energy. Material A has a lower specific heat capacity than material B. Which material has the larger temperature rise?",
+      "question": "Two equal masses receive the same energy. Material A has a lower specific heat capacity than material B. Which material has the larger temperature rise?",
       "options": [
-        "For internal energy, the statement is that during a change of state, energy changes particle potential energy while temperature stays constant.",
-        "In this internal energy item, temperature always rises during melting.",
-        "For internal energy, the statement is that particles are destroyed during a change of state.",
-        "The answer for internal energy says that energy is not transferred during boiling."
+        "Material A.",
+        "Material B.",
+        "Both must have the same temperature rise.",
+        "Neither material can warm up."
       ],
-      "correctAnswer": "For internal energy, the statement is that during a change of state, energy changes particle potential energy while temperature stays constant.",
+      "correctAnswer": "Material A.",
       "correctIndex": 0,
-      "explanation": "3.1 targets: Explain energy during change of state. Focus area: Internal Energy. For this question, During a change of state, energy changes particle potential energy while temperature stays constant. Context used: a labelled diagram; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:change_state_energy",
+      "explanation": "For the same mass and energy transfer, a lower specific heat capacity gives a larger temperature rise.",
+      "misconceptionTag": "specific-heat-comparison",
       "distractorRationales": [
         {
-          "text": "For internal energy, the statement is that particles are destroyed during a change of state.",
-          "misconception": "Temperature always rises during melting."
+          "text": "Material B.",
+          "misconception": ""
         },
         {
-          "text": "In this internal energy item, temperature always rises during melting.",
-          "misconception": "Energy is not transferred during boiling."
+          "text": "Both must have the same temperature rise.",
+          "misconception": ""
         },
         {
-          "text": "The answer for internal energy says that energy is not transferred during boiling.",
-          "misconception": "Particles are destroyed during a change of state."
+          "text": "Neither material can warm up.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain energy during change of state."
+      "senNote": "Checks: Compare temperature changes using specific heat capacity."
     },
     {
-      "id": "edexcel_3_1_internal_energy_specific_heat_capacity_data_interpretation_004",
+      "id": "edexcel_energy_internal_specific_heat_calculation_009",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -5640,56 +6003,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_specific_heat_capacity",
-        "statement": "Use specific heat capacity. (Internal Energy)",
+        "id": "edexcel_energy_internal_specific_heat_calculation_009_lo",
+        "statement": "Calculate specific heat capacity from energy, mass and temperature change.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "3.1:specific_heat_capacity:data_interpretation",
-      "conceptFamily": "specific_heat_capacity",
-      "contextType": "a short calculation",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_energy_internal_specific_heat_calculation_009",
+      "conceptFamily": "calculate_specific_heat_capacity_from_energy_mass_and_temperature_change",
+      "contextType": "exam_style",
       "skill": "Internal Energy practice",
-      "stem": "A small data set about internal energy is being interpreted. Which conclusion is valid? Demand focus: use specific heat capacity.",
-      "question": "A small data set about internal energy is being interpreted. Which conclusion is valid? Demand focus: use specific heat capacity.",
+      "stem": "A 0.20 kg metal block is heated by 500 J. Its temperature rises by 5.0 °C. What is its specific heat capacity?",
+      "question": "A 0.20 kg metal block is heated by 500 J. Its temperature rises by 5.0 °C. What is its specific heat capacity?",
       "options": [
-        "For internal energy, it means that specific heat capacity is measured in watts.",
-        "For internal energy, the option says that specific heat capacity is energy to melt 1 kg.",
-        "In this item, it means that specific heat capacity is the same as density.",
-        "For internal energy: Specific heat capacity is energy needed to raise 1 kg by 1 °C."
+        "500 J/kg °C",
+        "100 J/kg °C",
+        "2500 J/kg °C",
+        "50 J/kg °C"
       ],
-      "correctAnswer": "For internal energy: Specific heat capacity is energy needed to raise 1 kg by 1 °C.",
-      "correctIndex": 3,
-      "explanation": "3.1 targets: Use specific heat capacity. Focus area: Internal Energy. For this question, Specific heat capacity is energy needed to raise 1 kg by 1 °C. Context used: a short calculation; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:specific_heat_capacity",
+      "correctAnswer": "500 J/kg °C",
+      "correctIndex": 0,
+      "explanation": "Use c = ΔE ÷ (mΔθ) = 500 ÷ (0.20 × 5.0) = 500 J/kg °C.",
+      "misconceptionTag": "specific-heat-rearrange",
       "distractorRationales": [
         {
-          "text": "For internal energy, the option says that specific heat capacity is energy to melt 1 kg.",
-          "misconception": "Specific heat capacity is energy to melt 1 kg."
+          "text": "100 J/kg °C",
+          "misconception": ""
         },
         {
-          "text": "For internal energy, it means that specific heat capacity is measured in watts.",
-          "misconception": "Specific heat capacity is measured in watts."
+          "text": "2500 J/kg °C",
+          "misconception": ""
         },
         {
-          "text": "In this item, it means that specific heat capacity is the same as density.",
-          "misconception": "Specific heat capacity is the same as density."
+          "text": "50 J/kg °C",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use specific heat capacity."
+      "senNote": "Checks: Calculate specific heat capacity from energy, mass and temperature change."
     },
     {
-      "id": "edexcel_3_1_internal_energy_cooling_representation_interpretation_005",
+      "id": "edexcel_energy_internal_heating_graph_010",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -5711,56 +6075,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_cooling",
-        "statement": "Explain cooling. (Internal Energy)",
+        "id": "edexcel_energy_internal_heating_graph_010_lo",
+        "statement": "Interpret a heating graph during a change of state.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "3.1:cooling:representation_interpretation",
-      "conceptFamily": "cooling",
-      "contextType": "a safety decision",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "interpret",
+      "responseMode": "graph_interpretation",
+      "patternId": "authored:edexcel_energy_internal_heating_graph_010",
+      "conceptFamily": "interpret_a_heating_graph_during_a_change_of_state",
+      "contextType": "exam_style",
       "skill": "Internal Energy practice",
-      "stem": "Which option correctly reads the internal energy model or diagram idea? Check the clue before choosing: Explain cooling.",
-      "question": "Which option correctly reads the internal energy model or diagram idea? Check the clue before choosing: Explain cooling.",
+      "stem": "On a heating graph, a flat section shows a substance changing state. What does the flat section mean?",
+      "question": "On a heating graph, a flat section shows a substance changing state. What does the flat section mean?",
       "options": [
-        "In this internal energy item, cooling creates negative energy.",
-        "For internal energy, the answer claims that cooling reduces internal energy as energy transfers to the surroundings.",
-        "For internal energy, the statement is that cooling happens only by electrical transfer.",
-        "For internal energy, the answer claims that cooling increases average particle kinetic energy."
+        "Temperature stays constant while energy is still being transferred.",
+        "No energy is being transferred to the substance.",
+        "Particles have stopped moving completely.",
+        "The substance has lost all internal energy."
       ],
-      "correctAnswer": "For internal energy, the answer claims that cooling reduces internal energy as energy transfers to the surroundings.",
-      "correctIndex": 1,
-      "explanation": "3.1 targets: Explain cooling. Focus area: Internal Energy. For this question, Cooling reduces internal energy as energy transfers to the surroundings. Context used: a safety decision; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:cooling",
+      "correctAnswer": "Temperature stays constant while energy is still being transferred.",
+      "correctIndex": 0,
+      "explanation": "A flat section during a change of state means temperature is constant even though energy is being transferred.",
+      "misconceptionTag": "flat-graph-no-energy",
       "distractorRationales": [
         {
-          "text": "For internal energy, the answer claims that cooling increases average particle kinetic energy.",
-          "misconception": "Cooling creates negative energy."
+          "text": "No energy is being transferred to the substance.",
+          "misconception": ""
         },
         {
-          "text": "For internal energy, the statement is that cooling happens only by electrical transfer.",
-          "misconception": "Cooling increases average particle kinetic energy."
+          "text": "Particles have stopped moving completely.",
+          "misconception": ""
         },
         {
-          "text": "In this internal energy item, cooling creates negative energy.",
-          "misconception": "Cooling happens only by electrical transfer."
+          "text": "The substance has lost all internal energy.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain cooling."
+      "senNote": "Checks: Interpret a heating graph during a change of state."
     },
     {
-      "id": "edexcel_3_1_internal_energy_internal_energy_direct_recall_006",
+      "id": "edexcel_energy_internal_store_change_011",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -5782,56 +6147,129 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_internal_energy",
-        "statement": "Describe internal energy. (Internal Energy)",
+        "id": "edexcel_energy_internal_store_change_011_lo",
+        "statement": "Link heating to an increase in internal energy.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "concept",
+      "patternId": "authored:edexcel_energy_internal_store_change_011",
+      "conceptFamily": "link_heating_to_an_increase_in_internal_energy",
+      "contextType": "exam_style",
+      "skill": "Internal Energy practice",
+      "stem": "A sealed gas is heated so its temperature rises. Which store increases most directly?",
+      "question": "A sealed gas is heated so its temperature rises. Which store increases most directly?",
+      "options": [
+        "The internal energy store of the gas.",
+        "The gravitational potential energy store of Earth.",
+        "The elastic potential energy store of the container only.",
+        "The nuclear energy store of each atom."
+      ],
+      "correctAnswer": "The internal energy store of the gas.",
+      "correctIndex": 0,
+      "explanation": "Heating the gas raises its temperature and increases its internal energy.",
+      "misconceptionTag": "wrong-energy-store",
+      "distractorRationales": [
+        {
+          "text": "The gravitational potential energy store of Earth.",
+          "misconception": ""
+        },
+        {
+          "text": "The elastic potential energy store of the container only.",
+          "misconception": ""
+        },
+        {
+          "text": "The nuclear energy store of each atom.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Link heating to an increase in internal energy."
+    },
+    {
+      "id": "edexcel_energy_internal_particles_solid_liquid_012",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Internal Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "internal_energy",
+      "topicId": "energy_stores",
+      "specRef": "3.1",
+      "specStatement": "Describe internal energy and energy stores.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_internal_particles_solid_liquid_012_lo",
+        "statement": "Describe particle changes during melting.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "3.1:internal_energy:direct_recall",
-      "conceptFamily": "internal_energy",
-      "contextType": "a graph-reading task",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "concept",
+      "patternId": "authored:edexcel_energy_internal_particles_solid_liquid_012",
+      "conceptFamily": "describe_particle_changes_during_melting",
+      "contextType": "exam_style",
       "skill": "Internal Energy practice",
-      "stem": "Which answer matches this internal energy objective: Describe internal energy? Demand focus: describe internal energy.",
-      "question": "Which answer matches this internal energy objective: Describe internal energy? Demand focus: describe internal energy.",
+      "stem": "During melting, what changes about the particles?",
+      "question": "During melting, what changes about the particles?",
       "options": [
-        "In this item, it means that internal energy is always zero in solids.",
-        "For internal energy, the option says that internal energy is the total kinetic and potential energy of particles in a system.",
-        "In this item, it means that internal energy is just gravitational potential energy.",
-        "The claim for internal energy is that internal energy is the movement of the whole object only."
+        "Their arrangement changes as bonds are overcome.",
+        "They become different atoms.",
+        "They stop moving.",
+        "Their mass becomes zero."
       ],
-      "correctAnswer": "For internal energy, the option says that internal energy is the total kinetic and potential energy of particles in a system.",
-      "correctIndex": 1,
-      "explanation": "3.1 targets: Describe internal energy. Focus area: Internal Energy. For this question, Internal energy is the total kinetic and potential energy of particles in a system. Context used: a graph-reading task; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:internal_energy",
+      "correctAnswer": "Their arrangement changes as bonds are overcome.",
+      "correctIndex": 0,
+      "explanation": "Melting changes the arrangement of particles; the particles themselves are not destroyed or turned into different atoms.",
+      "misconceptionTag": "state-change-new-atoms",
       "distractorRationales": [
         {
-          "text": "In this item, it means that internal energy is always zero in solids.",
-          "misconception": "Internal energy is the movement of the whole object only."
+          "text": "They become different atoms.",
+          "misconception": ""
         },
         {
-          "text": "The claim for internal energy is that internal energy is the movement of the whole object only.",
-          "misconception": "Internal energy is just gravitational potential energy."
+          "text": "They stop moving.",
+          "misconception": ""
         },
         {
-          "text": "In this item, it means that internal energy is just gravitational potential energy.",
-          "misconception": "Internal energy is always zero in solids."
+          "text": "Their mass becomes zero.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe internal energy."
+      "senNote": "Checks: Describe particle changes during melting."
     },
     {
-      "id": "edexcel_3_1_internal_energy_heating_temperature_applied_context_007",
+      "id": "edexcel_energy_internal_evaporation_cooling_013",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -5853,198 +6291,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_heating_temperature",
-        "statement": "Explain temperature increase. (Internal Energy)",
+        "id": "edexcel_energy_internal_evaporation_cooling_013_lo",
+        "statement": "Explain cooling by evaporation using particle energy.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "apply",
+      "commandWord": "explain",
       "responseMode": "applied_context",
-      "patternId": "3.1:heating_temperature:applied_context",
-      "conceptFamily": "heating_temperature",
-      "contextType": "a comparison question",
+      "patternId": "authored:edexcel_energy_internal_evaporation_cooling_013",
+      "conceptFamily": "explain_cooling_by_evaporation_using_particle_energy",
+      "contextType": "exam_style",
       "skill": "Internal Energy practice",
-      "stem": "In a comparison question, which conclusion is correct for internal energy? Demand focus: explain temperature increase.",
-      "question": "In a comparison question, which conclusion is correct for internal energy? Demand focus: explain temperature increase.",
+      "stem": "Sweat evaporates from skin. Why can this cool the skin?",
+      "question": "Sweat evaporates from skin. Why can this cool the skin?",
       "options": [
-        "In this item, it means that temperature rise means particles become heavier.",
-        "In this item, it means that heating always lowers kinetic energy.",
-        "For internal energy, this would mean that heating can increase particles’ average kinetic energy, raising temperature.",
-        "For internal energy: Heating changes mass but not energy."
+        "The highest-energy particles leave the liquid, reducing the average energy of those left behind.",
+        "Evaporation creates cold energy that flows into the skin.",
+        "Particles gain mass as they leave the skin.",
+        "The skin gains thermal energy from the sweat."
       ],
-      "correctAnswer": "For internal energy, this would mean that heating can increase particles’ average kinetic energy, raising temperature.",
-      "correctIndex": 2,
-      "explanation": "3.1 targets: Explain temperature increase. Focus area: Internal Energy. For this question, Heating can increase particles’ average kinetic energy, raising temperature. Context used: a comparison question; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:heating_temperature",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that heating always lowers kinetic energy.",
-          "misconception": "Heating always lowers kinetic energy."
-        },
-        {
-          "text": "In this item, it means that temperature rise means particles become heavier.",
-          "misconception": "Temperature rise means particles become heavier."
-        },
-        {
-          "text": "For internal energy: Heating changes mass but not energy.",
-          "misconception": "Heating changes mass but not energy."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain temperature increase."
-    },
-    {
-      "id": "edexcel_3_1_internal_energy_change_state_energy_misconception_correction_008",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Internal Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "internal_energy",
-      "topicId": "energy_stores",
-      "specRef": "3.1",
-      "specStatement": "Describe internal energy and energy stores.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_change_state_energy",
-        "statement": "Explain energy during change of state. (Internal Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "3.1:change_state_energy:misconception_correction",
-      "conceptFamily": "change_state_energy",
-      "contextType": "a method-choice question",
-      "skill": "Internal Energy practice",
-      "stem": "Which answer corrects a misconception about internal energy? Check the clue before choosing: Explain energy during change of state.",
-      "question": "Which answer corrects a misconception about internal energy? Check the clue before choosing: Explain energy during change of state.",
-      "options": [
-        "For internal energy, the option says that temperature always rises during melting.",
-        "For internal energy, this would mean that particles are destroyed during a change of state.",
-        "For internal energy: During a change of state, energy changes particle potential energy while temperature stays constant.",
-        "For internal energy: Energy is not transferred during boiling."
-      ],
-      "correctAnswer": "For internal energy: During a change of state, energy changes particle potential energy while temperature stays constant.",
-      "correctIndex": 2,
-      "explanation": "3.1 targets: Explain energy during change of state. Focus area: Internal Energy. For this question, During a change of state, energy changes particle potential energy while temperature stays constant. Context used: a method-choice question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:change_state_energy",
-      "distractorRationales": [
-        {
-          "text": "For internal energy: Energy is not transferred during boiling.",
-          "misconception": "Temperature always rises during melting."
-        },
-        {
-          "text": "For internal energy, this would mean that particles are destroyed during a change of state.",
-          "misconception": "Energy is not transferred during boiling."
-        },
-        {
-          "text": "For internal energy, the option says that temperature always rises during melting.",
-          "misconception": "Particles are destroyed during a change of state."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain energy during change of state."
-    },
-    {
-      "id": "edexcel_3_1_internal_energy_specific_heat_capacity_exam_decision_009",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Internal Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "internal_energy",
-      "topicId": "energy_stores",
-      "specRef": "3.1",
-      "specStatement": "Describe internal energy and energy stores.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_specific_heat_capacity",
-        "statement": "Use specific heat capacity. (Internal Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "3.1:specific_heat_capacity:exam_decision",
-      "conceptFamily": "specific_heat_capacity",
-      "contextType": "a results discussion",
-      "skill": "Internal Energy practice",
-      "stem": "The mark scheme is testing use specific heat capacity. Which answer matches that point? Demand focus: use specific heat capacity.",
-      "question": "The mark scheme is testing use specific heat capacity. Which answer matches that point? Demand focus: use specific heat capacity.",
-      "options": [
-        "For internal energy, the option says that specific heat capacity is energy needed to raise 1 kg by 1 °C.",
-        "For internal energy, this would mean that specific heat capacity is the same as density.",
-        "For internal energy, it means that specific heat capacity is measured in watts.",
-        "For internal energy, this would mean that specific heat capacity is energy to melt 1 kg."
-      ],
-      "correctAnswer": "For internal energy, the option says that specific heat capacity is energy needed to raise 1 kg by 1 °C.",
+      "correctAnswer": "The highest-energy particles leave the liquid, reducing the average energy of those left behind.",
       "correctIndex": 0,
-      "explanation": "3.1 targets: Use specific heat capacity. Focus area: Internal Energy. For this question, Specific heat capacity is energy needed to raise 1 kg by 1 °C. Context used: a results discussion; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:specific_heat_capacity",
+      "explanation": "Evaporation removes higher-energy particles from the liquid, so the remaining liquid and skin can cool.",
+      "misconceptionTag": "evaporation-cold-energy",
       "distractorRationales": [
         {
-          "text": "For internal energy, this would mean that specific heat capacity is the same as density.",
-          "misconception": "Specific heat capacity is energy to melt 1 kg."
+          "text": "Evaporation creates cold energy that flows into the skin.",
+          "misconception": ""
         },
         {
-          "text": "For internal energy, this would mean that specific heat capacity is energy to melt 1 kg.",
-          "misconception": "Specific heat capacity is measured in watts."
+          "text": "Particles gain mass as they leave the skin.",
+          "misconception": ""
         },
         {
-          "text": "For internal energy, it means that specific heat capacity is measured in watts.",
-          "misconception": "Specific heat capacity is the same as density."
+          "text": "The skin gains thermal energy from the sweat.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use specific heat capacity."
+      "senNote": "Checks: Explain cooling by evaporation using particle energy."
     },
     {
-      "id": "edexcel_3_1_internal_energy_cooling_representation_interpretation_010",
+      "id": "edexcel_energy_internal_specific_heat_practical_014",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -6066,269 +6363,129 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_cooling",
-        "statement": "Explain cooling. (Internal Energy)",
+        "id": "edexcel_energy_internal_specific_heat_practical_014_lo",
+        "statement": "Explain a control used in a specific heat capacity experiment.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "practical",
+      "patternId": "authored:edexcel_energy_internal_specific_heat_practical_014",
+      "conceptFamily": "explain_a_control_used_in_a_specific_heat_capacity_experiment",
+      "contextType": "exam_style",
+      "skill": "Internal Energy practice",
+      "stem": "In a specific heat capacity experiment, why should insulation be placed around the block?",
+      "question": "In a specific heat capacity experiment, why should insulation be placed around the block?",
+      "options": [
+        "To reduce energy transfer from the block to the surroundings.",
+        "To increase the mass of the heater.",
+        "To make the thermometer read zero.",
+        "To stop current flowing in the circuit."
+      ],
+      "correctAnswer": "To reduce energy transfer from the block to the surroundings.",
+      "correctIndex": 0,
+      "explanation": "Insulation reduces unwanted energy transfer to the surroundings, improving the estimate of energy transferred to the block.",
+      "misconceptionTag": "insulation-purpose",
+      "distractorRationales": [
+        {
+          "text": "To increase the mass of the heater.",
+          "misconception": ""
+        },
+        {
+          "text": "To make the thermometer read zero.",
+          "misconception": ""
+        },
+        {
+          "text": "To stop current flowing in the circuit.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain a control used in a specific heat capacity experiment."
+    },
+    {
+      "id": "edexcel_energy_internal_specific_heat_table_015",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Internal Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "internal_energy",
+      "topicId": "energy_stores",
+      "specRef": "3.1",
+      "specStatement": "Describe internal energy and energy stores.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_internal_specific_heat_table_015_lo",
+        "statement": "Interpret a table involving specific heat capacity.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "3.1:cooling:representation_interpretation",
-      "conceptFamily": "cooling",
-      "contextType": "a classroom demonstration",
-      "skill": "Internal Energy practice",
-      "stem": "A representation of internal energy is described in words. Which interpretation is correct? Check the clue before choosing: Explain cooling.",
-      "question": "A representation of internal energy is described in words. Which interpretation is correct? Check the clue before choosing: Explain cooling.",
-      "options": [
-        "The claim for internal energy is that cooling creates negative energy.",
-        "The claim for internal energy is that cooling reduces internal energy as energy transfers to the surroundings.",
-        "For internal energy, this would mean that cooling happens only by electrical transfer.",
-        "For internal energy: Cooling increases average particle kinetic energy."
-      ],
-      "correctAnswer": "The claim for internal energy is that cooling reduces internal energy as energy transfers to the surroundings.",
-      "correctIndex": 1,
-      "explanation": "3.1 targets: Explain cooling. Focus area: Internal Energy. For this question, Cooling reduces internal energy as energy transfers to the surroundings. Context used: a classroom demonstration; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:cooling",
-      "distractorRationales": [
-        {
-          "text": "The claim for internal energy is that cooling creates negative energy.",
-          "misconception": "Cooling creates negative energy."
-        },
-        {
-          "text": "For internal energy: Cooling increases average particle kinetic energy.",
-          "misconception": "Cooling increases average particle kinetic energy."
-        },
-        {
-          "text": "For internal energy, this would mean that cooling happens only by electrical transfer.",
-          "misconception": "Cooling happens only by electrical transfer."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain cooling."
-    },
-    {
-      "id": "edexcel_3_1_internal_energy_internal_energy_concept_discrimination_011",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Internal Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "internal_energy",
-      "topicId": "energy_stores",
-      "specRef": "3.1",
-      "specStatement": "Describe internal energy and energy stores.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_internal_energy",
-        "statement": "Describe internal energy. (Internal Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
       "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "3.1:internal_energy:concept_discrimination",
-      "conceptFamily": "internal_energy",
-      "contextType": "a revision checkpoint",
-      "skill": "Internal Energy practice",
-      "stem": "A student is comparing similar ideas in internal energy. Which statement is correct? Demand focus: describe internal energy.",
-      "question": "A student is comparing similar ideas in internal energy. Which statement is correct? Demand focus: describe internal energy.",
-      "options": [
-        "In this item, it means that internal energy is always zero in solids.",
-        "For internal energy: Internal energy is the movement of the whole object only.",
-        "For internal energy, it means that internal energy is the total kinetic and potential energy of particles in a system.",
-        "In this item, it means that internal energy is just gravitational potential energy."
-      ],
-      "correctAnswer": "For internal energy, it means that internal energy is the total kinetic and potential energy of particles in a system.",
-      "correctIndex": 2,
-      "explanation": "3.1 targets: Describe internal energy. Focus area: Internal Energy. For this question, Internal energy is the total kinetic and potential energy of particles in a system. Context used: a revision checkpoint; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:internal_energy",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that internal energy is just gravitational potential energy.",
-          "misconception": "Internal energy is the movement of the whole object only."
-        },
-        {
-          "text": "In this item, it means that internal energy is always zero in solids.",
-          "misconception": "Internal energy is just gravitational potential energy."
-        },
-        {
-          "text": "For internal energy: Internal energy is the movement of the whole object only.",
-          "misconception": "Internal energy is always zero in solids."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe internal energy."
-    },
-    {
-      "id": "edexcel_3_1_internal_energy_heating_temperature_applied_context_012",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Internal Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "internal_energy",
-      "topicId": "energy_stores",
-      "specRef": "3.1",
-      "specStatement": "Describe internal energy and energy stores.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_heating_temperature",
-        "statement": "Explain temperature increase. (Internal Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "3.1:heating_temperature:applied_context",
-      "conceptFamily": "heating_temperature",
-      "contextType": "an exam-style data table",
-      "skill": "Internal Energy practice",
-      "stem": "A question set in an exam-style data table tests internal energy. Which answer applies the idea correctly? Demand focus: explain temperature increase.",
-      "question": "A question set in an exam-style data table tests internal energy. Which answer applies the idea correctly? Demand focus: explain temperature increase.",
-      "options": [
-        "For internal energy, it means that heating changes mass but not energy.",
-        "For internal energy, the statement is that heating can increase particles’ average kinetic energy, raising temperature.",
-        "For internal energy, it means that heating always lowers kinetic energy.",
-        "For internal energy, the answer claims that temperature rise means particles become heavier."
-      ],
-      "correctAnswer": "For internal energy, the statement is that heating can increase particles’ average kinetic energy, raising temperature.",
-      "correctIndex": 1,
-      "explanation": "3.1 targets: Explain temperature increase. Focus area: Internal Energy. For this question, Heating can increase particles’ average kinetic energy, raising temperature. Context used: an exam-style data table; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:heating_temperature",
-      "distractorRationales": [
-        {
-          "text": "For internal energy, it means that heating changes mass but not energy.",
-          "misconception": "Heating always lowers kinetic energy."
-        },
-        {
-          "text": "For internal energy, it means that heating always lowers kinetic energy.",
-          "misconception": "Temperature rise means particles become heavier."
-        },
-        {
-          "text": "For internal energy, the answer claims that temperature rise means particles become heavier.",
-          "misconception": "Heating changes mass but not energy."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain temperature increase."
-    },
-    {
-      "id": "edexcel_3_1_internal_energy_change_state_energy_data_interpretation_013",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Internal Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "internal_energy",
-      "topicId": "energy_stores",
-      "specRef": "3.1",
-      "specStatement": "Describe internal energy and energy stores.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_change_state_energy",
-        "statement": "Explain energy during change of state. (Internal Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
       "difficulty": "medium",
       "commandWord": "interpret",
       "responseMode": "data_interpretation",
-      "patternId": "3.1:change_state_energy:data_interpretation",
-      "conceptFamily": "change_state_energy",
-      "contextType": "a required-practical notebook",
+      "patternId": "authored:edexcel_energy_internal_specific_heat_table_015",
+      "conceptFamily": "interpret_a_table_involving_specific_heat_capacity",
+      "contextType": "exam_style",
       "skill": "Internal Energy practice",
-      "stem": "A small data set about internal energy is being interpreted. Which conclusion is valid? Check the clue before choosing: Explain energy during change of state.",
-      "question": "A small data set about internal energy is being interpreted. Which conclusion is valid? Check the clue before choosing: Explain energy during change of state.",
+      "stem": "A table shows equal masses of copper and water receive the same energy. Copper has the lower specific heat capacity. Which result is expected?",
+      "question": "A table shows equal masses of copper and water receive the same energy. Copper has the lower specific heat capacity. Which result is expected?",
       "options": [
-        "The claim for internal energy is that during a change of state, energy changes particle potential energy while temperature stays constant.",
-        "For internal energy: Energy is not transferred during boiling.",
-        "For internal energy: Temperature always rises during melting.",
-        "For internal energy: Particles are destroyed during a change of state."
+        "Copper has the larger temperature rise.",
+        "Water has the larger temperature rise because it has higher specific heat capacity.",
+        "Both have zero temperature rise.",
+        "The material with lower specific heat capacity must have lower mass."
       ],
-      "correctAnswer": "The claim for internal energy is that during a change of state, energy changes particle potential energy while temperature stays constant.",
+      "correctAnswer": "Copper has the larger temperature rise.",
       "correctIndex": 0,
-      "explanation": "3.1 targets: Explain energy during change of state. Focus area: Internal Energy. For this question, During a change of state, energy changes particle potential energy while temperature stays constant. Context used: a required-practical notebook; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:change_state_energy",
+      "explanation": "For equal mass and energy transfer, the lower specific heat capacity material warms more.",
+      "misconceptionTag": "higher-c-warmer",
       "distractorRationales": [
         {
-          "text": "For internal energy: Temperature always rises during melting.",
-          "misconception": "Temperature always rises during melting."
+          "text": "Water has the larger temperature rise because it has higher specific heat capacity.",
+          "misconception": ""
         },
         {
-          "text": "For internal energy: Energy is not transferred during boiling.",
-          "misconception": "Energy is not transferred during boiling."
+          "text": "Both have zero temperature rise.",
+          "misconception": ""
         },
         {
-          "text": "For internal energy: Particles are destroyed during a change of state.",
-          "misconception": "Particles are destroyed during a change of state."
+          "text": "The material with lower specific heat capacity must have lower mass.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain energy during change of state."
+      "senNote": "Checks: Interpret a table involving specific heat capacity."
     },
     {
-      "id": "edexcel_3_1_internal_energy_specific_heat_capacity_exam_decision_014",
+      "id": "edexcel_energy_internal_latent_vs_specific_016",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -6350,269 +6507,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_specific_heat_capacity",
-        "statement": "Use specific heat capacity. (Internal Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "3.1:specific_heat_capacity:exam_decision",
-      "conceptFamily": "specific_heat_capacity",
-      "contextType": "a technician report",
-      "skill": "Internal Energy practice",
-      "stem": "Which answer is the strongest GCSE Physics response for internal energy? Demand focus: use specific heat capacity.",
-      "question": "Which answer is the strongest GCSE Physics response for internal energy? Demand focus: use specific heat capacity.",
-      "options": [
-        "In this internal energy item, specific heat capacity is energy needed to raise 1 kg by 1 °C.",
-        "The answer for internal energy says that specific heat capacity is energy to melt 1 kg.",
-        "For internal energy, the statement is that specific heat capacity is measured in watts.",
-        "For internal energy, the statement is that specific heat capacity is the same as density."
-      ],
-      "correctAnswer": "In this internal energy item, specific heat capacity is energy needed to raise 1 kg by 1 °C.",
-      "correctIndex": 0,
-      "explanation": "3.1 targets: Use specific heat capacity. Focus area: Internal Energy. For this question, Specific heat capacity is energy needed to raise 1 kg by 1 °C. Context used: a technician report; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:specific_heat_capacity",
-      "distractorRationales": [
-        {
-          "text": "For internal energy, the statement is that specific heat capacity is measured in watts.",
-          "misconception": "Specific heat capacity is energy to melt 1 kg."
-        },
-        {
-          "text": "For internal energy, the statement is that specific heat capacity is the same as density.",
-          "misconception": "Specific heat capacity is measured in watts."
-        },
-        {
-          "text": "The answer for internal energy says that specific heat capacity is energy to melt 1 kg.",
-          "misconception": "Specific heat capacity is the same as density."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use specific heat capacity."
-    },
-    {
-      "id": "edexcel_3_1_internal_energy_cooling_direct_recall_015",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Internal Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "internal_energy",
-      "topicId": "energy_stores",
-      "specRef": "3.1",
-      "specStatement": "Describe internal energy and energy stores.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_cooling",
-        "statement": "Explain cooling. (Internal Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "3.1:cooling:direct_recall",
-      "conceptFamily": "cooling",
-      "contextType": "a labelled diagram",
-      "skill": "Internal Energy practice",
-      "stem": "Which answer matches this internal energy objective: Explain cooling? Check the clue before choosing: Explain cooling.",
-      "question": "Which answer matches this internal energy objective: Explain cooling? Check the clue before choosing: Explain cooling.",
-      "options": [
-        "For internal energy: Cooling reduces internal energy as energy transfers to the surroundings.",
-        "For internal energy, this would mean that cooling happens only by electrical transfer.",
-        "For internal energy, this would mean that cooling increases average particle kinetic energy.",
-        "For internal energy, this would mean that cooling creates negative energy."
-      ],
-      "correctAnswer": "For internal energy: Cooling reduces internal energy as energy transfers to the surroundings.",
-      "correctIndex": 0,
-      "explanation": "3.1 targets: Explain cooling. Focus area: Internal Energy. For this question, Cooling reduces internal energy as energy transfers to the surroundings. Context used: a labelled diagram; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:cooling",
-      "distractorRationales": [
-        {
-          "text": "For internal energy, this would mean that cooling happens only by electrical transfer.",
-          "misconception": "Cooling creates negative energy."
-        },
-        {
-          "text": "For internal energy, this would mean that cooling creates negative energy.",
-          "misconception": "Cooling increases average particle kinetic energy."
-        },
-        {
-          "text": "For internal energy, this would mean that cooling increases average particle kinetic energy.",
-          "misconception": "Cooling happens only by electrical transfer."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain cooling."
-    },
-    {
-      "id": "edexcel_3_1_internal_energy_internal_energy_concept_discrimination_016",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Internal Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "internal_energy",
-      "topicId": "energy_stores",
-      "specRef": "3.1",
-      "specStatement": "Describe internal energy and energy stores.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_internal_energy",
-        "statement": "Describe internal energy. (Internal Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "3.1:internal_energy:concept_discrimination",
-      "conceptFamily": "internal_energy",
-      "contextType": "a short calculation",
-      "skill": "Internal Energy practice",
-      "stem": "Which option best separates the correct internal energy idea from a common mix-up? Demand focus: describe internal energy.",
-      "question": "Which option best separates the correct internal energy idea from a common mix-up? Demand focus: describe internal energy.",
-      "options": [
-        "The answer for internal energy says that internal energy is the total kinetic and potential energy of particles in a system.",
-        "For internal energy, it means that internal energy is the movement of the whole object only.",
-        "For internal energy, it means that internal energy is just gravitational potential energy.",
-        "For internal energy, the answer claims that internal energy is always zero in solids."
-      ],
-      "correctAnswer": "The answer for internal energy says that internal energy is the total kinetic and potential energy of particles in a system.",
-      "correctIndex": 0,
-      "explanation": "3.1 targets: Describe internal energy. Focus area: Internal Energy. For this question, Internal energy is the total kinetic and potential energy of particles in a system. Context used: a short calculation; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:internal_energy",
-      "distractorRationales": [
-        {
-          "text": "For internal energy, it means that internal energy is the movement of the whole object only.",
-          "misconception": "Internal energy is the movement of the whole object only."
-        },
-        {
-          "text": "For internal energy, it means that internal energy is just gravitational potential energy.",
-          "misconception": "Internal energy is just gravitational potential energy."
-        },
-        {
-          "text": "For internal energy, the answer claims that internal energy is always zero in solids.",
-          "misconception": "Internal energy is always zero in solids."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe internal energy."
-    },
-    {
-      "id": "edexcel_3_1_internal_energy_heating_temperature_misconception_correction_017",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Internal Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "internal_energy",
-      "topicId": "energy_stores",
-      "specRef": "3.1",
-      "specStatement": "Describe internal energy and energy stores.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_heating_temperature",
-        "statement": "Explain temperature increase. (Internal Energy)",
+        "id": "edexcel_energy_internal_latent_vs_specific_016_lo",
+        "statement": "Distinguish heating from change-of-state energy transfer.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "3.1:heating_temperature:misconception_correction",
-      "conceptFamily": "heating_temperature",
-      "contextType": "a safety decision",
+      "commandWord": "distinguish",
+      "responseMode": "concept",
+      "patternId": "authored:edexcel_energy_internal_latent_vs_specific_016",
+      "conceptFamily": "distinguish_heating_from_change_of_state_energy_transfer",
+      "contextType": "exam_style",
       "skill": "Internal Energy practice",
-      "stem": "Which answer corrects a misconception about internal energy? Demand focus: explain temperature increase.",
-      "question": "Which answer corrects a misconception about internal energy? Demand focus: explain temperature increase.",
+      "stem": "Which observation shows that energy is being used for a change of state rather than raising temperature?",
+      "question": "Which observation shows that energy is being used for a change of state rather than raising temperature?",
       "options": [
-        "The answer for internal energy says that heating changes mass but not energy.",
-        "For internal energy, the answer claims that heating can increase particles’ average kinetic energy, raising temperature.",
-        "In this internal energy item, temperature rise means particles become heavier.",
-        "For internal energy, it means that heating always lowers kinetic energy."
+        "The temperature stays constant while the substance melts.",
+        "The temperature rises steadily in the solid.",
+        "The mass of the sample doubles.",
+        "The thermometer is removed before heating starts."
       ],
-      "correctAnswer": "For internal energy, the answer claims that heating can increase particles’ average kinetic energy, raising temperature.",
-      "correctIndex": 1,
-      "explanation": "3.1 targets: Explain temperature increase. Focus area: Internal Energy. For this question, Heating can increase particles’ average kinetic energy, raising temperature. Context used: a safety decision; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:heating_temperature",
+      "correctAnswer": "The temperature stays constant while the substance melts.",
+      "correctIndex": 0,
+      "explanation": "During a change of state, energy changes particle arrangement while temperature remains constant.",
+      "misconceptionTag": "latent-vs-temperature",
       "distractorRationales": [
         {
-          "text": "In this internal energy item, temperature rise means particles become heavier.",
-          "misconception": "Heating always lowers kinetic energy."
+          "text": "The temperature rises steadily in the solid.",
+          "misconception": ""
         },
         {
-          "text": "The answer for internal energy says that heating changes mass but not energy.",
-          "misconception": "Temperature rise means particles become heavier."
+          "text": "The mass of the sample doubles.",
+          "misconception": ""
         },
         {
-          "text": "For internal energy, it means that heating always lowers kinetic energy.",
-          "misconception": "Heating changes mass but not energy."
+          "text": "The thermometer is removed before heating starts.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain temperature increase."
+      "senNote": "Checks: Distinguish heating from change-of-state energy transfer."
     },
     {
-      "id": "edexcel_3_1_internal_energy_change_state_energy_data_interpretation_018",
+      "id": "edexcel_energy_internal_temperature_particle_speed_017",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -6634,56 +6579,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_change_state_energy",
-        "statement": "Explain energy during change of state. (Internal Energy)",
+        "id": "edexcel_energy_internal_temperature_particle_speed_017_lo",
+        "statement": "Relate temperature to average particle speed.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "3.1:change_state_energy:data_interpretation",
-      "conceptFamily": "change_state_energy",
-      "contextType": "a graph-reading task",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "relate",
+      "responseMode": "concept",
+      "patternId": "authored:edexcel_energy_internal_temperature_particle_speed_017",
+      "conceptFamily": "relate_temperature_to_average_particle_speed",
+      "contextType": "exam_style",
       "skill": "Internal Energy practice",
-      "stem": "Which conclusion about internal energy is supported by the evidence? Check the clue before choosing: Explain energy during change of state.",
-      "question": "Which conclusion about internal energy is supported by the evidence? Check the clue before choosing: Explain energy during change of state.",
+      "stem": "A gas thermometer shows a higher temperature. What has happened to the average speed of the gas particles?",
+      "question": "A gas thermometer shows a higher temperature. What has happened to the average speed of the gas particles?",
       "options": [
-        "For internal energy, the statement is that during a change of state, energy changes particle potential energy while temperature stays constant.",
-        "For internal energy, the answer claims that temperature always rises during melting.",
-        "For internal energy, the answer claims that energy is not transferred during boiling.",
-        "For internal energy, the answer claims that particles are destroyed during a change of state."
+        "It has increased.",
+        "It has decreased to zero.",
+        "It is unchanged because gases have no particles.",
+        "It has changed into gravitational field strength."
       ],
-      "correctAnswer": "For internal energy, the statement is that during a change of state, energy changes particle potential energy while temperature stays constant.",
+      "correctAnswer": "It has increased.",
       "correctIndex": 0,
-      "explanation": "3.1 targets: Explain energy during change of state. Focus area: Internal Energy. For this question, During a change of state, energy changes particle potential energy while temperature stays constant. Context used: a graph-reading task; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:change_state_energy",
+      "explanation": "Higher temperature means greater average kinetic energy, so the particles move faster on average.",
+      "misconceptionTag": "temperature-speed",
       "distractorRationales": [
         {
-          "text": "For internal energy, the answer claims that particles are destroyed during a change of state.",
-          "misconception": "Temperature always rises during melting."
+          "text": "It has decreased to zero.",
+          "misconception": ""
         },
         {
-          "text": "For internal energy, the answer claims that temperature always rises during melting.",
-          "misconception": "Energy is not transferred during boiling."
+          "text": "It is unchanged because gases have no particles.",
+          "misconception": ""
         },
         {
-          "text": "For internal energy, the answer claims that energy is not transferred during boiling.",
-          "misconception": "Particles are destroyed during a change of state."
+          "text": "It has changed into gravitational field strength.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain energy during change of state."
+      "senNote": "Checks: Relate temperature to average particle speed."
     },
     {
-      "id": "edexcel_3_1_internal_energy_specific_heat_capacity_representation_interpretation_019",
+      "id": "edexcel_energy_internal_energy_not_temperature_018",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -6705,53 +6651,126 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_3_1_internal_energy_specific_heat_capacity",
-        "statement": "Use specific heat capacity. (Internal Energy)",
+        "id": "edexcel_energy_internal_energy_not_temperature_018_lo",
+        "statement": "Distinguish temperature from total internal energy.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "3.1:specific_heat_capacity:representation_interpretation",
-      "conceptFamily": "specific_heat_capacity",
-      "contextType": "a comparison question",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "distinguish",
+      "responseMode": "concept",
+      "patternId": "authored:edexcel_energy_internal_energy_not_temperature_018",
+      "conceptFamily": "distinguish_temperature_from_total_internal_energy",
+      "contextType": "exam_style",
       "skill": "Internal Energy practice",
-      "stem": "A representation of internal energy is described in words. Which interpretation is correct? Demand focus: use specific heat capacity.",
-      "question": "A representation of internal energy is described in words. Which interpretation is correct? Demand focus: use specific heat capacity.",
+      "stem": "A large beaker and a small beaker contain water at the same temperature. Which statement is correct?",
+      "question": "A large beaker and a small beaker contain water at the same temperature. Which statement is correct?",
       "options": [
-        "For internal energy, this would mean that specific heat capacity is measured in watts.",
-        "For internal energy, this would mean that specific heat capacity is energy to melt 1 kg.",
-        "For internal energy, this would mean that specific heat capacity is the same as density.",
-        "For internal energy: Specific heat capacity is energy needed to raise 1 kg by 1 °C."
+        "The larger beaker can contain more internal energy because it has more particles.",
+        "They must contain exactly the same internal energy because their temperatures are equal.",
+        "The smaller beaker must contain more internal energy because it has less water.",
+        "Neither beaker contains internal energy."
       ],
-      "correctAnswer": "For internal energy: Specific heat capacity is energy needed to raise 1 kg by 1 °C.",
-      "correctIndex": 3,
-      "explanation": "3.1 targets: Use specific heat capacity. Focus area: Internal Energy. For this question, Specific heat capacity is energy needed to raise 1 kg by 1 °C. Context used: a comparison question; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:specific_heat_capacity",
+      "correctAnswer": "The larger beaker can contain more internal energy because it has more particles.",
+      "correctIndex": 0,
+      "explanation": "Temperature is linked to average particle kinetic energy, but total internal energy also depends on the amount of substance.",
+      "misconceptionTag": "temperature-equals-total-energy",
       "distractorRationales": [
         {
-          "text": "For internal energy, this would mean that specific heat capacity is energy to melt 1 kg.",
-          "misconception": "Specific heat capacity is energy to melt 1 kg."
+          "text": "They must contain exactly the same internal energy because their temperatures are equal.",
+          "misconception": ""
         },
         {
-          "text": "For internal energy, this would mean that specific heat capacity is measured in watts.",
-          "misconception": "Specific heat capacity is measured in watts."
+          "text": "The smaller beaker must contain more internal energy because it has less water.",
+          "misconception": ""
         },
         {
-          "text": "For internal energy, this would mean that specific heat capacity is the same as density.",
-          "misconception": "Specific heat capacity is the same as density."
+          "text": "Neither beaker contains internal energy.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 3.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use specific heat capacity."
+      "senNote": "Checks: Distinguish temperature from total internal energy."
+    },
+    {
+      "id": "edexcel_energy_internal_specific_heat_unit_conversion_019",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Internal Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "internal_energy",
+      "topicId": "energy_stores",
+      "specRef": "3.1",
+      "specStatement": "Describe internal energy and energy stores.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_internal_specific_heat_unit_conversion_019_lo",
+        "statement": "Use correct units in specific heat capacity calculations.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_energy_internal_specific_heat_unit_conversion_019",
+      "conceptFamily": "use_correct_units_in_specific_heat_capacity_calculations",
+      "contextType": "exam_style",
+      "skill": "Internal Energy practice",
+      "stem": "A 500 g sample receives 2100 J and warms by 10 °C. Its specific heat capacity is 420 J/kg °C. Which conversion is needed before using the equation?",
+      "question": "A 500 g sample receives 2100 J and warms by 10 °C. Its specific heat capacity is 420 J/kg °C. Which conversion is needed before using the equation?",
+      "options": [
+        "500 g must be written as 0.50 kg.",
+        "10 °C must be written as 10 kg.",
+        "2100 J must be written as 2100 W.",
+        "420 J/kg °C must be written as 420 N/kg."
+      ],
+      "correctAnswer": "500 g must be written as 0.50 kg.",
+      "correctIndex": 0,
+      "explanation": "The equation uses mass in kilograms, so 500 g should be converted to 0.50 kg.",
+      "misconceptionTag": "grams-to-kg",
+      "distractorRationales": [
+        {
+          "text": "10 °C must be written as 10 kg.",
+          "misconception": ""
+        },
+        {
+          "text": "2100 J must be written as 2100 W.",
+          "misconception": ""
+        },
+        {
+          "text": "420 J/kg °C must be written as 420 N/kg.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 3.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Use correct units in specific heat capacity calculations."
     }
   ]
 }

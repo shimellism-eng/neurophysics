@@ -5,6 +5,34 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice AQA Series Resistance + Parallel Circuits authored
+- Fixed the next AQA Electricity slice with premium, exam-style authored questions:
+  - AQA `Series Resistance`: 5/5 authored.
+  - AQA `Parallel Circuits`: 5/5 authored.
+- Hidden spec metadata:
+  - AQA Physics `specRef`: `4.2.2`.
+  - AQA Combined Science `combinedSpecRef`: `6.2.2`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Updated the regeneration pipeline so authored AQA items can carry `combinedSpecRef` into runtime JSON.
+- Current Electricity good-to-go count after this fix:
+  - AQA: 59/144 good to go.
+  - Edexcel: 94/94 good to go.
+  - Combined Electricity: 153/238 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `npx cap sync ios` passes.
+  - iOS simulator build passes on iPhone 17 Pro Max with `CODE_SIGNING_ALLOWED=NO`.
+  - iOS simulator install/launch passes; updated app is live in Simulator.
+
+### Next step
+- Continue AQA Electricity:
+  - AQA `Resistance`: 42 authored exam-style questions.
+  - Then AQA `Series Circuits`: 19.
+  - Then AQA `National Grid`: 24.
+
 ### Adaptive Practice board/course filter hardening
 - Implemented the first part of the board-faithful/course-faithful Adaptive Practice plan.
 - Fixed runtime filtering:

@@ -364,6 +364,7 @@ function makeAuthoredQuestion({ board, legacy, spec, item }) {
     subtopicSlug: legacy.subtopicSlug,
     topicId: legacy.topicId,
     specRef: spec.specRef,
+    ...(item.combinedSpecRef ? { combinedSpecRef: item.combinedSpecRef } : {}),
     specStatement: spec.statement,
     paper: spec.paper,
     courseAvailability: item.courseAvailability || spec.courseAvailability,

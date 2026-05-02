@@ -5,6 +5,31 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice AQA Energy Transfer + Series Current correction
+- Checked spec anchors before authoring:
+  - AQA `Series Current`: `4.2.2`, current in series circuits.
+  - AQA `Energy Transfer`: corrected from `4.2.4.1` to `4.2.4.2`, energy transfers in everyday electrical appliances.
+- Fixed:
+  - AQA `Series Current`: 5/5 authored exam-style questions.
+  - AQA `Energy Transfer`: 5/5 authored exam-style questions.
+- Current Electricity good-to-go count after this correction:
+  - AQA: 49/144 good to go.
+  - Edexcel: 94/94 good to go.
+  - Combined Electricity: 143/238 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `npx cap sync ios` passes.
+  - iOS simulator build passes on iPhone 17 Pro Max with `CODE_SIGNING_ALLOWED=NO`.
+  - iOS simulator boot/install/launch passes after rebooting the simulator.
+
+### Next step
+- Continue AQA Electricity:
+  - AQA `Series Resistance`: 5/5 authored.
+  - AQA `Parallel Circuits`: 5/5 authored.
+
 ### Adaptive Practice AQA Power + Edexcel Parallel Circuits correction
 - Checked spec anchors before authoring:
   - AQA `4.2.4.1` covers electrical power, `P = V × I`, `P = I²R`, and energy transfer over time.

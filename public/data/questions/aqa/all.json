@@ -1,7 +1,7 @@
 {
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
-  "generatedAt": "2026-05-02T07:04:48.139Z",
+  "generatedAt": "2026-05-02T07:09:40.299Z",
   "questions": [
     {
       "id": "aqa_atomic_isotopes_positive_ion_001",
@@ -10526,7 +10526,7 @@
       "senNote": "Checks: Choose how to measure potential difference across a component."
     },
     {
-      "id": "aqa_4_2_2_series_current_series_current_direct_recall_001",
+      "id": "aqa_electricity_series_current_same_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -10548,127 +10548,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_2_series_current_series_current",
-        "statement": "Describe current in a series circuit. (Series Current)",
+        "id": "aqa_electricity_series_current_same_001_lo",
+        "statement": "Recall that current is the same at all points in a series circuit.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.2.2:series_current:direct_recall",
-      "conceptFamily": "series_current",
-      "contextType": "a labelled diagram",
-      "skill": "Describe current in a series circuit.",
-      "stem": "Which statement is correct for series current? Check the clue before choosing: Describe current in a series circuit.",
-      "question": "Which statement is correct for series current? Check the clue before choosing: Describe current in a series circuit.",
-      "options": [
-        "For series current, the statement is that current is largest after the final component.",
-        "For series current, it means that current is the same at every point in a series circuit.",
-        "In this series current item, current splits between components in a single loop.",
-        "For series current, the answer claims that current is used up by each component."
-      ],
-      "correctAnswer": "For series current, it means that current is the same at every point in a series circuit.",
-      "correctIndex": 1,
-      "explanation": "4.2.2 targets: Describe current in a series circuit. Focus area: Series Current. For this question, Current is the same at every point in a series circuit. Context used: a labelled diagram; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_current",
-      "distractorRationales": [
-        {
-          "text": "For series current, the answer claims that current is used up by each component.",
-          "misconception": "Current is used up by each component."
-        },
-        {
-          "text": "For series current, the statement is that current is largest after the final component.",
-          "misconception": "Current is largest after the final component."
-        },
-        {
-          "text": "In this series current item, current splits between components in a single loop.",
-          "misconception": "Current splits between components in a single loop."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe current in a series circuit."
-    },
-    {
-      "id": "aqa_4_2_2_series_current_series_resistance_concept_discrimination_002",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Series Current",
-      "topicSlug": "electricity",
-      "subtopicSlug": "series_current",
-      "topicId": "series_parallel",
-      "specRef": "4.2.2",
-      "specStatement": "Current in series circuits.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_2_series_current_series_resistance",
-        "statement": "Calculate total resistance in series. (Series Current)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
+      "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.2.2:series_resistance:concept_discrimination",
-      "conceptFamily": "series_resistance",
-      "contextType": "a short calculation",
-      "skill": "Calculate total resistance in series.",
-      "stem": "A student is comparing similar ideas in series current. Which statement is correct? Demand focus: calculate total resistance in series.",
-      "question": "A student is comparing similar ideas in series current. Which statement is correct? Demand focus: calculate total resistance in series.",
+      "commandWord": "calculate",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_series_current_same_001",
+      "conceptFamily": "recall_that_current_is_the_same_at_all_points_in_a_series_circuit",
+      "contextType": "exam_style",
+      "skill": "Recall that current is the same at all points in a series circuit.",
+      "stem": "Three lamps are connected in series with a cell. An ammeter before the first lamp reads 0.40 A. What is the current after the third lamp?",
+      "question": "Three lamps are connected in series with a cell. An ammeter before the first lamp reads 0.40 A. What is the current after the third lamp?",
       "options": [
-        "In this series current item, total resistance in series is the sum of the component resistances.",
-        "The answer for series current says that only the largest resistor counts.",
-        "For series current, the statement is that total resistance in series is smaller than every resistor.",
-        "The answer for series current says that series resistance is found by multiplying by voltage."
+        "0.40 A",
+        "0.13 A",
+        "1.2 A",
+        "0 A"
       ],
-      "correctAnswer": "In this series current item, total resistance in series is the sum of the component resistances.",
+      "correctAnswer": "0.40 A",
       "correctIndex": 0,
-      "explanation": "4.2.2 targets: Calculate total resistance in series. Focus area: Series Current. For this question, Total resistance in series is the sum of the component resistances. Context used: a short calculation; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_resistance",
+      "explanation": "In a series circuit there is only one path, so the current is the same at every point.",
+      "misconceptionTag": "series-current-same",
       "distractorRationales": [
         {
-          "text": "The answer for series current says that only the largest resistor counts.",
-          "misconception": "Total resistance in series is smaller than every resistor."
+          "text": "0.13 A",
+          "misconception": ""
         },
         {
-          "text": "The answer for series current says that series resistance is found by multiplying by voltage.",
-          "misconception": "Only the largest resistor counts."
+          "text": "1.2 A",
+          "misconception": ""
         },
         {
-          "text": "For series current, the statement is that total resistance in series is smaller than every resistor.",
-          "misconception": "Series resistance is found by multiplying by voltage."
+          "text": "0 A",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate total resistance in series."
+      "senNote": "Checks: Recall that current is the same at all points in a series circuit."
     },
     {
-      "id": "aqa_4_2_2_series_current_parallel_current_misconception_correction_003",
+      "id": "aqa_electricity_series_current_not_used_up_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -10690,56 +10620,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_2_series_current_parallel_current",
-        "statement": "Describe current in parallel. (Series Current)",
+        "id": "aqa_electricity_series_current_not_used_up_002_lo",
+        "statement": "Correct the misconception that current is used up in a series circuit.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.2.2:parallel_current:misconception_correction",
-      "conceptFamily": "parallel_current",
-      "contextType": "a safety decision",
-      "skill": "Describe current in parallel.",
-      "stem": "A revision note about series current contains an error. Which replacement is correct? Demand focus: describe current in parallel.",
-      "question": "A revision note about series current contains an error. Which replacement is correct? Demand focus: describe current in parallel.",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_series_current_not_used_up_002",
+      "conceptFamily": "correct_the_misconception_that_current_is_used_up_in_a_series_circuit",
+      "contextType": "exam_style",
+      "skill": "Correct the misconception that current is used up in a series circuit.",
+      "stem": "A student says, “The current is smaller after the first lamp because the lamp uses up some current.” What is wrong with this statement?",
+      "question": "A student says, “The current is smaller after the first lamp because the lamp uses up some current.” What is wrong with this statement?",
       "options": [
-        "For series current, it means that current cannot split in parallel.",
-        "For series current, it means that only one branch can carry current.",
-        "For series current, it means that total current is always smaller than each branch current.",
-        "For series current, the option says that total current is the sum of the currents in the branches."
+        "Current is not used up; energy is transferred by the lamp.",
+        "The current gets bigger after each lamp.",
+        "The first lamp stores all the charge.",
+        "The current must be zero before every lamp."
       ],
-      "correctAnswer": "For series current, the option says that total current is the sum of the currents in the branches.",
-      "correctIndex": 3,
-      "explanation": "4.2.2 targets: Describe current in parallel. Focus area: Series Current. For this question, Total current is the sum of the currents in the branches. Context used: a safety decision; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_current",
+      "correctAnswer": "Current is not used up; energy is transferred by the lamp.",
+      "correctIndex": 0,
+      "explanation": "Components transfer energy, but charge is not used up. The current is the same throughout a single series loop.",
+      "misconceptionTag": "current-used-up",
       "distractorRationales": [
         {
-          "text": "For series current, it means that only one branch can carry current.",
-          "misconception": "Current cannot split in parallel."
+          "text": "The current gets bigger after each lamp.",
+          "misconception": "series current direction and conservation misunderstood"
         },
         {
-          "text": "For series current, it means that current cannot split in parallel.",
-          "misconception": "Total current is always smaller than each branch current."
+          "text": "The first lamp stores all the charge.",
+          "misconception": "charge storage misconception"
         },
         {
-          "text": "For series current, it means that total current is always smaller than each branch current.",
-          "misconception": "Only one branch can carry current."
+          "text": "The current must be zero before every lamp.",
+          "misconception": "current path misunderstood"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe current in parallel."
+      "senNote": "Checks: Correct the misconception that current is used up in a series circuit."
     },
     {
-      "id": "aqa_4_2_2_series_current_series_current_data_interpretation_004",
+      "id": "aqa_electricity_series_current_single_path_003",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -10761,56 +10692,129 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_2_series_current_series_current",
-        "statement": "Describe current in a series circuit. (Series Current)",
+        "id": "aqa_electricity_series_current_single_path_003_lo",
+        "statement": "Explain series current using the single-path model.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_series_current_single_path_003",
+      "conceptFamily": "explain_series_current_using_the_single_path_model",
+      "contextType": "exam_style",
+      "skill": "Explain series current using the single-path model.",
+      "stem": "Why is the current the same through all components in a series circuit?",
+      "question": "Why is the current the same through all components in a series circuit?",
+      "options": [
+        "There is only one path for the charge to flow.",
+        "The potential difference is the same across every component.",
+        "Each component creates new charge.",
+        "The resistance of every component is always zero."
+      ],
+      "correctAnswer": "There is only one path for the charge to flow.",
+      "correctIndex": 0,
+      "explanation": "A series circuit has one continuous loop, so the same charge flow passes through each component every second.",
+      "misconceptionTag": "series-single-path",
+      "distractorRationales": [
+        {
+          "text": "The potential difference is the same across every component.",
+          "misconception": "parallel p.d. rule confused with series current"
+        },
+        {
+          "text": "Each component creates new charge.",
+          "misconception": "charge creation misconception"
+        },
+        {
+          "text": "The resistance of every component is always zero.",
+          "misconception": "series current confused with zero resistance"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain series current using the single-path model."
+    },
+    {
+      "id": "aqa_electricity_series_current_two_ammeter_004",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Series Current",
+      "topicSlug": "electricity",
+      "subtopicSlug": "series_current",
+      "topicId": "series_parallel",
+      "specRef": "4.2.2",
+      "specStatement": "Current in series circuits.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_series_current_two_ammeter_004_lo",
+        "statement": "Interpret ammeter readings in a series circuit.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
       "difficulty": "medium",
       "commandWord": "interpret",
       "responseMode": "data_interpretation",
-      "patternId": "4.2.2:series_current:data_interpretation",
-      "conceptFamily": "series_current",
-      "contextType": "a graph-reading task",
-      "skill": "Describe current in a series circuit.",
-      "stem": "A small data set about series current is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: describe current in a series circuit.",
-      "question": "A small data set about series current is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: describe current in a series circuit.",
+      "patternId": "authored:aqa_electricity_series_current_two_ammeter_004",
+      "conceptFamily": "interpret_ammeter_readings_in_a_series_circuit",
+      "contextType": "exam_style",
+      "skill": "Interpret ammeter readings in a series circuit.",
+      "stem": "A series circuit contains two resistors. Ammeter A reads 0.25 A before the first resistor. What should ammeter B read between the two resistors?",
+      "question": "A series circuit contains two resistors. Ammeter A reads 0.25 A before the first resistor. What should ammeter B read between the two resistors?",
       "options": [
-        "For series current, the option says that current is used up by each component.",
-        "In this item, it means that current splits between components in a single loop.",
-        "In this item, it means that current is the same at every point in a series circuit.",
-        "For series current, it means that current is largest after the final component."
+        "0.25 A",
+        "0.50 A",
+        "0.125 A",
+        "25 A"
       ],
-      "correctAnswer": "In this item, it means that current is the same at every point in a series circuit.",
-      "correctIndex": 2,
-      "explanation": "4.2.2 targets: Describe current in a series circuit. Focus area: Series Current. For this question, Current is the same at every point in a series circuit. Context used: a graph-reading task; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_current",
+      "correctAnswer": "0.25 A",
+      "correctIndex": 0,
+      "explanation": "Current does not split in a series circuit, so both ammeters should read 0.25 A.",
+      "misconceptionTag": "series-ammeter-readings",
       "distractorRationales": [
         {
-          "text": "For series current, the option says that current is used up by each component.",
-          "misconception": "Current is used up by each component."
+          "text": "0.50 A",
+          "misconception": ""
         },
         {
-          "text": "For series current, it means that current is largest after the final component.",
-          "misconception": "Current is largest after the final component."
+          "text": "0.125 A",
+          "misconception": ""
         },
         {
-          "text": "In this item, it means that current splits between components in a single loop.",
-          "misconception": "Current splits between components in a single loop."
+          "text": "25 A",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe current in a series circuit."
+      "senNote": "Checks: Interpret ammeter readings in a series circuit."
     },
     {
-      "id": "aqa_4_2_2_series_current_series_resistance_representation_interpretation_005",
+      "id": "aqa_electricity_series_current_open_switch_005",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -10832,53 +10836,54 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_2_series_current_series_resistance",
-        "statement": "Calculate total resistance in series. (Series Current)",
+        "id": "aqa_electricity_series_current_open_switch_005_lo",
+        "statement": "Predict current in an open series circuit.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.2.2:series_resistance:representation_interpretation",
-      "conceptFamily": "series_resistance",
-      "contextType": "a comparison question",
-      "skill": "Calculate total resistance in series.",
-      "stem": "Which option correctly reads the series current model or diagram idea? Keep the answer focused on series current: calculate total resistance in series.",
-      "question": "Which option correctly reads the series current model or diagram idea? Keep the answer focused on series current: calculate total resistance in series.",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "predict",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_series_current_open_switch_005",
+      "conceptFamily": "predict_current_in_an_open_series_circuit",
+      "contextType": "exam_style",
+      "skill": "Predict current in an open series circuit.",
+      "stem": "A switch is opened in a series circuit. What happens to the current through every component?",
+      "question": "A switch is opened in a series circuit. What happens to the current through every component?",
       "options": [
-        "For series current, the option says that total resistance in series is the sum of the component resistances.",
-        "The claim for series current is that only the largest resistor counts.",
-        "The claim for series current is that series resistance is found by multiplying by voltage.",
-        "For series current, this would mean that total resistance in series is smaller than every resistor."
+        "It becomes zero everywhere in the circuit.",
+        "It keeps flowing through components before the switch.",
+        "It doubles after the switch.",
+        "It only stops in the cell."
       ],
-      "correctAnswer": "For series current, the option says that total resistance in series is the sum of the component resistances.",
+      "correctAnswer": "It becomes zero everywhere in the circuit.",
       "correctIndex": 0,
-      "explanation": "4.2.2 targets: Calculate total resistance in series. Focus area: Series Current. For this question, Total resistance in series is the sum of the component resistances. Context used: a comparison question; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_resistance",
+      "explanation": "Opening the switch breaks the only path, so no current flows anywhere in the series circuit.",
+      "misconceptionTag": "open-series-current-zero",
       "distractorRationales": [
         {
-          "text": "The claim for series current is that only the largest resistor counts.",
-          "misconception": "Total resistance in series is smaller than every resistor."
+          "text": "It keeps flowing through components before the switch.",
+          "misconception": "partial loop misconception"
         },
         {
-          "text": "The claim for series current is that series resistance is found by multiplying by voltage.",
-          "misconception": "Only the largest resistor counts."
+          "text": "It doubles after the switch.",
+          "misconception": "open circuit misunderstood"
         },
         {
-          "text": "For series current, this would mean that total resistance in series is smaller than every resistor.",
-          "misconception": "Series resistance is found by multiplying by voltage."
+          "text": "It only stops in the cell.",
+          "misconception": "cell/component current path confused"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate total resistance in series."
+      "senNote": "Checks: Predict current in an open series circuit."
     },
     {
       "id": "aqa_4_2_2_series_resistance_series_resistance_direct_recall_001",
@@ -11966,7 +11971,7 @@
       "senNote": "Checks: Calculate energy transferred using power and time."
     },
     {
-      "id": "aqa_4_2_4_1_energy_transfer_energy_power_time_direct_recall_001",
+      "id": "aqa_electricity_energy_transfer_appliance_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -11977,8 +11982,8 @@
       "topicSlug": "electricity",
       "subtopicSlug": "energy_transfer",
       "topicId": "electrical_power",
-      "specRef": "4.2.4.1",
-      "specStatement": "Energy transfers in electrical appliances.",
+      "specRef": "4.2.4.2",
+      "specStatement": "Energy transfers in everyday electrical appliances.",
       "paper": "Paper 1",
       "courseAvailability": [
         "combined",
@@ -11988,198 +11993,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_1_energy_transfer_energy_power_time",
-        "statement": "Use energy transferred by a device. (Energy Transfer)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.2.4.1:energy_power_time:direct_recall",
-      "conceptFamily": "energy_power_time",
-      "contextType": "a safety decision",
-      "skill": "Use energy transferred by a device.",
-      "stem": "Which statement is correct for energy transfer? Check the clue before choosing: Use energy transferred by a device.",
-      "question": "Which statement is correct for energy transfer? Check the clue before choosing: Use energy transferred by a device.",
-      "options": [
-        "For energy transfer, the option says that energy transferred = power × time.",
-        "For energy transfer, this would mean that energy transferred = power ÷ time.",
-        "For energy transfer, this would mean that energy transferred is measured in amperes.",
-        "For energy transfer, it means that energy transfer does not depend on time."
-      ],
-      "correctAnswer": "For energy transfer, the option says that energy transferred = power × time.",
-      "correctIndex": 0,
-      "explanation": "4.2.4.1 targets: Use energy transferred by a device. Focus area: Energy Transfer. For this question, Energy transferred = power × time. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:energy_power_time",
-      "distractorRationales": [
-        {
-          "text": "For energy transfer, this would mean that energy transferred = power ÷ time.",
-          "misconception": "Energy transferred = power ÷ time."
-        },
-        {
-          "text": "For energy transfer, this would mean that energy transferred is measured in amperes.",
-          "misconception": "Energy transferred is measured in amperes."
-        },
-        {
-          "text": "For energy transfer, it means that energy transfer does not depend on time.",
-          "misconception": "Energy transfer does not depend on time."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use energy transferred by a device."
-    },
-    {
-      "id": "aqa_4_2_4_1_energy_transfer_power_vi_concept_discrimination_002",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Energy Transfer",
-      "topicSlug": "electricity",
-      "subtopicSlug": "energy_transfer",
-      "topicId": "electrical_power",
-      "specRef": "4.2.4.1",
-      "specStatement": "Energy transfers in electrical appliances.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_4_1_energy_transfer_power_vi",
-        "statement": "Use power, potential difference and current. (Energy Transfer)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.2.4.1:power_vi:concept_discrimination",
-      "conceptFamily": "power_vi",
-      "contextType": "a graph-reading task",
-      "skill": "Use power, potential difference and current.",
-      "stem": "A student is comparing similar ideas in energy transfer. Which statement is correct? Keep the answer focused on energy transfer: use power, potential difference and current.",
-      "question": "A student is comparing similar ideas in energy transfer. Which statement is correct? Keep the answer focused on energy transfer: use power, potential difference and current.",
-      "options": [
-        "The answer for energy transfer says that power is measured in coulombs.",
-        "The answer for energy transfer says that power = charge × resistance only.",
-        "For energy transfer, it means that electrical power can be calculated using power = potential difference × current.",
-        "For energy transfer, the statement is that power = current ÷ potential difference."
-      ],
-      "correctAnswer": "For energy transfer, it means that electrical power can be calculated using power = potential difference × current.",
-      "correctIndex": 2,
-      "explanation": "4.2.4.1 targets: Use power, potential difference and current. Focus area: Energy Transfer. For this question, Electrical power can be calculated using power = potential difference × current. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_vi",
-      "distractorRationales": [
-        {
-          "text": "The answer for energy transfer says that power = charge × resistance only.",
-          "misconception": "Power = current ÷ potential difference."
-        },
-        {
-          "text": "The answer for energy transfer says that power is measured in coulombs.",
-          "misconception": "Power = charge × resistance only."
-        },
-        {
-          "text": "For energy transfer, the statement is that power = current ÷ potential difference.",
-          "misconception": "Power is measured in coulombs."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use power, potential difference and current."
-    },
-    {
-      "id": "aqa_4_2_4_1_energy_transfer_power_i2r_misconception_correction_003",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Energy Transfer",
-      "topicSlug": "electricity",
-      "subtopicSlug": "energy_transfer",
-      "topicId": "electrical_power",
-      "specRef": "4.2.4.1",
-      "specStatement": "Energy transfers in electrical appliances.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_4_1_energy_transfer_power_i2r",
-        "statement": "Use power, current and resistance. (Energy Transfer)",
+        "id": "aqa_electricity_energy_transfer_appliance_001_lo",
+        "statement": "Describe energy transfers in a domestic electrical appliance.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.2.4.1:power_i2r:misconception_correction",
-      "conceptFamily": "power_i2r",
-      "contextType": "a comparison question",
-      "skill": "Use power, current and resistance.",
-      "stem": "A revision note about energy transfer contains an error. Which replacement is correct? Demand focus: use power, current and resistance.",
-      "question": "A revision note about energy transfer contains an error. Which replacement is correct? Demand focus: use power, current and resistance.",
+      "commandWord": "describe",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_energy_transfer_appliance_001",
+      "conceptFamily": "describe_energy_transfers_in_a_domestic_electrical_appliance",
+      "contextType": "exam_style",
+      "skill": "Describe energy transfers in a domestic electrical appliance.",
+      "stem": "A hair dryer is connected to the mains supply. Which useful energy transfer is it designed to make?",
+      "question": "A hair dryer is connected to the mains supply. Which useful energy transfer is it designed to make?",
       "options": [
-        "For energy transfer: Power can also be calculated using power = current² × resistance.",
-        "The claim for energy transfer is that power is independent of current.",
-        "The claim for energy transfer is that power = current × resistance².",
-        "The claim for energy transfer is that power = resistance ÷ current²."
+        "Electrical energy transfer to thermal and kinetic energy stores.",
+        "Thermal energy transfer to electrical energy stores.",
+        "Nuclear energy transfer to kinetic energy stores.",
+        "Gravitational energy transfer to chemical energy stores."
       ],
-      "correctAnswer": "For energy transfer: Power can also be calculated using power = current² × resistance.",
+      "correctAnswer": "Electrical energy transfer to thermal and kinetic energy stores.",
       "correctIndex": 0,
-      "explanation": "4.2.4.1 targets: Use power, current and resistance. Focus area: Energy Transfer. For this question, Power can also be calculated using power = current² × resistance. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_i2r",
+      "explanation": "A hair dryer uses electrical energy transfer to heat air and move it with a fan.",
+      "misconceptionTag": "appliance-energy-transfer",
       "distractorRationales": [
         {
-          "text": "The claim for energy transfer is that power is independent of current.",
-          "misconception": "Power = current × resistance²."
+          "text": "Thermal energy transfer to electrical energy stores.",
+          "misconception": "energy transfer direction reversed"
         },
         {
-          "text": "The claim for energy transfer is that power = current × resistance².",
-          "misconception": "Power = resistance ÷ current²."
+          "text": "Nuclear energy transfer to kinetic energy stores.",
+          "misconception": "unrelated energy store"
         },
         {
-          "text": "The claim for energy transfer is that power = resistance ÷ current².",
-          "misconception": "Power is independent of current."
+          "text": "Gravitational energy transfer to chemical energy stores.",
+          "misconception": "wrong store and pathway"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use power, current and resistance."
+      "senNote": "Checks: Describe energy transfers in a domestic electrical appliance."
     },
     {
-      "id": "aqa_4_2_4_1_energy_transfer_heating_effect_data_interpretation_004",
+      "id": "aqa_electricity_energy_transfer_power_time_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -12190,8 +12054,8 @@
       "topicSlug": "electricity",
       "subtopicSlug": "energy_transfer",
       "topicId": "electrical_power",
-      "specRef": "4.2.4.1",
-      "specStatement": "Energy transfers in electrical appliances.",
+      "specRef": "4.2.4.2",
+      "specStatement": "Energy transfers in everyday electrical appliances.",
       "paper": "Paper 1",
       "courseAvailability": [
         "combined",
@@ -12201,56 +12065,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_1_energy_transfer_heating_effect",
-        "statement": "Link resistance to heating. (Energy Transfer)",
+        "id": "aqa_electricity_energy_transfer_power_time_002_lo",
+        "statement": "Calculate energy transferred using power and time.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.2.4.1:heating_effect:data_interpretation",
-      "conceptFamily": "heating_effect",
-      "contextType": "a method-choice question",
-      "skill": "Link resistance to heating.",
-      "stem": "A small data set about energy transfer is being interpreted. Which conclusion is valid? Check the clue before choosing: Link resistance to heating.",
-      "question": "A small data set about energy transfer is being interpreted. Which conclusion is valid? Check the clue before choosing: Link resistance to heating.",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_energy_transfer_power_time_002",
+      "conceptFamily": "calculate_energy_transferred_using_power_and_time",
+      "contextType": "exam_style",
+      "skill": "Calculate energy transferred using power and time.",
+      "stem": "A 900 W microwave is used for 120 s. How much energy is transferred?",
+      "question": "A 900 W microwave is used for 120 s. How much energy is transferred?",
       "options": [
-        "For energy transfer, the statement is that resistance makes energy disappear rather than transfer.",
-        "For energy transfer, the statement is that heating proves no current is flowing.",
-        "For energy transfer, the answer claims that a current through resistance transfers energy by heating the component and surroundings.",
-        "For energy transfer, the statement is that resistance removes all energy transfer."
+        "7.5 J",
+        "780 J",
+        "1020 J",
+        "108 000 J"
       ],
-      "correctAnswer": "For energy transfer, the answer claims that a current through resistance transfers energy by heating the component and surroundings.",
-      "correctIndex": 2,
-      "explanation": "4.2.4.1 targets: Link resistance to heating. Focus area: Energy Transfer. For this question, A current through resistance transfers energy by heating the component and surroundings. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:heating_effect",
+      "correctAnswer": "108 000 J",
+      "correctIndex": 3,
+      "explanation": "Use energy transferred = power × time. E = 900 × 120 = 108 000 J.",
+      "misconceptionTag": "energy-power-time",
       "distractorRationales": [
         {
-          "text": "For energy transfer, the statement is that resistance removes all energy transfer.",
-          "misconception": "Resistance removes all energy transfer."
+          "text": "7.5 J",
+          "misconception": ""
         },
         {
-          "text": "For energy transfer, the statement is that heating proves no current is flowing.",
-          "misconception": "Heating proves no current is flowing."
+          "text": "780 J",
+          "misconception": ""
         },
         {
-          "text": "For energy transfer, the statement is that resistance makes energy disappear rather than transfer.",
-          "misconception": "Resistance makes energy disappear rather than transfer."
+          "text": "1020 J",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Link resistance to heating."
+      "senNote": "Checks: Calculate energy transferred using power and time."
     },
     {
-      "id": "aqa_4_2_4_1_energy_transfer_cost_electricity_representation_interpretation_005",
+      "id": "aqa_electricity_energy_transfer_charge_pd_003",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -12261,8 +12126,8 @@
       "topicSlug": "electricity",
       "subtopicSlug": "energy_transfer",
       "topicId": "electrical_power",
-      "specRef": "4.2.4.1",
-      "specStatement": "Energy transfers in electrical appliances.",
+      "specRef": "4.2.4.2",
+      "specStatement": "Energy transfers in everyday electrical appliances.",
       "paper": "Paper 1",
       "courseAvailability": [
         "combined",
@@ -12272,53 +12137,198 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_1_energy_transfer_cost_electricity",
-        "statement": "Calculate cost of electricity. (Energy Transfer)",
+        "id": "aqa_electricity_energy_transfer_charge_pd_003_lo",
+        "statement": "Calculate energy transferred using charge and potential difference.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_energy_transfer_charge_pd_003",
+      "conceptFamily": "calculate_energy_transferred_using_charge_and_potential_difference",
+      "contextType": "exam_style",
+      "skill": "Calculate energy transferred using charge and potential difference.",
+      "stem": "A charge of 40 C passes through a motor with a potential difference of 6.0 V across it. How much energy is transferred?",
+      "question": "A charge of 40 C passes through a motor with a potential difference of 6.0 V across it. How much energy is transferred?",
+      "options": [
+        "6.7 J",
+        "46 J",
+        "240 J",
+        "1200 J"
+      ],
+      "correctAnswer": "240 J",
+      "correctIndex": 2,
+      "explanation": "Use energy transferred = charge × potential difference. E = 40 × 6.0 = 240 J.",
+      "misconceptionTag": "energy-charge-pd",
+      "distractorRationales": [
+        {
+          "text": "6.7 J",
+          "misconception": ""
+        },
+        {
+          "text": "46 J",
+          "misconception": ""
+        },
+        {
+          "text": "1200 J",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate energy transferred using charge and potential difference."
+    },
+    {
+      "id": "aqa_electricity_energy_transfer_duration_004",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Energy Transfer",
+      "topicSlug": "electricity",
+      "subtopicSlug": "energy_transfer",
+      "topicId": "electrical_power",
+      "specRef": "4.2.4.2",
+      "specStatement": "Energy transfers in everyday electrical appliances.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_energy_transfer_duration_004_lo",
+        "statement": "Compare energy transferred when power is constant and time changes.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.2.4.1:cost_electricity:representation_interpretation",
-      "conceptFamily": "cost_electricity",
-      "contextType": "a results discussion",
-      "skill": "Calculate cost of electricity.",
-      "stem": "Which option correctly reads the energy transfer model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: calculate cost of electricity.",
-      "question": "Which option correctly reads the energy transfer model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: calculate cost of electricity.",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_energy_transfer_duration_004",
+      "conceptFamily": "compare_energy_transferred_when_power_is_constant_and_time_changes",
+      "contextType": "exam_style",
+      "skill": "Compare energy transferred when power is constant and time changes.",
+      "stem": "Two identical heaters have the same power. Heater X is switched on for twice as long as heater Y. Which statement is correct?",
+      "question": "Two identical heaters have the same power. Heater X is switched on for twice as long as heater Y. Which statement is correct?",
       "options": [
-        "For energy transfer, this would mean that cost is measured in watts.",
-        "For energy transfer, this would mean that cost does not depend on how long the device is used.",
-        "For energy transfer, it means that cost is found from current alone.",
-        "For energy transfer, the option says that cost is found from energy used in kWh multiplied by cost per kWh."
+        "Heater X transfers twice as much energy as heater Y.",
+        "Heater Y transfers twice as much energy as heater X.",
+        "Both heaters transfer the same energy whatever the time.",
+        "Neither heater transfers energy because power is constant."
       ],
-      "correctAnswer": "For energy transfer, the option says that cost is found from energy used in kWh multiplied by cost per kWh.",
-      "correctIndex": 3,
-      "explanation": "4.2.4.1 targets: Calculate cost of electricity. Focus area: Energy Transfer. For this question, Cost is found from energy used in kWh multiplied by cost per kWh. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:cost_electricity",
+      "correctAnswer": "Heater X transfers twice as much energy as heater Y.",
+      "correctIndex": 0,
+      "explanation": "For the same power, energy transferred is proportional to time. Twice the time means twice the energy transferred.",
+      "misconceptionTag": "energy-time-proportional",
       "distractorRationales": [
         {
-          "text": "For energy transfer, this would mean that cost is measured in watts.",
-          "misconception": "Cost is found from current alone."
+          "text": "Heater Y transfers twice as much energy as heater X.",
+          "misconception": "time relationship reversed"
         },
         {
-          "text": "For energy transfer, this would mean that cost does not depend on how long the device is used.",
-          "misconception": "Cost is measured in watts."
+          "text": "Both heaters transfer the same energy whatever the time.",
+          "misconception": "time ignored"
         },
         {
-          "text": "For energy transfer, it means that cost is found from current alone.",
-          "misconception": "Cost does not depend on how long the device is used."
+          "text": "Neither heater transfers energy because power is constant.",
+          "misconception": "constant power misunderstood"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate cost of electricity."
+      "senNote": "Checks: Compare energy transferred when power is constant and time changes."
+    },
+    {
+      "id": "aqa_electricity_energy_transfer_power_rating_005",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Energy Transfer",
+      "topicSlug": "electricity",
+      "subtopicSlug": "energy_transfer",
+      "topicId": "electrical_power",
+      "specRef": "4.2.4.2",
+      "specStatement": "Energy transfers in everyday electrical appliances.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_energy_transfer_power_rating_005_lo",
+        "statement": "Relate appliance power rating to energy transferred over the same time.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_energy_transfer_power_rating_005",
+      "conceptFamily": "relate_appliance_power_rating_to_energy_transferred_over_the_same_time",
+      "contextType": "exam_style",
+      "skill": "Relate appliance power rating to energy transferred over the same time.",
+      "stem": "A 2.0 kW kettle and a 1.0 kW heater are each used for 5 minutes. Which appliance transfers more energy?",
+      "question": "A 2.0 kW kettle and a 1.0 kW heater are each used for 5 minutes. Which appliance transfers more energy?",
+      "options": [
+        "The kettle, because it has the larger power rating.",
+        "The heater, because smaller power always means more energy.",
+        "They transfer the same energy because they are used for the same time.",
+        "Neither transfers energy unless charge is stored inside it."
+      ],
+      "correctAnswer": "The kettle, because it has the larger power rating.",
+      "correctIndex": 0,
+      "explanation": "For the same time, the appliance with the larger power rating transfers more energy.",
+      "misconceptionTag": "power-rating-energy",
+      "distractorRationales": [
+        {
+          "text": "The heater, because smaller power always means more energy.",
+          "misconception": "power-energy relationship reversed"
+        },
+        {
+          "text": "They transfer the same energy because they are used for the same time.",
+          "misconception": "power difference ignored"
+        },
+        {
+          "text": "Neither transfers energy unless charge is stored inside it.",
+          "misconception": "energy transfer and charge storage confused"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Relate appliance power rating to energy transferred over the same time."
     },
     {
       "id": "aqa_4_1_2_2_efficiency_efficiency_ratio_direct_recall_001",

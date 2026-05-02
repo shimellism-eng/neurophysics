@@ -41,7 +41,7 @@ export const ADAPTIVE_SPEC_MANIFESTS = {
       entry({ topic: 'Electricity', subtopic: 'Series Resistance', topicId: 'series_parallel', specRef: '4.2.2', statement: 'Resistance in series circuits.', paper: 'Paper 1' }),
       entry({ topic: 'Electricity', subtopic: 'Parallel Circuits', topicId: 'series_parallel', specRef: '4.2.2', statement: 'Current and potential difference in parallel circuits.', paper: 'Paper 1' }),
       entry({ topic: 'Electricity', subtopic: 'Power', topicId: 'electrical_power', specRef: '4.2.4.1', statement: 'Electrical power and energy transfers.', paper: 'Paper 1', mathsSkills: ['MS 3b', 'MS 3c'] }),
-      entry({ topic: 'Electricity', subtopic: 'Energy Transfer', topicId: 'electrical_power', specRef: '4.2.4.1', statement: 'Energy transfers in electrical appliances.', paper: 'Paper 1' }),
+      entry({ topic: 'Electricity', subtopic: 'Energy Transfer', topicId: 'electrical_power', specRef: '4.2.4.2', statement: 'Energy transfers in everyday electrical appliances.', paper: 'Paper 1' }),
       entry({ topic: 'Electricity', subtopic: 'National Grid', topicId: 'national_grid', specRef: '4.2.4.3', statement: 'The National Grid and transformers.', paper: 'Paper 1' }),
       entry({ topic: 'Energy', subtopic: 'Energy Stores', topicId: 'energy_stores', specRef: '4.1.1.1', statement: 'Energy stores and systems.', paper: 'Paper 1' }),
       entry({ topic: 'Energy', subtopic: 'Efficiency', topicId: 'efficiency', specRef: '4.1.2.2', statement: 'Efficiency.', paper: 'Paper 1', mathsSkills: ['MS 1a', 'MS 3b'] }),

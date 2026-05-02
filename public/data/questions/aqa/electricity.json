@@ -2,7 +2,7 @@
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
   "topicSlug": "electricity",
-  "generatedAt": "2026-05-02T07:53:46.746Z",
+  "generatedAt": "2026-05-02T08:01:39.346Z",
   "questions": [
     {
       "id": "aqa_electricity_charge_current_definition_001",
@@ -6621,7 +6621,7 @@
       "senNote": "This checks one idea only: Interpret an ohmic conductor."
     },
     {
-      "id": "aqa_4_2_2_series_circuits_series_current_direct_recall_001",
+      "id": "aqa_electricity_series_circuits_ammeter_reading_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -6633,6 +6633,7 @@
       "subtopicSlug": "series_circuits",
       "topicId": "series_parallel",
       "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
       "specStatement": "Series and parallel circuits.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -6643,198 +6644,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_series_current",
-        "statement": "Describe current in a series circuit. (Series Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.2.2:series_current:direct_recall",
-      "conceptFamily": "series_current",
-      "contextType": "a labelled diagram",
-      "skill": "Series Circuits practice",
-      "stem": "Which statement is correct for series circuits? Check the clue before choosing: Describe current in a series circuit.",
-      "question": "Which statement is correct for series circuits? Check the clue before choosing: Describe current in a series circuit.",
-      "options": [
-        "In this item, it means that current is used up by each component.",
-        "In this item, it means that current splits between components in a single loop.",
-        "In this item, it means that current is largest after the final component.",
-        "For series circuits, it means that current is the same at every point in a series circuit."
-      ],
-      "correctAnswer": "For series circuits, it means that current is the same at every point in a series circuit.",
-      "correctIndex": 3,
-      "explanation": "4.2.2 targets: Describe current in a series circuit. Focus area: Series Circuits. For this question, Current is the same at every point in a series circuit. Context used: a labelled diagram; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_current",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that current is used up by each component.",
-          "misconception": "Current is used up by each component."
-        },
-        {
-          "text": "In this item, it means that current is largest after the final component.",
-          "misconception": "Current is largest after the final component."
-        },
-        {
-          "text": "In this item, it means that current splits between components in a single loop.",
-          "misconception": "Current splits between components in a single loop."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe current in a series circuit."
-    },
-    {
-      "id": "aqa_4_2_2_series_circuits_series_resistance_concept_discrimination_002",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Series Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "series_circuits",
-      "topicId": "series_parallel",
-      "specRef": "4.2.2",
-      "specStatement": "Series and parallel circuits.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_series_resistance",
-        "statement": "Calculate total resistance in series. (Series Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.2.2:series_resistance:concept_discrimination",
-      "conceptFamily": "series_resistance",
-      "contextType": "a short calculation",
-      "skill": "Series Circuits practice",
-      "stem": "A student is comparing similar ideas in series circuits. Which statement is correct? Demand focus: calculate total resistance in series.",
-      "question": "A student is comparing similar ideas in series circuits. Which statement is correct? Demand focus: calculate total resistance in series.",
-      "options": [
-        "In this item, it means that only the largest resistor counts.",
-        "For series circuits: Total resistance in series is the sum of the component resistances.",
-        "In this item, it means that total resistance in series is smaller than every resistor.",
-        "The claim for series circuits is that series resistance is found by multiplying by voltage."
-      ],
-      "correctAnswer": "For series circuits: Total resistance in series is the sum of the component resistances.",
-      "correctIndex": 1,
-      "explanation": "4.2.2 targets: Calculate total resistance in series. Focus area: Series Circuits. For this question, Total resistance in series is the sum of the component resistances. Context used: a short calculation; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_resistance",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that only the largest resistor counts.",
-          "misconception": "Total resistance in series is smaller than every resistor."
-        },
-        {
-          "text": "The claim for series circuits is that series resistance is found by multiplying by voltage.",
-          "misconception": "Only the largest resistor counts."
-        },
-        {
-          "text": "In this item, it means that total resistance in series is smaller than every resistor.",
-          "misconception": "Series resistance is found by multiplying by voltage."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Calculate total resistance in series."
-    },
-    {
-      "id": "aqa_4_2_2_series_circuits_parallel_pd_misconception_correction_003",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Series Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "series_circuits",
-      "topicId": "series_parallel",
-      "specRef": "4.2.2",
-      "specStatement": "Series and parallel circuits.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_parallel_pd",
-        "statement": "Describe potential difference in parallel. (Series Circuits)",
+        "id": "aqa_electricity_series_circuits_ammeter_reading_001_lo",
+        "statement": "Apply the rule that current is the same throughout a series circuit.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.2.2:parallel_pd:misconception_correction",
-      "conceptFamily": "parallel_pd",
-      "contextType": "a safety decision",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_series_circuits_ammeter_reading_001",
+      "conceptFamily": "apply_the_rule_that_current_is_the_same_throughout_a_series_circuit",
+      "contextType": "exam_style",
       "skill": "Series Circuits practice",
-      "stem": "A revision note about series circuits contains an error. Which replacement is correct? Demand focus: describe potential difference in parallel.",
-      "question": "A revision note about series circuits contains an error. Which replacement is correct? Demand focus: describe potential difference in parallel.",
+      "stem": "A cell, a lamp and a resistor are connected in one loop. An ammeter next to the cell reads 0.40 A. What should an ammeter next to the lamp read?",
+      "question": "A cell, a lamp and a resistor are connected in one loop. An ammeter next to the cell reads 0.40 A. What should an ammeter next to the lamp read?",
       "options": [
-        "In this item, it means that potential difference is shared equally by branch number only.",
-        "In this item, it means that potential difference is larger after each component.",
-        "For series circuits: Potential difference is zero in every branch.",
-        "The claim for series circuits is that potential difference across each parallel branch is the same as the supply."
+        "0.40 A",
+        "0.20 A",
+        "0.80 A",
+        "0 A"
       ],
-      "correctAnswer": "The claim for series circuits is that potential difference across each parallel branch is the same as the supply.",
-      "correctIndex": 3,
-      "explanation": "4.2.2 targets: Describe potential difference in parallel. Focus area: Series Circuits. For this question, Potential difference across each parallel branch is the same as the supply. Context used: a safety decision; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_pd",
+      "correctAnswer": "0.40 A",
+      "correctIndex": 0,
+      "explanation": "In a series circuit there is only one path for charge, so the current is the same at every point in the loop.",
+      "misconceptionTag": "series-current-same",
       "distractorRationales": [
         {
-          "text": "In this item, it means that potential difference is larger after each component.",
-          "misconception": "Potential difference is shared equally by branch number only."
+          "text": "0.20 A",
+          "misconception": ""
         },
         {
-          "text": "In this item, it means that potential difference is shared equally by branch number only.",
-          "misconception": "Potential difference is zero in every branch."
+          "text": "0.80 A",
+          "misconception": ""
         },
         {
-          "text": "For series circuits: Potential difference is zero in every branch.",
-          "misconception": "Potential difference is larger after each component."
+          "text": "0 A",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe potential difference in parallel."
+      "senNote": "Checks: Apply the rule that current is the same throughout a series circuit."
     },
     {
-      "id": "aqa_4_2_2_series_circuits_parallel_current_data_interpretation_004",
+      "id": "aqa_electricity_series_circuits_two_lamps_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -6846,6 +6706,7 @@
       "subtopicSlug": "series_circuits",
       "topicId": "series_parallel",
       "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
       "specStatement": "Series and parallel circuits.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -6856,56 +6717,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_parallel_current",
-        "statement": "Describe current in parallel. (Series Circuits)",
+        "id": "aqa_electricity_series_circuits_two_lamps_002_lo",
+        "statement": "Reject the misconception that current is used up in a series circuit.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.2.2:parallel_current:data_interpretation",
-      "conceptFamily": "parallel_current",
-      "contextType": "a graph-reading task",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_series_circuits_two_lamps_002",
+      "conceptFamily": "reject_the_misconception_that_current_is_used_up_in_a_series_circuit",
+      "contextType": "exam_style",
       "skill": "Series Circuits practice",
-      "stem": "A small data set about series circuits is being interpreted. Which conclusion is valid? Check the clue before choosing: Describe current in parallel.",
-      "question": "A small data set about series circuits is being interpreted. Which conclusion is valid? Check the clue before choosing: Describe current in parallel.",
+      "stem": "Two identical lamps are connected in series to a battery. What happens to the current as it passes through the first lamp?",
+      "question": "Two identical lamps are connected in series to a battery. What happens to the current as it passes through the first lamp?",
       "options": [
-        "For series circuits, the answer claims that only one branch can carry current.",
-        "For series circuits, it means that total current is always smaller than each branch current.",
-        "For series circuits, the statement is that total current is the sum of the currents in the branches.",
-        "For series circuits, it means that current cannot split in parallel."
+        "The current is used up by the first lamp.",
+        "The current becomes larger after the first lamp.",
+        "The current stays the same through both lamps.",
+        "The current changes into potential difference."
       ],
-      "correctAnswer": "For series circuits, the statement is that total current is the sum of the currents in the branches.",
+      "correctAnswer": "The current stays the same through both lamps.",
       "correctIndex": 2,
-      "explanation": "4.2.2 targets: Describe current in parallel. Focus area: Series Circuits. For this question, Total current is the sum of the currents in the branches. Context used: a graph-reading task; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_current",
+      "explanation": "Current is the rate of flow of charge. Charge is not used up by a lamp, so the same current passes through each component in series.",
+      "misconceptionTag": "current-used-up",
       "distractorRationales": [
         {
-          "text": "For series circuits, it means that current cannot split in parallel.",
-          "misconception": "Current cannot split in parallel."
+          "text": "The current is used up by the first lamp.",
+          "misconception": ""
         },
         {
-          "text": "For series circuits, it means that total current is always smaller than each branch current.",
-          "misconception": "Total current is always smaller than each branch current."
+          "text": "The current becomes larger after the first lamp.",
+          "misconception": ""
         },
         {
-          "text": "For series circuits, the answer claims that only one branch can carry current.",
-          "misconception": "Only one branch can carry current."
+          "text": "The current changes into potential difference.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe current in parallel."
+      "senNote": "Checks: Reject the misconception that current is used up in a series circuit."
     },
     {
-      "id": "aqa_4_2_2_series_circuits_series_current_representation_interpretation_005",
+      "id": "aqa_electricity_series_circuits_open_switch_003",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -6917,6 +6779,7 @@
       "subtopicSlug": "series_circuits",
       "topicId": "series_parallel",
       "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
       "specStatement": "Series and parallel circuits.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -6927,269 +6790,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_series_current",
-        "statement": "Describe current in a series circuit. (Series Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.2.2:series_current:representation_interpretation",
-      "conceptFamily": "series_current",
-      "contextType": "a comparison question",
-      "skill": "Series Circuits practice",
-      "stem": "Which option correctly reads the series circuits model or diagram idea? Demand focus: describe current in a series circuit.",
-      "question": "Which option correctly reads the series circuits model or diagram idea? Demand focus: describe current in a series circuit.",
-      "options": [
-        "For series circuits, the answer claims that current is used up by each component.",
-        "For series circuits, it means that current is the same at every point in a series circuit.",
-        "For series circuits, it means that current is largest after the final component.",
-        "For series circuits, the statement is that current splits between components in a single loop."
-      ],
-      "correctAnswer": "For series circuits, it means that current is the same at every point in a series circuit.",
-      "correctIndex": 1,
-      "explanation": "4.2.2 targets: Describe current in a series circuit. Focus area: Series Circuits. For this question, Current is the same at every point in a series circuit. Context used: a comparison question; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_current",
-      "distractorRationales": [
-        {
-          "text": "For series circuits, it means that current is largest after the final component.",
-          "misconception": "Current is used up by each component."
-        },
-        {
-          "text": "For series circuits, the statement is that current splits between components in a single loop.",
-          "misconception": "Current is largest after the final component."
-        },
-        {
-          "text": "For series circuits, the answer claims that current is used up by each component.",
-          "misconception": "Current splits between components in a single loop."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe current in a series circuit."
-    },
-    {
-      "id": "aqa_4_2_2_series_circuits_series_resistance_direct_recall_006",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Series Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "series_circuits",
-      "topicId": "series_parallel",
-      "specRef": "4.2.2",
-      "specStatement": "Series and parallel circuits.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_series_resistance",
-        "statement": "Calculate total resistance in series. (Series Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.2.2:series_resistance:direct_recall",
-      "conceptFamily": "series_resistance",
-      "contextType": "a method-choice question",
-      "skill": "Series Circuits practice",
-      "stem": "Which answer matches this series circuits objective: Calculate total resistance in series? Choose the statement that fits this exact GCSE Physics idea: calculate total resistance in series.",
-      "question": "Which answer matches this series circuits objective: Calculate total resistance in series? Choose the statement that fits this exact GCSE Physics idea: calculate total resistance in series.",
-      "options": [
-        "For series circuits, the answer claims that total resistance in series is smaller than every resistor.",
-        "For series circuits, the answer claims that only the largest resistor counts.",
-        "For series circuits, the answer claims that series resistance is found by multiplying by voltage.",
-        "The answer for series circuits says that total resistance in series is the sum of the component resistances."
-      ],
-      "correctAnswer": "The answer for series circuits says that total resistance in series is the sum of the component resistances.",
-      "correctIndex": 3,
-      "explanation": "4.2.2 targets: Calculate total resistance in series. Focus area: Series Circuits. For this question, Total resistance in series is the sum of the component resistances. Context used: a method-choice question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_resistance",
-      "distractorRationales": [
-        {
-          "text": "For series circuits, the answer claims that series resistance is found by multiplying by voltage.",
-          "misconception": "Total resistance in series is smaller than every resistor."
-        },
-        {
-          "text": "For series circuits, the answer claims that total resistance in series is smaller than every resistor.",
-          "misconception": "Only the largest resistor counts."
-        },
-        {
-          "text": "For series circuits, the answer claims that only the largest resistor counts.",
-          "misconception": "Series resistance is found by multiplying by voltage."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Calculate total resistance in series."
-    },
-    {
-      "id": "aqa_4_2_2_series_circuits_parallel_pd_applied_context_007",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Series Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "series_circuits",
-      "topicId": "series_parallel",
-      "specRef": "4.2.2",
-      "specStatement": "Series and parallel circuits.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_parallel_pd",
-        "statement": "Describe potential difference in parallel. (Series Circuits)",
+        "id": "aqa_electricity_series_circuits_open_switch_003_lo",
+        "statement": "Predict the effect of an open switch in a series circuit.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.2.2:parallel_pd:applied_context",
-      "conceptFamily": "parallel_pd",
-      "contextType": "a results discussion",
+      "commandWord": "predict",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_series_circuits_open_switch_003",
+      "conceptFamily": "predict_the_effect_of_an_open_switch_in_a_series_circuit",
+      "contextType": "exam_style",
       "skill": "Series Circuits practice",
-      "stem": "In a results discussion, which conclusion is correct for series circuits? Choose the statement that fits this exact GCSE Physics idea: describe potential difference in parallel.",
-      "question": "In a results discussion, which conclusion is correct for series circuits? Choose the statement that fits this exact GCSE Physics idea: describe potential difference in parallel.",
+      "stem": "A switch is opened in a series circuit containing three lamps. What happens to the lamps?",
+      "question": "A switch is opened in a series circuit containing three lamps. What happens to the lamps?",
       "options": [
-        "In this series circuits item, potential difference across each parallel branch is the same as the supply.",
-        "For series circuits, it means that potential difference is larger after each component.",
-        "For series circuits, it means that potential difference is shared equally by branch number only.",
-        "For series circuits, the statement is that potential difference is zero in every branch."
+        "Only the lamp nearest the switch goes out.",
+        "All three lamps go out.",
+        "The lamps become brighter.",
+        "Only the lamp nearest the cell stays on."
       ],
-      "correctAnswer": "In this series circuits item, potential difference across each parallel branch is the same as the supply.",
-      "correctIndex": 0,
-      "explanation": "4.2.2 targets: Describe potential difference in parallel. Focus area: Series Circuits. For this question, Potential difference across each parallel branch is the same as the supply. Context used: a results discussion; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_pd",
-      "distractorRationales": [
-        {
-          "text": "For series circuits, it means that potential difference is shared equally by branch number only.",
-          "misconception": "Potential difference is shared equally by branch number only."
-        },
-        {
-          "text": "For series circuits, the statement is that potential difference is zero in every branch.",
-          "misconception": "Potential difference is zero in every branch."
-        },
-        {
-          "text": "For series circuits, it means that potential difference is larger after each component.",
-          "misconception": "Potential difference is larger after each component."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe potential difference in parallel."
-    },
-    {
-      "id": "aqa_4_2_2_series_circuits_parallel_current_misconception_correction_008",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Series Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "series_circuits",
-      "topicId": "series_parallel",
-      "specRef": "4.2.2",
-      "specStatement": "Series and parallel circuits.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_parallel_current",
-        "statement": "Describe current in parallel. (Series Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.2.2:parallel_current:misconception_correction",
-      "conceptFamily": "parallel_current",
-      "contextType": "a classroom demonstration",
-      "skill": "Series Circuits practice",
-      "stem": "Which answer corrects a misconception about series circuits? Demand focus: describe current in parallel.",
-      "question": "Which answer corrects a misconception about series circuits? Demand focus: describe current in parallel.",
-      "options": [
-        "For series circuits, this would mean that total current is always smaller than each branch current.",
-        "For series circuits, this would mean that total current is the sum of the currents in the branches.",
-        "For series circuits, this would mean that current cannot split in parallel.",
-        "For series circuits, the option says that only one branch can carry current."
-      ],
-      "correctAnswer": "For series circuits, this would mean that total current is the sum of the currents in the branches.",
+      "correctAnswer": "All three lamps go out.",
       "correctIndex": 1,
-      "explanation": "4.2.2 targets: Describe current in parallel. Focus area: Series Circuits. For this question, Total current is the sum of the currents in the branches. Context used: a classroom demonstration; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_current",
+      "explanation": "Opening the switch breaks the only complete path in a series circuit, so no current flows through any lamp.",
+      "misconceptionTag": "series-open-switch",
       "distractorRationales": [
         {
-          "text": "For series circuits, this would mean that total current is always smaller than each branch current.",
-          "misconception": "Current cannot split in parallel."
+          "text": "Only the lamp nearest the switch goes out.",
+          "misconception": ""
         },
         {
-          "text": "For series circuits, the option says that only one branch can carry current.",
-          "misconception": "Total current is always smaller than each branch current."
+          "text": "The lamps become brighter.",
+          "misconception": ""
         },
         {
-          "text": "For series circuits, this would mean that current cannot split in parallel.",
-          "misconception": "Only one branch can carry current."
+          "text": "Only the lamp nearest the cell stays on.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe current in parallel."
+      "senNote": "Checks: Predict the effect of an open switch in a series circuit."
     },
     {
-      "id": "aqa_4_2_2_series_circuits_series_current_exam_decision_009",
+      "id": "aqa_electricity_series_circuits_one_path_004",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -7201,6 +6852,7 @@
       "subtopicSlug": "series_circuits",
       "topicId": "series_parallel",
       "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
       "specStatement": "Series and parallel circuits.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -7211,198 +6863,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_series_current",
-        "statement": "Describe current in a series circuit. (Series Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.2.2:series_current:exam_decision",
-      "conceptFamily": "series_current",
-      "contextType": "a revision checkpoint",
-      "skill": "Series Circuits practice",
-      "stem": "The mark scheme is testing describe current in a series circuit. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: describe current in a series circuit.",
-      "question": "The mark scheme is testing describe current in a series circuit. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: describe current in a series circuit.",
-      "options": [
-        "The answer for series circuits says that current splits between components in a single loop.",
-        "For series circuits, the statement is that current is the same at every point in a series circuit.",
-        "The answer for series circuits says that current is largest after the final component.",
-        "For series circuits, it means that current is used up by each component."
-      ],
-      "correctAnswer": "For series circuits, the statement is that current is the same at every point in a series circuit.",
-      "correctIndex": 1,
-      "explanation": "4.2.2 targets: Describe current in a series circuit. Focus area: Series Circuits. For this question, Current is the same at every point in a series circuit. Context used: a revision checkpoint; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_current",
-      "distractorRationales": [
-        {
-          "text": "The answer for series circuits says that current splits between components in a single loop.",
-          "misconception": "Current is used up by each component."
-        },
-        {
-          "text": "For series circuits, it means that current is used up by each component.",
-          "misconception": "Current is largest after the final component."
-        },
-        {
-          "text": "The answer for series circuits says that current is largest after the final component.",
-          "misconception": "Current splits between components in a single loop."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe current in a series circuit."
-    },
-    {
-      "id": "aqa_4_2_2_series_circuits_series_resistance_representation_interpretation_010",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Series Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "series_circuits",
-      "topicId": "series_parallel",
-      "specRef": "4.2.2",
-      "specStatement": "Series and parallel circuits.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_series_resistance",
-        "statement": "Calculate total resistance in series. (Series Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.2.2:series_resistance:representation_interpretation",
-      "conceptFamily": "series_resistance",
-      "contextType": "an exam-style data table",
-      "skill": "Series Circuits practice",
-      "stem": "A representation of series circuits is described in words. Which interpretation is correct? Keep the answer focused on series circuits: calculate total resistance in series.",
-      "question": "A representation of series circuits is described in words. Which interpretation is correct? Keep the answer focused on series circuits: calculate total resistance in series.",
-      "options": [
-        "For series circuits, this would mean that total resistance in series is smaller than every resistor.",
-        "The claim for series circuits is that total resistance in series is the sum of the component resistances.",
-        "For series circuits, it means that series resistance is found by multiplying by voltage.",
-        "For series circuits, the option says that only the largest resistor counts."
-      ],
-      "correctAnswer": "The claim for series circuits is that total resistance in series is the sum of the component resistances.",
-      "correctIndex": 1,
-      "explanation": "4.2.2 targets: Calculate total resistance in series. Focus area: Series Circuits. For this question, Total resistance in series is the sum of the component resistances. Context used: an exam-style data table; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_resistance",
-      "distractorRationales": [
-        {
-          "text": "For series circuits, this would mean that total resistance in series is smaller than every resistor.",
-          "misconception": "Total resistance in series is smaller than every resistor."
-        },
-        {
-          "text": "For series circuits, the option says that only the largest resistor counts.",
-          "misconception": "Only the largest resistor counts."
-        },
-        {
-          "text": "For series circuits, it means that series resistance is found by multiplying by voltage.",
-          "misconception": "Series resistance is found by multiplying by voltage."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Calculate total resistance in series."
-    },
-    {
-      "id": "aqa_4_2_2_series_circuits_parallel_pd_concept_discrimination_011",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Series Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "series_circuits",
-      "topicId": "series_parallel",
-      "specRef": "4.2.2",
-      "specStatement": "Series and parallel circuits.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_parallel_pd",
-        "statement": "Describe potential difference in parallel. (Series Circuits)",
+        "id": "aqa_electricity_series_circuits_one_path_004_lo",
+        "statement": "Identify a series circuit from its structure.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.2.2:parallel_pd:concept_discrimination",
-      "conceptFamily": "parallel_pd",
-      "contextType": "a required-practical notebook",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_series_circuits_one_path_004",
+      "conceptFamily": "identify_a_series_circuit_from_its_structure",
+      "contextType": "exam_style",
       "skill": "Series Circuits practice",
-      "stem": "A student is comparing similar ideas in series circuits. Which statement is correct? Keep the answer focused on series circuits: describe potential difference in parallel.",
-      "question": "A student is comparing similar ideas in series circuits. Which statement is correct? Keep the answer focused on series circuits: describe potential difference in parallel.",
+      "stem": "Which description identifies a series circuit?",
+      "question": "Which description identifies a series circuit?",
       "options": [
-        "The claim for series circuits is that potential difference is zero in every branch.",
-        "The claim for series circuits is that potential difference is larger after each component.",
-        "The claim for series circuits is that potential difference is shared equally by branch number only.",
-        "For series circuits, the option says that potential difference across each parallel branch is the same as the supply."
+        "A circuit with one complete path for charge.",
+        "A circuit with a separate branch for every component.",
+        "A circuit in which the potential difference is zero.",
+        "A circuit that must contain only one component."
       ],
-      "correctAnswer": "For series circuits, the option says that potential difference across each parallel branch is the same as the supply.",
-      "correctIndex": 3,
-      "explanation": "4.2.2 targets: Describe potential difference in parallel. Focus area: Series Circuits. For this question, Potential difference across each parallel branch is the same as the supply. Context used: a required-practical notebook; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_pd",
+      "correctAnswer": "A circuit with one complete path for charge.",
+      "correctIndex": 0,
+      "explanation": "A series circuit has components connected one after another in a single loop. It can contain more than one component.",
+      "misconceptionTag": "series-one-loop",
       "distractorRationales": [
         {
-          "text": "The claim for series circuits is that potential difference is zero in every branch.",
-          "misconception": "Potential difference is shared equally by branch number only."
+          "text": "A circuit with a separate branch for every component.",
+          "misconception": ""
         },
         {
-          "text": "The claim for series circuits is that potential difference is larger after each component.",
-          "misconception": "Potential difference is zero in every branch."
+          "text": "A circuit in which the potential difference is zero.",
+          "misconception": ""
         },
         {
-          "text": "The claim for series circuits is that potential difference is shared equally by branch number only.",
-          "misconception": "Potential difference is larger after each component."
+          "text": "A circuit that must contain only one component.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe potential difference in parallel."
+      "senNote": "Checks: Identify a series circuit from its structure."
     },
     {
-      "id": "aqa_4_2_2_series_circuits_parallel_current_applied_context_012",
+      "id": "aqa_electricity_series_circuits_total_resistance_005",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -7414,6 +6925,7 @@
       "subtopicSlug": "series_circuits",
       "topicId": "series_parallel",
       "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
       "specStatement": "Series and parallel circuits.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -7424,56 +6936,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_parallel_current",
-        "statement": "Describe current in parallel. (Series Circuits)",
+        "id": "aqa_electricity_series_circuits_total_resistance_005_lo",
+        "statement": "Calculate total resistance for two resistors in series.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.2.2:parallel_current:applied_context",
-      "conceptFamily": "parallel_current",
-      "contextType": "a technician report",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_series_circuits_total_resistance_005",
+      "conceptFamily": "calculate_total_resistance_for_two_resistors_in_series",
+      "contextType": "exam_style",
       "skill": "Series Circuits practice",
-      "stem": "A question set in a technician report tests series circuits. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: describe current in parallel.",
-      "question": "A question set in a technician report tests series circuits. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: describe current in parallel.",
+      "stem": "A 3 ohm resistor and a 6 ohm resistor are connected in series. What is the total resistance?",
+      "question": "A 3 ohm resistor and a 6 ohm resistor are connected in series. What is the total resistance?",
       "options": [
-        "For series circuits, the statement is that only one branch can carry current.",
-        "For series circuits, the statement is that current cannot split in parallel.",
-        "For series circuits, it means that total current is the sum of the currents in the branches.",
-        "For series circuits, the statement is that total current is always smaller than each branch current."
+        "2 ohms",
+        "3 ohms",
+        "9 ohms",
+        "18 ohms"
       ],
-      "correctAnswer": "For series circuits, it means that total current is the sum of the currents in the branches.",
+      "correctAnswer": "9 ohms",
       "correctIndex": 2,
-      "explanation": "4.2.2 targets: Describe current in parallel. Focus area: Series Circuits. For this question, Total current is the sum of the currents in the branches. Context used: a technician report; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_current",
+      "explanation": "The total resistance of resistors in series is found by adding the resistances: 3 + 6 = 9 ohms.",
+      "misconceptionTag": "series-resistance-addition",
       "distractorRationales": [
         {
-          "text": "For series circuits, the statement is that only one branch can carry current.",
-          "misconception": "Current cannot split in parallel."
+          "text": "2 ohms",
+          "misconception": ""
         },
         {
-          "text": "For series circuits, the statement is that current cannot split in parallel.",
-          "misconception": "Total current is always smaller than each branch current."
+          "text": "3 ohms",
+          "misconception": ""
         },
         {
-          "text": "For series circuits, the statement is that total current is always smaller than each branch current.",
-          "misconception": "Only one branch can carry current."
+          "text": "18 ohms",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe current in parallel."
+      "senNote": "Checks: Calculate total resistance for two resistors in series."
     },
     {
-      "id": "aqa_4_2_2_series_circuits_series_current_data_interpretation_013",
+      "id": "aqa_electricity_series_circuits_missing_resistor_006",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -7485,6 +6998,7 @@
       "subtopicSlug": "series_circuits",
       "topicId": "series_parallel",
       "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
       "specStatement": "Series and parallel circuits.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -7495,340 +7009,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_series_current",
-        "statement": "Describe current in a series circuit. (Series Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.2.2:series_current:data_interpretation",
-      "conceptFamily": "series_current",
-      "contextType": "a labelled diagram",
-      "skill": "Series Circuits practice",
-      "stem": "A small data set about series circuits is being interpreted. Which conclusion is valid? Keep the answer focused on series circuits: describe current in a series circuit.",
-      "question": "A small data set about series circuits is being interpreted. Which conclusion is valid? Keep the answer focused on series circuits: describe current in a series circuit.",
-      "options": [
-        "For series circuits, this would mean that current is the same at every point in a series circuit.",
-        "For series circuits, the option says that current is used up by each component.",
-        "For series circuits, the option says that current splits between components in a single loop.",
-        "For series circuits, the option says that current is largest after the final component."
-      ],
-      "correctAnswer": "For series circuits, this would mean that current is the same at every point in a series circuit.",
-      "correctIndex": 0,
-      "explanation": "4.2.2 targets: Describe current in a series circuit. Focus area: Series Circuits. For this question, Current is the same at every point in a series circuit. Context used: a labelled diagram; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_current",
-      "distractorRationales": [
-        {
-          "text": "For series circuits, the option says that current is used up by each component.",
-          "misconception": "Current is used up by each component."
-        },
-        {
-          "text": "For series circuits, the option says that current is largest after the final component.",
-          "misconception": "Current is largest after the final component."
-        },
-        {
-          "text": "For series circuits, the option says that current splits between components in a single loop.",
-          "misconception": "Current splits between components in a single loop."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe current in a series circuit."
-    },
-    {
-      "id": "aqa_4_2_2_series_circuits_series_resistance_exam_decision_014",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Series Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "series_circuits",
-      "topicId": "series_parallel",
-      "specRef": "4.2.2",
-      "specStatement": "Series and parallel circuits.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_series_resistance",
-        "statement": "Calculate total resistance in series. (Series Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.2.2:series_resistance:exam_decision",
-      "conceptFamily": "series_resistance",
-      "contextType": "a short calculation",
-      "skill": "Series Circuits practice",
-      "stem": "Which answer is the strongest GCSE Physics response for series circuits? Use the wording carefully: this is about calculate total resistance in series.",
-      "question": "Which answer is the strongest GCSE Physics response for series circuits? Use the wording carefully: this is about calculate total resistance in series.",
-      "options": [
-        "For series circuits, the option says that total resistance in series is the sum of the component resistances.",
-        "For series circuits, the option says that only the largest resistor counts.",
-        "For series circuits, it means that series resistance is found by multiplying by voltage.",
-        "For series circuits, the option says that total resistance in series is smaller than every resistor."
-      ],
-      "correctAnswer": "For series circuits, the option says that total resistance in series is the sum of the component resistances.",
-      "correctIndex": 0,
-      "explanation": "4.2.2 targets: Calculate total resistance in series. Focus area: Series Circuits. For this question, Total resistance in series is the sum of the component resistances. Context used: a short calculation; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_resistance",
-      "distractorRationales": [
-        {
-          "text": "For series circuits, the option says that only the largest resistor counts.",
-          "misconception": "Total resistance in series is smaller than every resistor."
-        },
-        {
-          "text": "For series circuits, it means that series resistance is found by multiplying by voltage.",
-          "misconception": "Only the largest resistor counts."
-        },
-        {
-          "text": "For series circuits, the option says that total resistance in series is smaller than every resistor.",
-          "misconception": "Series resistance is found by multiplying by voltage."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Calculate total resistance in series."
-    },
-    {
-      "id": "aqa_4_2_2_series_circuits_parallel_pd_direct_recall_015",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Series Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "series_circuits",
-      "topicId": "series_parallel",
-      "specRef": "4.2.2",
-      "specStatement": "Series and parallel circuits.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_parallel_pd",
-        "statement": "Describe potential difference in parallel. (Series Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.2.2:parallel_pd:direct_recall",
-      "conceptFamily": "parallel_pd",
-      "contextType": "a safety decision",
-      "skill": "Series Circuits practice",
-      "stem": "Which answer matches this series circuits objective: Describe potential difference in parallel? Use the wording carefully: this is about describe potential difference in parallel.",
-      "question": "Which answer matches this series circuits objective: Describe potential difference in parallel? Use the wording carefully: this is about describe potential difference in parallel.",
-      "options": [
-        "The answer for series circuits says that potential difference is larger after each component.",
-        "For series circuits, the answer claims that potential difference is shared equally by branch number only.",
-        "For series circuits, the statement is that potential difference is zero in every branch.",
-        "The answer for series circuits says that potential difference across each parallel branch is the same as the supply."
-      ],
-      "correctAnswer": "The answer for series circuits says that potential difference across each parallel branch is the same as the supply.",
-      "correctIndex": 3,
-      "explanation": "4.2.2 targets: Describe potential difference in parallel. Focus area: Series Circuits. For this question, Potential difference across each parallel branch is the same as the supply. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_pd",
-      "distractorRationales": [
-        {
-          "text": "The answer for series circuits says that potential difference is larger after each component.",
-          "misconception": "Potential difference is shared equally by branch number only."
-        },
-        {
-          "text": "For series circuits, the answer claims that potential difference is shared equally by branch number only.",
-          "misconception": "Potential difference is zero in every branch."
-        },
-        {
-          "text": "For series circuits, the statement is that potential difference is zero in every branch.",
-          "misconception": "Potential difference is larger after each component."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe potential difference in parallel."
-    },
-    {
-      "id": "aqa_4_2_2_series_circuits_parallel_current_concept_discrimination_016",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Series Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "series_circuits",
-      "topicId": "series_parallel",
-      "specRef": "4.2.2",
-      "specStatement": "Series and parallel circuits.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_parallel_current",
-        "statement": "Describe current in parallel. (Series Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.2.2:parallel_current:concept_discrimination",
-      "conceptFamily": "parallel_current",
-      "contextType": "a graph-reading task",
-      "skill": "Series Circuits practice",
-      "stem": "Which option best separates the correct series circuits idea from a common mix-up? Keep the answer focused on series circuits: describe current in parallel.",
-      "question": "Which option best separates the correct series circuits idea from a common mix-up? Keep the answer focused on series circuits: describe current in parallel.",
-      "options": [
-        "In this item, it means that current cannot split in parallel.",
-        "The claim for series circuits is that total current is always smaller than each branch current.",
-        "For series circuits: Only one branch can carry current.",
-        "For series circuits, the option says that total current is the sum of the currents in the branches."
-      ],
-      "correctAnswer": "For series circuits, the option says that total current is the sum of the currents in the branches.",
-      "correctIndex": 3,
-      "explanation": "4.2.2 targets: Describe current in parallel. Focus area: Series Circuits. For this question, Total current is the sum of the currents in the branches. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_current",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that current cannot split in parallel.",
-          "misconception": "Current cannot split in parallel."
-        },
-        {
-          "text": "The claim for series circuits is that total current is always smaller than each branch current.",
-          "misconception": "Total current is always smaller than each branch current."
-        },
-        {
-          "text": "For series circuits: Only one branch can carry current.",
-          "misconception": "Only one branch can carry current."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe current in parallel."
-    },
-    {
-      "id": "aqa_4_2_2_series_circuits_series_current_misconception_correction_017",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Series Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "series_circuits",
-      "topicId": "series_parallel",
-      "specRef": "4.2.2",
-      "specStatement": "Series and parallel circuits.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_series_current",
-        "statement": "Describe current in a series circuit. (Series Circuits)",
+        "id": "aqa_electricity_series_circuits_missing_resistor_006_lo",
+        "statement": "Find a missing resistance in a series circuit.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.2.2:series_current:misconception_correction",
-      "conceptFamily": "series_current",
-      "contextType": "a comparison question",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_series_circuits_missing_resistor_006",
+      "conceptFamily": "find_a_missing_resistance_in_a_series_circuit",
+      "contextType": "exam_style",
       "skill": "Series Circuits practice",
-      "stem": "Which answer corrects a misconception about series circuits? Use the wording carefully: this is about describe current in a series circuit.",
-      "question": "Which answer corrects a misconception about series circuits? Use the wording carefully: this is about describe current in a series circuit.",
+      "stem": "Two resistors are connected in series. The total resistance is 14 ohms. One resistor is 5 ohms. What is the other resistance?",
+      "question": "Two resistors are connected in series. The total resistance is 14 ohms. One resistor is 5 ohms. What is the other resistance?",
       "options": [
-        "In this series circuits item, current is largest after the final component.",
-        "For series circuits, it means that current is the same at every point in a series circuit.",
-        "For series circuits, it means that current is used up by each component.",
-        "The answer for series circuits says that current splits between components in a single loop."
+        "2.8 ohms",
+        "9 ohms",
+        "14 ohms",
+        "19 ohms"
       ],
-      "correctAnswer": "For series circuits, it means that current is the same at every point in a series circuit.",
+      "correctAnswer": "9 ohms",
       "correctIndex": 1,
-      "explanation": "4.2.2 targets: Describe current in a series circuit. Focus area: Series Circuits. For this question, Current is the same at every point in a series circuit. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_current",
+      "explanation": "For series resistors, total resistance is the sum. The missing resistance is 14 - 5 = 9 ohms.",
+      "misconceptionTag": "series-missing-resistor",
       "distractorRationales": [
         {
-          "text": "In this series circuits item, current is largest after the final component.",
-          "misconception": "Current is used up by each component."
+          "text": "2.8 ohms",
+          "misconception": ""
         },
         {
-          "text": "The answer for series circuits says that current splits between components in a single loop.",
-          "misconception": "Current is largest after the final component."
+          "text": "14 ohms",
+          "misconception": ""
         },
         {
-          "text": "For series circuits, it means that current is used up by each component.",
-          "misconception": "Current splits between components in a single loop."
+          "text": "19 ohms",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe current in a series circuit."
+      "senNote": "Checks: Find a missing resistance in a series circuit."
     },
     {
-      "id": "aqa_4_2_2_series_circuits_series_resistance_data_interpretation_018",
+      "id": "aqa_electricity_series_circuits_added_lamp_007",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -7840,6 +7071,7 @@
       "subtopicSlug": "series_circuits",
       "topicId": "series_parallel",
       "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
       "specStatement": "Series and parallel circuits.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -7850,56 +7082,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_series_resistance",
-        "statement": "Calculate total resistance in series. (Series Circuits)",
+        "id": "aqa_electricity_series_circuits_added_lamp_007_lo",
+        "statement": "Explain the effect of adding a component in series.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.2.2:series_resistance:data_interpretation",
-      "conceptFamily": "series_resistance",
-      "contextType": "a method-choice question",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_series_circuits_added_lamp_007",
+      "conceptFamily": "explain_the_effect_of_adding_a_component_in_series",
+      "contextType": "exam_style",
       "skill": "Series Circuits practice",
-      "stem": "Which conclusion about series circuits is supported by the evidence? Check the clue before choosing: Calculate total resistance in series.",
-      "question": "Which conclusion about series circuits is supported by the evidence? Check the clue before choosing: Calculate total resistance in series.",
+      "stem": "A second identical lamp is added in series with a lamp and battery. What happens to the brightness of the first lamp?",
+      "question": "A second identical lamp is added in series with a lamp and battery. What happens to the brightness of the first lamp?",
       "options": [
-        "For series circuits, the statement is that total resistance in series is the sum of the component resistances.",
-        "For series circuits, the answer claims that series resistance is found by multiplying by voltage.",
-        "For series circuits, the answer claims that only the largest resistor counts.",
-        "For series circuits, the answer claims that total resistance in series is smaller than every resistor."
+        "It becomes brighter because there are more lamps.",
+        "It becomes dimmer because the total resistance increases.",
+        "It is unchanged because each lamp gets the full battery voltage.",
+        "It goes out only if the second lamp is brighter."
       ],
-      "correctAnswer": "For series circuits, the statement is that total resistance in series is the sum of the component resistances.",
-      "correctIndex": 0,
-      "explanation": "4.2.2 targets: Calculate total resistance in series. Focus area: Series Circuits. For this question, Total resistance in series is the sum of the component resistances. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_resistance",
+      "correctAnswer": "It becomes dimmer because the total resistance increases.",
+      "correctIndex": 1,
+      "explanation": "Adding a lamp in series increases the total resistance. With the same battery, the current decreases, so the first lamp is dimmer.",
+      "misconceptionTag": "adding-series-lamp",
       "distractorRationales": [
         {
-          "text": "For series circuits, the answer claims that series resistance is found by multiplying by voltage.",
-          "misconception": "Total resistance in series is smaller than every resistor."
+          "text": "It becomes brighter because there are more lamps.",
+          "misconception": ""
         },
         {
-          "text": "For series circuits, the answer claims that total resistance in series is smaller than every resistor.",
-          "misconception": "Only the largest resistor counts."
+          "text": "It is unchanged because each lamp gets the full battery voltage.",
+          "misconception": ""
         },
         {
-          "text": "For series circuits, the answer claims that only the largest resistor counts.",
-          "misconception": "Series resistance is found by multiplying by voltage."
+          "text": "It goes out only if the second lamp is brighter.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate total resistance in series."
+      "senNote": "Checks: Explain the effect of adding a component in series."
     },
     {
-      "id": "aqa_4_2_2_series_circuits_parallel_pd_representation_interpretation_019",
+      "id": "aqa_electricity_series_circuits_pd_sum_008",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -7911,6 +7144,7 @@
       "subtopicSlug": "series_circuits",
       "topicId": "series_parallel",
       "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
       "specStatement": "Series and parallel circuits.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -7921,53 +7155,857 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_2_series_circuits_parallel_pd",
-        "statement": "Describe potential difference in parallel. (Series Circuits)",
+        "id": "aqa_electricity_series_circuits_pd_sum_008_lo",
+        "statement": "Use potential difference sharing in a series circuit.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.2.2:parallel_pd:representation_interpretation",
-      "conceptFamily": "parallel_pd",
-      "contextType": "a results discussion",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_series_circuits_pd_sum_008",
+      "conceptFamily": "use_potential_difference_sharing_in_a_series_circuit",
+      "contextType": "exam_style",
       "skill": "Series Circuits practice",
-      "stem": "A representation of series circuits is described in words. Which interpretation is correct? Check the clue before choosing: Describe potential difference in parallel.",
-      "question": "A representation of series circuits is described in words. Which interpretation is correct? Check the clue before choosing: Describe potential difference in parallel.",
+      "stem": "Two components are connected in series to a 12 V supply. The potential difference across one component is 5 V. What is the potential difference across the other component?",
+      "question": "Two components are connected in series to a 12 V supply. The potential difference across one component is 5 V. What is the potential difference across the other component?",
       "options": [
-        "In this item, it means that potential difference across each parallel branch is the same as the supply.",
-        "For series circuits, this would mean that potential difference is larger after each component.",
-        "For series circuits, this would mean that potential difference is zero in every branch.",
-        "For series circuits, this would mean that potential difference is shared equally by branch number only."
+        "2.4 V",
+        "5 V",
+        "7 V",
+        "17 V"
       ],
-      "correctAnswer": "In this item, it means that potential difference across each parallel branch is the same as the supply.",
-      "correctIndex": 0,
-      "explanation": "4.2.2 targets: Describe potential difference in parallel. Focus area: Series Circuits. For this question, Potential difference across each parallel branch is the same as the supply. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_pd",
+      "correctAnswer": "7 V",
+      "correctIndex": 2,
+      "explanation": "The potential differences across components in series add up to the supply potential difference. The missing value is 12 - 5 = 7 V.",
+      "misconceptionTag": "series-pd-adds",
       "distractorRationales": [
         {
-          "text": "For series circuits, this would mean that potential difference is shared equally by branch number only.",
-          "misconception": "Potential difference is shared equally by branch number only."
+          "text": "2.4 V",
+          "misconception": ""
         },
         {
-          "text": "For series circuits, this would mean that potential difference is zero in every branch.",
-          "misconception": "Potential difference is zero in every branch."
+          "text": "5 V",
+          "misconception": ""
         },
         {
-          "text": "For series circuits, this would mean that potential difference is larger after each component.",
-          "misconception": "Potential difference is larger after each component."
+          "text": "17 V",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe potential difference in parallel."
+      "senNote": "Checks: Use potential difference sharing in a series circuit."
+    },
+    {
+      "id": "aqa_electricity_series_circuits_equal_lamps_pd_009",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Series Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "series_circuits",
+      "topicId": "series_parallel",
+      "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
+      "specStatement": "Series and parallel circuits.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_series_circuits_equal_lamps_pd_009_lo",
+        "statement": "Calculate potential difference across identical series components.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_series_circuits_equal_lamps_pd_009",
+      "conceptFamily": "calculate_potential_difference_across_identical_series_components",
+      "contextType": "exam_style",
+      "skill": "Series Circuits practice",
+      "stem": "Two identical lamps are connected in series to a 6 V battery. What is the potential difference across each lamp?",
+      "question": "Two identical lamps are connected in series to a 6 V battery. What is the potential difference across each lamp?",
+      "options": [
+        "0 V",
+        "3 V",
+        "6 V",
+        "12 V"
+      ],
+      "correctAnswer": "3 V",
+      "correctIndex": 1,
+      "explanation": "Identical lamps in series share the supply potential difference equally, so each lamp has 3 V across it.",
+      "misconceptionTag": "equal-series-pd-share",
+      "distractorRationales": [
+        {
+          "text": "0 V",
+          "misconception": ""
+        },
+        {
+          "text": "6 V",
+          "misconception": ""
+        },
+        {
+          "text": "12 V",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate potential difference across identical series components."
+    },
+    {
+      "id": "aqa_electricity_series_circuits_compare_resistance_010",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Series Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "series_circuits",
+      "topicId": "series_parallel",
+      "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
+      "specStatement": "Series and parallel circuits.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_series_circuits_compare_resistance_010_lo",
+        "statement": "Compare total series resistance with individual resistors.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_series_circuits_compare_resistance_010",
+      "conceptFamily": "compare_total_series_resistance_with_individual_resistors",
+      "contextType": "exam_style",
+      "skill": "Series Circuits practice",
+      "stem": "A 4 ohm resistor and a 10 ohm resistor are connected in series. Which statement is correct?",
+      "question": "A 4 ohm resistor and a 10 ohm resistor are connected in series. Which statement is correct?",
+      "options": [
+        "The total resistance is less than 4 ohms.",
+        "The total resistance is between 4 ohms and 10 ohms.",
+        "The total resistance is greater than 10 ohms.",
+        "The total resistance is exactly 10 ohms."
+      ],
+      "correctAnswer": "The total resistance is greater than 10 ohms.",
+      "correctIndex": 2,
+      "explanation": "Resistances add in series, so the total is 14 ohms, which is greater than either resistor alone.",
+      "misconceptionTag": "series-total-greater",
+      "distractorRationales": [
+        {
+          "text": "The total resistance is less than 4 ohms.",
+          "misconception": ""
+        },
+        {
+          "text": "The total resistance is between 4 ohms and 10 ohms.",
+          "misconception": ""
+        },
+        {
+          "text": "The total resistance is exactly 10 ohms.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Compare total series resistance with individual resistors."
+    },
+    {
+      "id": "aqa_electricity_series_circuits_v_ir_current_011",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Series Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "series_circuits",
+      "topicId": "series_parallel",
+      "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
+      "specStatement": "Series and parallel circuits.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_series_circuits_v_ir_current_011_lo",
+        "statement": "Use V = IR for a component in a series circuit.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_series_circuits_v_ir_current_011",
+      "conceptFamily": "use_v_ir_for_a_component_in_a_series_circuit",
+      "contextType": "exam_style",
+      "skill": "Series Circuits practice",
+      "stem": "A 12 ohm resistor is connected in series with a cell. The current in the circuit is 0.50 A. What is the potential difference across the resistor?",
+      "question": "A 12 ohm resistor is connected in series with a cell. The current in the circuit is 0.50 A. What is the potential difference across the resistor?",
+      "options": [
+        "0.042 V",
+        "6 V",
+        "12.5 V",
+        "24 V"
+      ],
+      "correctAnswer": "6 V",
+      "correctIndex": 1,
+      "explanation": "Potential difference = current x resistance. V = 0.50 x 12 = 6 V.",
+      "misconceptionTag": "series-v-ir",
+      "distractorRationales": [
+        {
+          "text": "0.042 V",
+          "misconception": ""
+        },
+        {
+          "text": "12.5 V",
+          "misconception": ""
+        },
+        {
+          "text": "24 V",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Use V = IR for a component in a series circuit."
+    },
+    {
+      "id": "aqa_electricity_series_circuits_total_current_012",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Series Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "series_circuits",
+      "topicId": "series_parallel",
+      "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
+      "specStatement": "Series and parallel circuits.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_series_circuits_total_current_012_lo",
+        "statement": "Calculate current in a series circuit using total resistance.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_series_circuits_total_current_012",
+      "conceptFamily": "calculate_current_in_a_series_circuit_using_total_resistance",
+      "contextType": "exam_style",
+      "skill": "Series Circuits practice",
+      "stem": "A 9 V battery is connected to two series resistors with a total resistance of 18 ohms. What is the current in the circuit?",
+      "question": "A 9 V battery is connected to two series resistors with a total resistance of 18 ohms. What is the current in the circuit?",
+      "options": [
+        "0.5 A",
+        "2 A",
+        "9 A",
+        "162 A"
+      ],
+      "correctAnswer": "0.5 A",
+      "correctIndex": 0,
+      "explanation": "Current = potential difference ÷ resistance. I = 9 ÷ 18 = 0.5 A.",
+      "misconceptionTag": "series-current-from-total-resistance",
+      "distractorRationales": [
+        {
+          "text": "2 A",
+          "misconception": ""
+        },
+        {
+          "text": "9 A",
+          "misconception": ""
+        },
+        {
+          "text": "162 A",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate current in a series circuit using total resistance."
+    },
+    {
+      "id": "aqa_electricity_series_circuits_practical_current_013",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Series Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "series_circuits",
+      "topicId": "series_parallel",
+      "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
+      "specStatement": "Series and parallel circuits.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_series_circuits_practical_current_013_lo",
+        "statement": "Interpret current measurements taken around a series circuit.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "interpret",
+      "responseMode": "practical_interpretation",
+      "patternId": "authored:aqa_electricity_series_circuits_practical_current_013",
+      "conceptFamily": "interpret_current_measurements_taken_around_a_series_circuit",
+      "contextType": "exam_style",
+      "skill": "Series Circuits practice",
+      "stem": "In a practical, a student moves the same ammeter to three different positions in a series circuit. What should the readings show?",
+      "question": "In a practical, a student moves the same ammeter to three different positions in a series circuit. What should the readings show?",
+      "options": [
+        "The reading is largest near the positive terminal.",
+        "The reading is smallest after the last component.",
+        "The reading is the same at each position.",
+        "The reading is zero between two components."
+      ],
+      "correctAnswer": "The reading is the same at each position.",
+      "correctIndex": 2,
+      "explanation": "An ammeter measures the current at a point. In a series circuit, the current is the same at all points.",
+      "misconceptionTag": "series-ammeter-practical",
+      "distractorRationales": [
+        {
+          "text": "The reading is largest near the positive terminal.",
+          "misconception": ""
+        },
+        {
+          "text": "The reading is smallest after the last component.",
+          "misconception": ""
+        },
+        {
+          "text": "The reading is zero between two components.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Interpret current measurements taken around a series circuit."
+    },
+    {
+      "id": "aqa_electricity_series_circuits_cell_count_014",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Series Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "series_circuits",
+      "topicId": "series_parallel",
+      "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
+      "specStatement": "Series and parallel circuits.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_series_circuits_cell_count_014_lo",
+        "statement": "Predict the effect of adding cells in series.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "predict",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_series_circuits_cell_count_014",
+      "conceptFamily": "predict_the_effect_of_adding_cells_in_series",
+      "contextType": "exam_style",
+      "skill": "Series Circuits practice",
+      "stem": "A second identical cell is added in series with the first cell in a simple lamp circuit. What is the most likely effect?",
+      "question": "A second identical cell is added in series with the first cell in a simple lamp circuit. What is the most likely effect?",
+      "options": [
+        "The lamp becomes brighter because the supply potential difference is greater.",
+        "The lamp becomes dimmer because the circuit has two cells.",
+        "The current becomes zero because cells block charge.",
+        "The resistance of the lamp becomes zero."
+      ],
+      "correctAnswer": "The lamp becomes brighter because the supply potential difference is greater.",
+      "correctIndex": 0,
+      "explanation": "Cells connected in series can increase the supply potential difference. For the same lamp resistance, a larger potential difference gives a larger current.",
+      "misconceptionTag": "cells-in-series",
+      "distractorRationales": [
+        {
+          "text": "The lamp becomes dimmer because the circuit has two cells.",
+          "misconception": ""
+        },
+        {
+          "text": "The current becomes zero because cells block charge.",
+          "misconception": ""
+        },
+        {
+          "text": "The resistance of the lamp becomes zero.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Predict the effect of adding cells in series."
+    },
+    {
+      "id": "aqa_electricity_series_circuits_short_circuit_015",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Series Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "series_circuits",
+      "topicId": "series_parallel",
+      "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
+      "specStatement": "Series and parallel circuits.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_series_circuits_short_circuit_015_lo",
+        "statement": "Explain a fault caused by a low-resistance bypass in a circuit.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_series_circuits_short_circuit_015",
+      "conceptFamily": "explain_a_fault_caused_by_a_low_resistance_bypass_in_a_circuit",
+      "contextType": "exam_style",
+      "skill": "Series Circuits practice",
+      "stem": "A wire is accidentally connected directly across a lamp in a series circuit. Why might the lamp go out?",
+      "question": "A wire is accidentally connected directly across a lamp in a series circuit. Why might the lamp go out?",
+      "options": [
+        "Most current takes the low-resistance path through the wire.",
+        "The wire changes current into charge.",
+        "The lamp has gained extra potential difference.",
+        "The battery has stopped producing charge."
+      ],
+      "correctAnswer": "Most current takes the low-resistance path through the wire.",
+      "correctIndex": 0,
+      "explanation": "A connecting wire has very low resistance, so it can provide an easier path that bypasses the lamp.",
+      "misconceptionTag": "short-circuit-path",
+      "distractorRationales": [
+        {
+          "text": "The wire changes current into charge.",
+          "misconception": ""
+        },
+        {
+          "text": "The lamp has gained extra potential difference.",
+          "misconception": ""
+        },
+        {
+          "text": "The battery has stopped producing charge.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain a fault caused by a low-resistance bypass in a circuit."
+    },
+    {
+      "id": "aqa_electricity_series_circuits_component_fault_016",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Series Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "series_circuits",
+      "topicId": "series_parallel",
+      "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
+      "specStatement": "Series and parallel circuits.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_series_circuits_component_fault_016_lo",
+        "statement": "Explain why one failed component stops a series circuit.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_series_circuits_component_fault_016",
+      "conceptFamily": "explain_why_one_failed_component_stops_a_series_circuit",
+      "contextType": "exam_style",
+      "skill": "Series Circuits practice",
+      "stem": "One lamp fails in a string of lamps connected in series. Why do the other lamps also go out?",
+      "question": "One lamp fails in a string of lamps connected in series. Why do the other lamps also go out?",
+      "options": [
+        "The failed lamp breaks the only path for current.",
+        "The failed lamp takes all the potential difference but current still flows.",
+        "The other lamps have become parallel branches.",
+        "The current has been stored in the failed lamp."
+      ],
+      "correctAnswer": "The failed lamp breaks the only path for current.",
+      "correctIndex": 0,
+      "explanation": "If one component in a series circuit breaks the loop, there is no complete path for current through the remaining components.",
+      "misconceptionTag": "series-component-fault",
+      "distractorRationales": [
+        {
+          "text": "The failed lamp takes all the potential difference but current still flows.",
+          "misconception": ""
+        },
+        {
+          "text": "The other lamps have become parallel branches.",
+          "misconception": ""
+        },
+        {
+          "text": "The current has been stored in the failed lamp.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain why one failed component stops a series circuit."
+    },
+    {
+      "id": "aqa_electricity_series_circuits_three_resistors_017",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Series Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "series_circuits",
+      "topicId": "series_parallel",
+      "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
+      "specStatement": "Series and parallel circuits.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_series_circuits_three_resistors_017_lo",
+        "statement": "Add three resistances in series.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_series_circuits_three_resistors_017",
+      "conceptFamily": "add_three_resistances_in_series",
+      "contextType": "exam_style",
+      "skill": "Series Circuits practice",
+      "stem": "Three resistors of 1 ohm, 4 ohms and 7 ohms are connected in series. What is the total resistance?",
+      "question": "Three resistors of 1 ohm, 4 ohms and 7 ohms are connected in series. What is the total resistance?",
+      "options": [
+        "7 ohms",
+        "11 ohms",
+        "12 ohms",
+        "28 ohms"
+      ],
+      "correctAnswer": "12 ohms",
+      "correctIndex": 2,
+      "explanation": "Series resistances add directly: 1 + 4 + 7 = 12 ohms.",
+      "misconceptionTag": "series-three-resistors",
+      "distractorRationales": [
+        {
+          "text": "7 ohms",
+          "misconception": ""
+        },
+        {
+          "text": "11 ohms",
+          "misconception": ""
+        },
+        {
+          "text": "28 ohms",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Add three resistances in series."
+    },
+    {
+      "id": "aqa_electricity_series_circuits_pd_ratio_018",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Series Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "series_circuits",
+      "topicId": "series_parallel",
+      "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
+      "specStatement": "Series and parallel circuits.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_series_circuits_pd_ratio_018_lo",
+        "statement": "Compare potential differences across unequal series resistors.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_series_circuits_pd_ratio_018",
+      "conceptFamily": "compare_potential_differences_across_unequal_series_resistors",
+      "contextType": "exam_style",
+      "skill": "Series Circuits practice",
+      "stem": "A 2 ohm resistor and a 4 ohm resistor are connected in series. Which resistor has the larger potential difference across it?",
+      "question": "A 2 ohm resistor and a 4 ohm resistor are connected in series. Which resistor has the larger potential difference across it?",
+      "options": [
+        "The 2 ohm resistor, because it has less resistance.",
+        "The 4 ohm resistor, because the same current flows through a larger resistance.",
+        "They must both have 0 V because they are in series.",
+        "They must always have equal potential differences."
+      ],
+      "correctAnswer": "The 4 ohm resistor, because the same current flows through a larger resistance.",
+      "correctIndex": 1,
+      "explanation": "The same current flows through both series resistors. Since V = IR, the larger resistance has the larger potential difference.",
+      "misconceptionTag": "series-pd-resistance-ratio",
+      "distractorRationales": [
+        {
+          "text": "The 2 ohm resistor, because it has less resistance.",
+          "misconception": ""
+        },
+        {
+          "text": "They must both have 0 V because they are in series.",
+          "misconception": ""
+        },
+        {
+          "text": "They must always have equal potential differences.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Compare potential differences across unequal series resistors."
+    },
+    {
+      "id": "aqa_electricity_series_circuits_design_choice_019",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Series Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "series_circuits",
+      "topicId": "series_parallel",
+      "specRef": "4.2.2",
+      "combinedSpecRef": "6.2.2",
+      "specStatement": "Series and parallel circuits.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_series_circuits_design_choice_019_lo",
+        "statement": "Choose a series arrangement for a control circuit.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "choose",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_series_circuits_design_choice_019",
+      "conceptFamily": "choose_a_series_arrangement_for_a_control_circuit",
+      "contextType": "exam_style",
+      "skill": "Series Circuits practice",
+      "stem": "A student wants two switches so that either switch can break the circuit and turn off a buzzer. How should the switches be connected?",
+      "question": "A student wants two switches so that either switch can break the circuit and turn off a buzzer. How should the switches be connected?",
+      "options": [
+        "In series with the buzzer.",
+        "In parallel with the buzzer.",
+        "Across the cell only.",
+        "In separate branches that bypass the buzzer."
+      ],
+      "correctAnswer": "In series with the buzzer.",
+      "correctIndex": 0,
+      "explanation": "Switches in series with the buzzer are both part of the only path. Opening either switch breaks the circuit.",
+      "misconceptionTag": "series-switch-control",
+      "distractorRationales": [
+        {
+          "text": "In parallel with the buzzer.",
+          "misconception": ""
+        },
+        {
+          "text": "Across the cell only.",
+          "misconception": ""
+        },
+        {
+          "text": "In separate branches that bypass the buzzer.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Choose a series arrangement for a control circuit."
     },
     {
       "id": "aqa_electricity_current_rate_of_flow_001",
